@@ -152,6 +152,37 @@ def normalize_indent(text):
                 result.append(line)
     return '\n'.join(result)
 
+def build_static_map(static_dir):
+    """Build mapping from extensionless name to full filename for static assets."""
+    mapping = {}
+    if not os.path.exists(static_dir):
+        return mapping
+    for fname in os.listdir(static_dir):
+        name, ext = os.path.splitext(fname)
+        mapping[name] = fname
+    return mapping
+
+
+def fix_image_extensions(html, static_map):
+    """Add missing file extensions to image src paths."""
+    if not static_map:
+        return html
+
+    def replace_src(match):
+        prefix = match.group(1)  # e.g. "../" or "../../" or "./" or ""
+        basename = match.group(2)
+        if basename in static_map:
+            return f'src="{prefix}static/{static_map[basename]}"'
+        return match.group(0)  # no change
+
+    html = re.sub(
+        r'src="((?:\.\./)*)static/([^"]+)"',
+        replace_src,
+        html
+    )
+    return html
+
+
 def md_to_html(md_text):
     """Convert markdown to HTML with extensions."""
     # Normalize tab indentation: replace leading tabs with 4 spaces per level
@@ -175,7 +206,7 @@ def md_to_html(md_text):
     html = process_callouts(html)
     return html
 
-def build_page(h1, h2, tree, base_path):
+def build_page(h1, h2, tree, base_path, static_map):
     """Build a section page (either H1 overview or H2 detail)."""
     if h2:
         heading = h2
@@ -190,6 +221,7 @@ def build_page(h1, h2, tree, base_path):
     content_html = md_to_html(normalize_indent(content_md))
     content_html = content_html.replace('src="static/', f'src="{base_path}static/')
     content_html = content_html.replace('src="videos/', f'src="{base_path}videos/')
+    content_html = fix_image_extensions(content_html, static_map)
 
     # Calculate breadcrumb
     breadcrumb = []
@@ -228,9 +260,12 @@ def main():
         md_text = f.read()
 
     overview, tree = split_sections(md_text)
+    static_map = build_static_map(STATIC_DIR)
+
     overview_html = md_to_html(normalize_indent(overview))
     overview_html = overview_html.replace('src="static/', 'src="./static/')
     overview_html = overview_html.replace('src="videos/', 'src="./videos/')
+    overview_html = fix_image_extensions(overview_html, static_map)
 
     # Clean site dir
     if os.path.exists(SITE_DIR):
@@ -261,7 +296,7 @@ def main():
         os.makedirs(h1_dir, exist_ok=True)
 
         # H1 overview page
-        ctx = build_page(h1, None, tree, '../')
+        ctx = build_page(h1, None, tree, '../', static_map)
         ctx['base_path'] = '../'  # In subfolder, go up one level
         html = tpl_section.render(**ctx)
         with open(os.path.join(h1_dir, 'index.html'), 'w', encoding='utf-8') as f:
@@ -269,7 +304,7 @@ def main():
 
         # H2 detail pages
         for h2 in h1['children']:
-            ctx = build_page(h1, h2, tree, '../../')
+            ctx = build_page(h1, h2, tree, '../../', static_map)
             ctx['base_path'] = '../../'
             html = tpl_section.render(**ctx)
             with open(os.path.join(h1_dir, f'{h2["slug"]}.html'), 'w', encoding='utf-8') as f:
