@@ -1,0 +1,116 @@
+/* Custom styles for 软曲教学 */
+
+/* Chinese font stack */
+:root {
+  --vp-font-family-base: "PingFang SC", "Microsoft YaHei", "Noto Sans SC",
+    system-ui, -apple-system, sans-serif;
+}
+
+/* Image sizing */
+.content img,
+.vp-doc img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 6px;
+  margin: 12px 0;
+}
+
+/* Video sizing */
+.content video,
+.vp-doc video {
+  max-width: 50%;
+  border-radius: 6px;
+  margin: 12px 0;
+  background: #000;
+}
+
+/* Bold/strong text in red */
+.vp-doc strong {
+  color: #c00;
+}
+
+/* Callout/Tip styling */
+.vp-doc .tip {
+  border-left-color: var(--vp-c-brand-1);
+}
+
+/* H2 styling */
+.vp-doc h2 {
+  color: var(--vp-c-brand-1);
+  padding-left: 12px;
+}
+
+/* Home page hero */
+.VPHero .name {
+  font-size: 2.4rem;
+}
+
+/* Cards grid for section overview pages */
+.vp-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.vp-card {
+  display: block;
+  padding: 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--vp-c-text-1);
+  transition: all 0.2s;
+}
+
+.vp-card:hover {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+}
+
+.vp-card h3 {
+  margin: 0 0 6px;
+  color: var(--vp-c-brand-1);
+  font-size: 1.1rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .vp-doc img,
+  .vp-doc video {
+    max-width: 100%;
+  }
+
+  .vp-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Media grid for side-by-side videos and images */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.media-item img,
+.media-item video {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 6px;
+}
+
+.media-item p {
+  margin: 4px 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+}

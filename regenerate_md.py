@@ -1,7 +1,7 @@
 """Regenerate markdown from feishu JSON dump, supporting videos."""
 import json, os
 
-with open('ISDBdRNj4oIqsxxqXtdcyyuJnoe.json', 'r', encoding='utf-8') as f:
+with open('feishu-export/ISDBdRNj4oIqsxxqXtdcyyuJnoe.json', 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 blocks_map = {b['block_id']: b for b in data['blocks']}
@@ -212,7 +212,7 @@ process_block(document_id)
 
 # Write output
 output = '\n'.join(output_lines)
-with open('ISDBdRNj4oIqsxxqXtdcyyuJnoe.md', 'w', encoding='utf-8') as f:
+with open('feishu-export/ISDBdRNj4oIqsxxqXtdcyyuJnoe.md', 'w', encoding='utf-8') as f:
     f.write(output)
 
 print(f'Generated {len(output_lines)} lines, {len(output)} bytes')

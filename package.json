@@ -1,0 +1,16 @@
+{
+  "name": "training-manual",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "软曲教学 - 软式曲棍球（Floorball）校队训练内容网站",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "markdown-it-container": "^4.0.0",
+    "vitepress": "^1.6.4"
+  }
+}
