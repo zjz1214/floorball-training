@@ -188,6 +188,8 @@ def build_page(h1, h2, tree, base_path):
         sub_pages = h1['children'] if h1['children'] else None
 
     content_html = md_to_html(normalize_indent(content_md))
+    content_html = content_html.replace('src="static/', f'src="{base_path}static/')
+    content_html = content_html.replace('src="videos/', f'src="{base_path}videos/')
 
     # Calculate breadcrumb
     breadcrumb = []
@@ -227,6 +229,8 @@ def main():
 
     overview, tree = split_sections(md_text)
     overview_html = md_to_html(normalize_indent(overview))
+    overview_html = overview_html.replace('src="static/', 'src="./static/')
+    overview_html = overview_html.replace('src="videos/', 'src="./videos/')
 
     # Clean site dir
     if os.path.exists(SITE_DIR):
