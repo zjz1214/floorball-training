@@ -1,9 +1,15 @@
 /* Custom styles for 软曲教学 */
 
-/* Chinese font stack */
+/* Unified font: Times New Roman for Latin, Microsoft YaHei for CJK */
 :root {
-  --vp-font-family-base: "PingFang SC", "Microsoft YaHei", "Noto Sans SC",
-    system-ui, -apple-system, sans-serif;
+  --vp-font-family-base: "Times New Roman", "Microsoft YaHei", sans-serif;
+}
+
+html, body, .vp-doc, .VPSidebar, .VPNav, .VPNavBar,
+h1, h2, h3, h4, h5, h6,
+.vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4, .vp-doc h5, .vp-doc h6,
+.VPNavBarTitle, .VPSidebarItem, .VPLink {
+  font-family: "Times New Roman", "Microsoft YaHei", sans-serif;
 }
 
 /* Image sizing */
@@ -43,6 +49,64 @@
 /* Home page hero */
 .VPHero .name {
   font-size: 2.4rem;
+}
+
+/* Author card — right side of hero section */
+.VPHero .image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.VPHero .image-bg {
+  display: none;
+}
+
+.author-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  background: var(--vp-c-bg-soft);
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 !important;
+  max-width: 48px !important;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--vp-c-text-1);
+}
+
+.author-email {
+  font-size: 0.8rem;
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+}
+
+.author-email:hover {
+  color: var(--vp-c-brand-1);
+}
+
+@media (max-width: 959px) {
+  .VPHero .image {
+    order: 3;
+    margin-top: 24px;
+  }
 }
 
 /* Cards grid for section overview pages */

@@ -1,6 +1,6 @@
 # 软曲教学
 
-软式曲棍球（Floorball）校队训练内容网站，包含个人技术、团队战术与发力原理。基于 VitePress 构建。
+软式曲棍球（Floorball）校队训练内容网站，涵盖个人技术、团队战术。基于 VitePress 构建。
 
 ## 本地预览
 
@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-打开浏览器访问 `http://localhost:5173/training-manual/`。
+打开浏览器访问 `http://localhost:5173/floorball-training/`。
 
 ## 构建
 
