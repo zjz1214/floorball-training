@@ -1,4 +1,4 @@
-# 软曲教学
+# 软曲校队训练 
 
 > [!TIP]
 训练重点：
@@ -51,7 +51,7 @@
 ![W1Elb8zZRoMXWtxmppIcJHQYn3e](static/W1Elb8zZRoMXWtxmppIcJHQYn3e)
 ![WgFvb6Pd9ocggEx6ImUcvGYrnyh](static/WgFvb6Pd9ocggEx6ImUcvGYrnyh)
 两人长距离传球
-<video src="videos/videoplayback-00.01.31.611-00.01.35.622.mp4" controls width="640"></video>
+<video src="videos/videoplayback-00.01.31.611-00.01.35.622.mov" controls width="640"></video>
 3. **反手和转身的传球**：上面那两个反弹器的动作也可以作为两个人传球的练习，
 ![TNVLbMKdcoNdUGxOIFjcKar7nqf](static/TNVLbMKdcoNdUGxOIFjcKar7nqf)
 ![JhIGblRlQomuZKxcgTkcNVsLnPe](static/JhIGblRlQomuZKxcgTkcNVsLnPe)
@@ -170,7 +170,7 @@
 ![PiA7bGUZHoyoCrx8HiFciWw4nrg](static/PiA7bGUZHoyoCrx8HiFciWw4nrg)
 射门的一瞬间转为单膝跪地
 # 个人技术进阶
-## 控球
+5. 控球
 	1. 球感训练：
 		1. 颠球
 			<video src="videos/8753.mp4" controls width="640"></video>
@@ -183,45 +183,45 @@
 			<video src="videos/5150e936cfe847ef8db25f8125ee5a0c.mp4" controls width="640"></video>
 		3. 往前跑的时候正手卸下来
 		4. 反拍面停下来然后往前带
-			<video src="videos/videoplayback-00.12.44.132-00.12.46.042.mp4" controls width="640"></video>
+			<video src="videos/videoplayback-00.12.44.132-00.12.46.042.mov" controls width="640"></video>
 		5. 进阶-球落地一瞬间正手/反手传出去
 	4. 一些无意义tricks
 		<video src="videos/f8e3dd8f8d60ecdb1190eb86e53f3801.mp4" controls width="640"></video>
 		<video src="videos/a6f67ece456f2f1d2e21ac1a1c57c3c1.mp4" controls width="640"></video>
 		<video src="videos/bac2797a1b3771b96a5d8edd0d8246e4.mp4" controls width="640"></video>
 		<video src="videos/686b23bf4f9103691b3dda7a47620988.mp4" controls width="640"></video>
-## 传球
+6. 传球
 	1. 传球的视野，穿透性传球，身后的传球，比赛中个人主义，少黏球多第一时间传球
 	2. 接球：熟练掌握各个角度的接球，想象这个球从你的四面八方传过来，传到你身体的正手位，双腿间，反手位都应该分别如何接球。
 	> [!TIP]
 	接球：
 	1. 接球很多时候不是最舒适的位置，想象球从**不同方向**传给你应该怎么接，并且迅速对球有控制
 		1. 身前接球，拍面是斜对球的，**接球的瞬间拍面回正让球不滑出拍面**
-			<video src="videos/videoplayback-01.03.34.346-01.03.45.733.mp4" controls width="640"></video>
+			<video src="videos/videoplayback-01.03.34.346-01.03.45.733.mov" controls width="640"></video>
 		2. 正手双腿间接球
-			<video src="videos/videoplayback-00.51.40.596-00.51.43.582.mp4" controls width="640"></video>
+			<video src="videos/videoplayback-00.51.40.596-00.51.43.582.mov" controls width="640"></video>
 		3. 反手接球
 			<video src="videos/videoplayback-00.44.49.309-00.44.51.681.mp4" controls width="640"></video>
 		4. 正手接球几乎卸掉所有球速，但保留一点球向前的速度
 	2. 接球准备动作
 		1. 射门或快速传球预备：双手持杆，中心放低
-			<video src="videos/videoplayback-00.53.51.451-00.54.01.521.mp4" controls width="640"></video>
+			<video src="videos/videoplayback-00.53.51.451-00.54.01.521.mov" controls width="640"></video>
 		2. 接球迎上去接，会提供一点初始速度拉开与防守人员的距离，防止被掏球
 	3. 如果球速很快，为了不让球弹跳或者滑出拍头到意外的地方，可以选择给球施一点力，让球不是停在拍面上而是和拍头撞击然后尽量减少速度，第二时间控制好球
-## 射门
+7. 射门
 	1. 结合过人动作
 	<video src="videos/ScreenRecording_01-28-2026 12-17-37_1.mp4" controls width="640"></video>
-	<video src="videos/28eef8ed8298f084601e7fb7824f6afc.mp4_20260213_001651.mp4" controls width="640"></video>
-	<video src="videos/63fb59aeae75d25ffe9ca8c2d969d5de.mp4_20260213_001549.mp4" controls width="640"></video>
+	<video src="videos/28eef8ed8298f084601e7fb7824f6afc.mp4_20260213_001651.mkv" controls width="640"></video>
+	<video src="videos/63fb59aeae75d25ffe9ca8c2d969d5de.mp4_20260213_001549.mkv" controls width="640"></video>
 	2. 传球射门
 		<video src="videos/ee0b33b938974508b5f00f0b232b58db.mp4" controls width="640"></video>
 # 专项练习
 ##  前锋专项
 1. 假动作积累
 	1. 正手接球往弧顶带，做反手转身
-		<video src="videos/videoplayback-00.13.24.408-00.13.27.212.mp4" controls width="640"></video>
+		<video src="videos/videoplayback-00.13.24.408-00.13.27.212.mov" controls width="640"></video>
 	2. 控住球，面向后卫方向，假装传球的动作，然后一个反手转身过人
-		<video src="videos/videoplayback-00.12.45.350-00.12.48.966.mp4" controls width="640"></video>
+		<video src="videos/videoplayback-00.12.45.350-00.12.48.966.mov" controls width="640"></video>
 2. 传球
 	1. 意识
 		1. 提前观察队友位置（可能要多抬头，脑子里要有队友的空间位置）
@@ -231,11 +231,11 @@
 		4. 板边拿到球多往中间看一看
 	2. 技术
 		1. 反手传球多一点，硬一点
-			<video src="videos/videoplayback-00.00.31.256-00.00.33.357.mp4" controls width="640"></video>
-			<video src="videos/videoplayback-00.00.45.266-00.00.47.485.mp4" controls width="640"></video>
+			<video src="videos/videoplayback-00.00.31.256-00.00.33.357.mov" controls width="640"></video>
+			<video src="videos/videoplayback-00.00.45.266-00.00.47.485.mov" controls width="640"></video>
 		2. 双手正手向身后打板传球
 		3. 反手nolookpass
-			<video src="videos/videoplayback-00.00.48.154-00.00.50.767.mp4" controls width="640"></video>
+			<video src="videos/videoplayback-00.00.48.154-00.00.50.767.mov" controls width="640"></video>
 3. 接球及带球
 	1. 后卫板边传给前锋，前锋拿到球要做动作过掉一个标志桶
 		1. 接球动作利索一点
@@ -260,39 +260,39 @@
 		3. 射程外：注意力优先防被过，然后是防传球
 	2. 进攻
 		1. 没事带着球往前冲冲，压力大了反手打板回
-			<video src="videos/videoplayback-00.03.36.516-00.03.40.220.mp4" controls width="640"></video>
+			<video src="videos/videoplayback-00.03.36.516-00.03.40.220.mov" controls width="640"></video>
 2. 后卫的基本持球和传球方式（低重心，双手持球），然后可以观察到传球的时候有一下停顿，一方面是拍面要直，减少旋转，一方面可能是压杆让球出的更干脆
-	<video src="videos/videoplayback-00.02.09.783-00.02.16.260.mp4" controls width="640"></video>
+	<video src="videos/videoplayback-00.02.09.783-00.02.16.260.mov" controls width="640"></video>
 3. 处理高压局面
 	1. 后卫摆脱的反手转身停顿
-		<video src="videos/videoplayback-00.10.32.217-00.10.37.825.mp4" controls width="640"></video>
+		<video src="videos/videoplayback-00.10.32.217-00.10.37.825.mov" controls width="640"></video>
 	2. 要是被一直追就往回一直退，做一点停顿骗对手
-		<video src="videos/videoplayback-00.08.56.887-00.09.03.097.mp4" controls width="640"></video>
+		<video src="videos/videoplayback-00.08.56.887-00.09.03.097.mov" controls width="640"></video>
 	3. 门附近的混乱局面果断解围，有条件的话挑高球
 4. 思路
 	1. 
 5. 传球
 	1. 进攻性传球
 		1. 贴板长传，主要的进攻发起手段，最好能直接传到对方半场以后
-			<video src="videos/videoplayback-00.02.19.741-00.02.23.452.mp4" controls width="640"></video>
+			<video src="videos/videoplayback-00.02.19.741-00.02.23.452.mov" controls width="640"></video>
 		2. 斜向的长传球
-			<video src="videos/videoplayback-00.13.52.537-00.13.55.859.mp4" controls width="640"></video>
+			<video src="videos/videoplayback-00.13.52.537-00.13.55.859.mov" controls width="640"></video>
 		3. 偶尔直塞给中锋让中锋自由发挥
 	2. 防守性传球
 		1. 人向前反手轻敲给身后
-			<video src="videos/videoplayback-00.02.17.627-00.02.19.337.mp4" controls width="640"></video>
+			<video src="videos/videoplayback-00.02.17.627-00.02.19.337.mov" controls width="640"></video>
 		2. 打底板传球
-			<video src="videos/videoplayback-00.01.23.581-00.01.25.900.mp4" controls width="640"></video>
+			<video src="videos/videoplayback-00.01.23.581-00.01.25.900.mov" controls width="640"></video>
 		3. 身后的打底板
 			<video src="videos/videoplayback-00.41.49.455-00.41.52.462.mp4" controls width="640"></video>
 		4. 打底脚传球
 		5. 提前观察队友的位置
-			<video src="videos/videoplayback-00.12.11.133-00.12.14.693.mp4" controls width="640"></video>
+			<video src="videos/videoplayback-00.12.11.133-00.12.14.693.mov" controls width="640"></video>
 6. 封堵动作
 	1. 要蹲得下来，球杆几乎贴地
 		<video src="videos/ScreenRecording_01-30-2026 00-12-14_1.mp4" controls width="640"></video>
 # 团队训练
-## 防守战术
+8. 防守战术
 	1. W型站位
 		![RQaQbl9JnoUfgexUeafcHMgSnAg](static/RQaQbl9JnoUfgexUeafcHMgSnAg)
 		1. 前面那个人卡一边
@@ -302,24 +302,24 @@
 			1. 压力点：板边和底角（图中两个阴影）。两人包夹（在对面面向挡板的时候是前锋回来包夹的时机。）什么时候什么地点主动断球。不能只等对面失误。先引导再抢球。
 				![XwfzbY5MSoFtFHx17yMcd4QLntA](static/XwfzbY5MSoFtFHx17yMcd4QLntA)
 			2. 中间的人的功能：截断横穿以及阻止对方后卫前插
-## 进攻战术：快的和慢的。快的就是防反和长传冲吊
+9. 进攻战术：快的和慢的。快的就是防反和长传冲吊
 	1. 慢的：怎么送到半场里是固定的，一般就是两个人在后面传传传opening（5个人都需要回来接应。除非特殊战术一个人站门前不用回来，那就是4个人转），一般从边上送进去。一个后卫传完就走然后，然后就是可以下底或者兜回来。球进半场了就是阵地战，临场发挥更多。进攻比较灵活，防守是固定套路。
 	2. 快的（熟练套路）
 		1. 快反是比较固定的，相对熟悉的打法，可以通过练3打2这样，所以我们后面练3打2是为了练固定套路，快速终结。
 		2. 长传冲吊，不论是挑还是长传。都差不多。
-## 进攻的局部技术（积累默契）
+10. 进攻的局部技术（积累默契）
 	1. 加强跑切和传切（撞墙），无球队员无球跑动
 	2. 两个前锋交叉换位
 	3. 中锋回退接球
 	4. 后卫中锋撞墙2过1
-## 5打4战术
-## 任意球战术
+11. 5打4战术
+12. 任意球战术
 	1. 三人战术
-		<video src="videos/videoplayback-00.02.44.267-00.02.46.226.mp4" controls width="640"></video>
+		<video src="videos/videoplayback-00.02.44.267-00.02.46.226.mov" controls width="640"></video>
 	2. 欣赏
-		<video src="videos/videoplayback-01.36.27.189-01.36.31.690.mp4" controls width="640"></video>
+		<video src="videos/videoplayback-01.36.27.189-01.36.31.690.mov" controls width="640"></video>
 # 发力原理解析
-## 体能训练
+13. 体能训练
 	1. 低重心需要有较为强大的后侧链
 	2. 然后一直跑要有足够的心肺
 	3. 频繁的急停可能需要较强的小腿肌肉和稳定的脚踝
@@ -371,7 +371,7 @@
 				### 拖射 vs 腕射 的生物力学区别
 # 热身及小游戏
 # 其他
-## 换人
-## 比赛经验
+14. 换人
+15. 比赛经验
 	1. 不要在对面控球的时候换人
 	2. 比分越落后越要冷静传球

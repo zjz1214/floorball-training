@@ -72,20 +72,27 @@ def split_sections(md_text):
         if idx == first_h1_idx:
             continue  # Skip overview H1
 
-        # Determine content range
+        # Determine content range (up to next heading of same or higher level)
         next_pos = len(lines)
+        first_child_pos = len(lines)
         for j in range(idx + 1, len(positions)):
             if positions[j][1] <= level:
                 next_pos = positions[j][0]
                 break
+            if first_child_pos == len(lines) and positions[j][1] > level:
+                first_child_pos = positions[j][0]
 
         content = '\n'.join(lines[pos:next_pos]).strip()
+
+        # Intro is content from this heading to its first child heading
+        intro = '\n'.join(lines[pos:first_child_pos]).strip()
 
         if level == 1:
             current_h1 = {
                 'title': title,
                 'slug': slugify(title),
                 'content_md': content,
+                'intro_md': intro,
                 'children': []
             }
             h1_sections.append(current_h1)
@@ -116,40 +123,39 @@ def process_callouts(html):
     )
     return html
 
-def normalize_indent(text):
-    """Strip base indentation from markdown content so list indents don't become code blocks."""
+def tab_to_spaces(text):
+    """Convert leading tabs to 4-space indentation."""
     lines = text.split('\n')
-    # Skip the heading line (starts with #) for min-indent calculation
-    non_headings = []
-    has_heading = False
-    for line in lines:
-        if line.startswith('#'):
-            has_heading = True
-            continue
-        if line.strip():  # non-empty
-            # Count leading spaces/tabs
-            stripped = line.lstrip('\t ')
-            indent = len(line) - len(stripped)
-            non_headings.append((indent, line, stripped))
-
-    if not non_headings:
-        return text
-
-    # Find minimum indent among content lines
-    min_indent = min(nh[0] for nh in non_headings)
-
-    # De-indent all lines by min_indent
     result = []
     for line in lines:
-        if line.startswith('#') or not line.strip():
-            result.append(line)
+        if '\t' in line and line.startswith('\t'):
+            stripped = line.lstrip('\t')
+            tabs = len(line) - len(stripped)
+            result.append('    ' * tabs + stripped)
         else:
-            stripped = line.lstrip('\t ')
-            current_indent = len(line) - len(stripped)
-            if current_indent >= min_indent:
-                result.append('    ' * ((current_indent - min_indent) // 4) + stripped)
-            else:
-                result.append(line)
+            result.append(line)
+    return '\n'.join(result)
+
+
+def escape_repetition_marks(text):
+    """Escape *N (repetition counter like 动作一*20) so it's not parsed as emphasis."""
+    # * followed by digit, not preceded by * (so **bold** is safe)
+    return re.sub(r'(?<!\*)\*(?=\d)', r'\\*', text)
+
+
+def preprocess_md(text):
+    """Prepare markdown text for HTML conversion (tab/spaces already normalized globally)."""
+    # Reduce deep indentation on HTML tags to prevent code-block treatment.
+    # 8+ space indent = code block, but <video>/<img> continuations should be 4 spaces max.
+    lines = text.split('\n')
+    result = []
+    for line in lines:
+        stripped = line.lstrip(' ')
+        indent = len(line) - len(stripped)
+        if indent > 4 and (stripped.startswith('<video') or stripped.startswith('<img')):
+            result.append('    ' + stripped)
+        else:
+            result.append(line)
     return '\n'.join(result)
 
 def build_static_map(static_dir):
@@ -185,20 +191,7 @@ def fix_image_extensions(html, static_map):
 
 def md_to_html(md_text):
     """Convert markdown to HTML with extensions."""
-    # Normalize tab indentation: replace leading tabs with 4 spaces per level
-    # This prevents tabs from being interpreted as code blocks while preserving list nesting
-    lines = md_text.split('\n')
-    normalized = []
-    for line in lines:
-        if line.startswith('\t'):
-            # Count leading tabs and replace with 4 spaces each
-            stripped = line.lstrip('\t')
-            tabs = len(line) - len(stripped)
-            normalized.append('    ' * tabs + stripped)
-        else:
-            normalized.append(line)
-    md_text = '\n'.join(normalized)
-
+    md_text = preprocess_md(md_text)
     html = markdown(
         md_text,
         extensions=['tables', 'fenced_code', 'codehilite']
@@ -206,22 +199,64 @@ def md_to_html(md_text):
     html = process_callouts(html)
     return html
 
+
+def strip_heading_line(md_text, level):
+    """Remove the first heading line and trim common base indent from remaining content."""
+    prefix = '#' * level + ' '
+    lines = md_text.split('\n')
+    result = []
+    skipped_heading = False
+    for line in lines:
+        if not skipped_heading and line.startswith(prefix):
+            skipped_heading = True
+            continue
+        if skipped_heading and not result and not line.strip():
+            continue
+        result.append(line)
+
+    if not result:
+        return ''
+
+    # Calculate common base indent from non-empty, non-heading lines
+    non_headings = []
+    for line in result:
+        if line.strip() and not line.startswith('#'):
+            stripped = line.lstrip(' ')
+            indent = len(line) - len(stripped)
+            non_headings.append(indent)
+
+    if non_headings:
+        min_indent = min(non_headings)
+        if min_indent > 0:
+            result = [line[min_indent:] if line.startswith(' ' * min_indent) else line
+                      for line in result]
+
+    return '\n'.join(result)
+
+
+def remove_video_width(html):
+    """Remove hardcoded width from video tags, let CSS control sizing."""
+    return re.sub(r'<video\s+([^>]*?)width="[^"]*"\s*([^>]*)>', r'<video \1\2>', html)
+
 def build_page(h1, h2, tree, base_path, static_map):
     """Build a section page (either H1 overview or H2 detail)."""
     if h2:
         heading = h2
-        content_md = h2['content_md']
+        content_md = strip_heading_line(h2['content_md'], 2)
         sub_pages = None
     else:
         heading = h1
-        # For H1 overview page, just show the H1 content
-        content_md = h1['content_md']
+        content_md = strip_heading_line(h1['intro_md'], 1)
         sub_pages = h1['children'] if h1['children'] else None
 
-    content_html = md_to_html(normalize_indent(content_md))
+    if not content_md.strip():
+        content_md = '暂无内容。'
+
+    content_html = md_to_html(content_md)
     content_html = content_html.replace('src="static/', f'src="{base_path}static/')
     content_html = content_html.replace('src="videos/', f'src="{base_path}videos/')
     content_html = fix_image_extensions(content_html, static_map)
+    content_html = remove_video_width(content_html)
 
     # Calculate breadcrumb
     breadcrumb = []
@@ -255,17 +290,22 @@ def build_page(h1, h2, tree, base_path, static_map):
     }
 
 def main():
-    # Load markdown
+    # Load markdown and normalize tabs to spaces upfront
     with open(MD_FILE, 'r', encoding='utf-8') as f:
         md_text = f.read()
+    md_text = tab_to_spaces(md_text)
+    md_text = escape_repetition_marks(md_text)
 
     overview, tree = split_sections(md_text)
     static_map = build_static_map(STATIC_DIR)
 
-    overview_html = md_to_html(normalize_indent(overview))
+    overview_html = md_to_html(overview)
+    # Remove the first H1 heading from overview — the hero section handles the title
+    overview_html = re.sub(r'<h1>.*?</h1>\s*', '', overview_html, count=1)
     overview_html = overview_html.replace('src="static/', 'src="./static/')
     overview_html = overview_html.replace('src="videos/', 'src="./videos/')
     overview_html = fix_image_extensions(overview_html, static_map)
+    overview_html = remove_video_width(overview_html)
 
     # Clean site dir
     if os.path.exists(SITE_DIR):
