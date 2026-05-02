@@ -48,7 +48,7 @@ export default defineConfig({
   title: '软曲教学',
   description: '软式曲棍球（Floorball）校队训练内容',
   lang: 'zh-CN',
-  base: '/training-manual/',
+  base: '/floorball-training/',
   cleanUrls: true,
   ignoreDeadLinks: true,
   srcExclude: ['**/manual.md', '**/*.py', '**/feishu-export/**', '**/README.md', '**/CLAUDE.md', '**/todo.md'],
