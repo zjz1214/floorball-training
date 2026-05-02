@@ -7,3 +7,8 @@ Thumbs.db
 node_modules/
 .vitepress/dist/
 .vitepress/cache/
+CLAUDE.md
+todo.md
+manual.md
+*.py
+feishu-export/
