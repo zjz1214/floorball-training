@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: 软曲教学
-  text: 软式曲棍球校队手册
+  text: 软式曲棍球训练手册
   tagline: 系统化的训练内容，涵盖个人技术、团队战术
 
 features:
