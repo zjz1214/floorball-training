@@ -1,0 +1,7389 @@
+======================================================================
+PAGE 1
+======================================================================
+
+International Floorball Federation
+INDIVIDUAL TECHNIQUE
+AND TACTICS
+Teaching Individual Technique and Tactics in Floorball;
+Instructions and Drills
+
+
+======================================================================
+PAGE 2
+======================================================================
+
+
+
+======================================================================
+PAGE 3
+======================================================================
+
+►3
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Table of contents
+Introduction.............................................................................................................5
+The levels...........................................................................................................5
+The practice............................................................................................................6
+Planning..............................................................................................................6
+Running the session...........................................................................................7
+Giving feedback..................................................................................................7
+Motivational points..............................................................................................7
+Equipment...........................................................................................................8
+Shoes.............................................................................................................8
+Stick................................................................................................................8
+Eye wear.........................................................................................................9
+Terms and figures used...........................................................................................10
+Tactical terms used.................................................................................................11
+Individual technique................................................................................................12
+Passing and receiving.........................................................................................12
+Level 1. ..........................................................................................................12
+Level 2............................................................................................................16
+Level 3............................................................................................................20
+Shooting..............................................................................................................25
+Level 1............................................................................................................25
+Level 2............................................................................................................30
+Level 3............................................................................................................33
+Dribbling..............................................................................................................36
+Level 1............................................................................................................36
+Level 2............................................................................................................39
+Level 3............................................................................................................42
+Individual tactics......................................................................................................44
+Game situation roles...........................................................................................44
+Level 1............................................................................................................46
+Level 2............................................................................................................49
+Level 3............................................................................................................52
+
+
+======================================================================
+PAGE 4
+======================================================================
+
+4◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+
+
+======================================================================
+PAGE 5
+======================================================================
+
+►5
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+The levels
+The first part of the material consists of individual techni­
+ques and tactics. Each topic is divided into levels 1, 2 and 
+3, according to the progression of the skill development. 
+1st level -> basic individual technique drills, simple exerci­
+ses, emphasis on correct performance.
+2nd level -> techniques transferred to game like situations, 
+more complex exercises, e.g. 1 on 1, 2 on 1, emphasis on 
+performing the right technique correctly during an indivi­
+dual tactic action.
+3rd level -> techniques transferred to game plays, emphasis 
+on performing the right individual tactic action according 
+to other players. The individual technique should be auto­
+matic so that the player does not have to think about it and 
+that it will not hinder the performance.
+ 
+The levels are only to be used as an indicator, and it is the 
+coaches decision when to move on to the next level, ac­
+cording to the development of the players. The coach can 
+decide whether to go through each topic level by level du­
+ring one practice (with more developed players) or during 
+one whole season (beginners). With beginners it should be 
+noted that the progression of each player is individual de­
+pending on ones learning process, and that moving on to 
+more complicated topics, such as team tactics requires that 
+all players excel the necessary skills at least in descent le­
+vel. Once the basic technique is performed well, it should 
+still be practiced every now and then to maintain and re-
+enforce the skill. Therefore it is advised to return to level 1, 
+even though the team has already moved on to level 2 or 3. 
+The drills can also be modified for the players depen­
+ding on the level of the skill, number of players, and exis­
+ting environment and facilities. Key points are for the co­
+ach to consider and correct while observing execution.
+The material is collected from the education material of the 
+International Floorball Federation and its member asso­
+ciations. Bibliography is found at the end of this material.
+I would also like to thank all the people that have helped 
+me in the progress, especially Grant Mead (Australia), Jürg 
+Kihm (Switzerland), Jussi Jäntti (Finland), Mika Ahonen 
+(Finland), Kati Suomela (Finland), Petri Kettunen (Fin­
+land), Jukka Tiikkaja (Finland) and Petri Lindberg (Finland). 
+They have willingly shared their expertise in Floorball and 
+coaching and their contribution made this manual possible.
+In Helsinki, the 16th of August 2007 
+Anniina Paavilainen, the author.
+Introduction
+This material has been made for coaches 
+at all levels to teach their players not 
+only Floorball but also game sense and 
+problem solving. Players become awa-
+re of the game situation roles while lear-
+ning basic individual techniques. This is 
+made possible by creating a game like 
+learning environment and encouraging 
+the players to use their cognitive skills.
+
+
+======================================================================
+PAGE 6
+======================================================================
+
+6◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Planning
+While planning the practices the objectives should be 
+closely considered. Player’s physical capacity as well as the 
+tactical progression should be thought, both during one 
+practice session and the whole season. The best way to 
+consider the development of the players is to make a sketch 
+of training program consisting both physical and tactical 
+aspects. This sketch can then be modified as the season 
+goes on. 
+The season can be divided basically in quarters; off-sea­
+son, pre-season, mid-season and post-season. For example 
+during the off-season, the emphasis should be on physical 
+training while also technical skills could be improved. In 
+the beginning of the season the team tactical factors should 
+be emphasised and they should be re-enforced during the 
+rest of the season. Individual tactics, consisting of the skills 
+demanded in the chosen team tactics, should be included 
+in each practice during the season. The team tactical issu­
+es should be prioritized in the end of the season, where the 
+cooperation of the units should be seamless. Different phases 
+could contain for example following division of emphasis. 
+This can and should be determined and altered by the coach.
+Emphasis
+Off-
+season
+Pre-
+season
+Mid-
+season 1
+Mid-
+season 2
+Post-
+season
+May-July
+Aug-Sep
+Oct-Dec
+Jan-March April
+Physical
+40
+20
+30
+20
+60
+Technical
+30
+20
+10
+10
+20
+Ind Tactics 20
+20
+20
+20
+10
+Team 
+Tactics
+10
+40
+40
+50
+10
+Total %
+100
+100
+100
+100
+100
+These phases can be divided further to even shorter phases, such 
+as months and weeks. According to the players’ development 
+it is therefore easier to plan the practices in shorter periods. 
+Also games and tournaments can be adjusted to the practice 
+plan. By weekly planning, the amount of hours spent on dif­
+ferent skills, is followed. This can also be used after the season 
+to evaluate the progression and to help to plan the next season.
+Emphasis
+Mon
+Tue
+Wed
+Thu
+Fri
+Sat
+Sun
+Total 
+min.
+Warm-up
+30
+0
+30
+30
+0
+0
+0
+90
+Technical
+10
+0
+10
+5
+0
+0
+0
+25
+Physical
+15
+0
+0
+5
+0
+60
+0
+80
+Ind Tactics
+15
+0
+20
+20
+0
+0
+0
+55
+Team tactics
+20
+0
+30
+15
+0
+0
+0
+65
+Spec. Sit.
+10
+0
+0
+0
+0
+0
+0
+10
+5 vs 5
+15
+0
+25
+15
+0
+0
+0
+55
+Cool-down
+5
+0
+5
+5
+0
+0
+0
+15
+Total min.
+120
+0
+120
+95
+0
+60
+0
+395
+The main objective of the practices 
+is to make the drills as game like as 
+possible and instead of teaching the 
+players a certain type of behaviour, to 
+provide them options and teach them 
+to choose from these options accor-
+ding to the situation. This will develop 
+the players’ game sense and the ability 
+to read the game, which will then give 
+them a good foundation when starting 
+to internalize the team play system.
+The practice
+Always plan the individual practice session before­
+hand. An organised coach is the most effective coa­
+ch. Planning the practice beforehand, writing the con­
+tent including a time plan on a paper and perhaps going 
+through the exercises with the team before the practi­
+ce, saves time and makes the practice more efficient. 
+Techniques should be trained in the beginning of a 
+practice session because the learning is the most effecti­
+ve when the players have rested. Technique training can 
+be included in the warm-up of players and the goalkee­
+pers; it can be executed either standing still or included 
+
+
+======================================================================
+PAGE 7
+======================================================================
+
+►7
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+in game like drills. Individual tactical skills can be com­
+bined with physical training as two against two using the 
+whole field. Before the game session, the main points of the 
+team tactics should be discussed and pointed out to refresh 
+the players’ memories. It is up to the coach how to divi­
+de the practice nevertheless these guide lines are preferable: 
+(example of a two hours practice session including 30 mi­
+nutes warm up and one and a half hours indoor practice)
+What
+How
+Where
+Time 
+(min)
+Warm-up
+Jogging
+Outside
+0-30
+ 
+Coordination runs
+ 
+ 
+Ind technique
+Passing in pairs
+Rink
+31-40
+Ind technique
+Shooting
+Rink
+41-55
+Ind tactics
+1-1, 2-2
+Rink
+56-70
+Team tactics
+5 against 0
+Rink
+71-85
+Game
+5 against 5
+Rink
+86-110
+Cool down
+Light jogging
+Rink/
+111-120
+ 
+Stretching
+outside
+ 
+ 
+ 
+ 
+Tot. 120
+Running the session
+Make sure that the players are on time. Punctuality and 
+organisation will transfer to the game. Any warm-up can 
+also be done outside (depending on the weather and fa­
+cilities) to make the practice time as efficient as possible.
+See that all the players are present and paying attention before 
+starting the instructions. When giving further instructions, gat­
+her the players together to gain everybody’s full attention. The 
+best way to explain a drill is to demonstrate. It is appreciated if 
+the coach can show it him/herself, but also players can be used. 
+During a practice the players should be provided with 
+regular breaks to catch their breath and re-hydrate. During 
+the breaks it is good to go through the main points of the 
+drills and this way to make sure that the players have under­
+stood the objective. 
+These breaks will also help the recovery for the next training 
+session, which depending again on the level, might even be 
+the next day. 
+Equipment that should be provided in the practices:
+cones
+vests/bibs
+balls
+whistle
+tactic board and pen
+a timer
+The coach should always be prepared to change the plan 
+according to unpredicted circumstances, such as:
+less players than expected
+facilities not in use
+crucial equipment missing (balls, sticks etc.)
+•
+•
+•
+•
+•
+•
+•
+•
+•
+The better prepared the coach is, the more trust he/she 
+gains from the players.
+Giving feedback
+While giving any kind of feedback concerning the whole 
+team, the execution should be stopped, and the players gat­
+hered in one place. When giving individual feedback it is 
+good to include the negative or corrective comments in the 
+middle of positive feedback, such as “Your pass is good but try 
+to have a bit softer hands in receiving. The accuracy of the pass 
+is excellent!”
+Players are usually motivated by positive feedback. They should 
+be praised after a good performance, although some players are 
+motivated by corrective or even negative feedback. This usual­
+ly concerns players who are high achievers and are well aware 
+of their level and potential, they know when they are perfor­
+ming badly, and expect the coach to correct them to improve.
+Motivational points
+The more variety there is in the practices, the more motiva­
+ted the players become. Players look forward to come to the 
+practices if they don’t quite know what to expect but if they 
+know that they can trust the coach to have a rational plan.
+In the beginning it is reasonable to have exercises that 
+have lot of repetitions to make the performance systema­
+tic. The amount of repetitions should be as high as pos­
+sible. It plays a big role in the beginning stages of the players 
+learning process. There after all sorts of variab­
+les should be added to maintain player’s interest level. 
+Also unpleasant, but essential exercises become motivating 
+if the players know the objective. The more game like the 
+exercise is, the easier it is to rationalize it to the players. 
+
+
+======================================================================
+PAGE 8
+======================================================================
+
+8◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Here are some tools to keep up the motivation of the players. 
+These tools are a part of Decision Making Training which 
+is created to improve long term performance of the ath­
+lete and to improve the overall sport training experien­
+ce. In order to achieve the specific decision making skills, 
+the mental workload of the athletes is increased gradually.
+Variable practice: instead of practicing one 
+specific shot to perfection, variations of each shot 
+should be practiced. Variable training should also 
+occur in realistic environment, as in appropriate gi­
+ven to the age of the athlete, the type of competition 
+and time of season.
+Random practice: combining different skills 
+within game like drills that stimulate competition.
+Withdrawn feedback: feedback is gradually 
+reduced or faded requiring the athlete to function 
+more independent of external guidance. Feedback is 
+only given when the players performance falls outsi­
+de coaches own knowledge. This requires the players 
+to solve problems on their own.
+Questioning: asking questions from the players 
+to make sure that they have understood. Questio­
+ning becomes extremely important with reduced 
+feedback. It also demands a high level of knowledge 
+from the coach. Instead of giving direct instructions, 
+asking the players what they would do in certain 
+situations, makes them use the cognitive skills.
+Video feedback: showing the players videos of 
+their own performance in order to detect what is 
+done well and what needs to be improved. In the be­
+ginning video feedback should be led by the coach, 
+who identifies critical cues and makes suggestions 
+for improvement, but very soon, the players should 
+be responsible of filming and analyzing by themsel­
+ves. This tool is of course dependent on the availabi­
+lity of the equipment.
+Hard-first instructions: complex technical and 
+tactical information should be presented early in the 
+season rather than later. The use of tactical instruc­
+tions differs between beginners and more experien­
+ced players because of the level of both physical and 
+cognitive skills.
+Modelling: the players should be shown perfor­
+mances of an expert or another player, in order to 
+learn what is required to perform better. Not only 
+optimal performance should be shown, but also 
+team mates and other peers to detect mistakes and 
+to analyze and correct them.
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+Equipment
+The coach should always see through that the players are 
+wearing the right equipment. Safety should always become 
+first, especially with children. Rules and right kind of at­
+titude towards sports, and life itself, should be introdu­
+ced to the players already from the beginning. This might 
+as well be started with a safety code inside the team. Sa­
+fety code also includes learning the rules of the game.
+Shoes
+The shoes should be made for indoor use only. If the player 
+does not have the right kind of shoes, it is still better to have 
+some shoes. Without shoes it is hard to make turns and quick 
+stops. The players might also get injured because of acciden­
+tal hitting on feet. If outdoor shoes are used, be sure that 
+the players wipe their shoes before stepping in to the rink.
+Stick
+The stick length is an important factor. The stick should reach 
+player’s bellybutton. The right stick length helps the player 
+when shooting and protecting the ball. It also makes the 
+posture more game like when the player has to bend knees 
+to keep the centre of gravity low. With more experienced 
+players the longer stick might increase the reach with the stick 
+and make the ball protection with the stick more advanced. 
+Also the curve of the blade should be accordance to rules. 
+The highest point of the blade, when placed on a flat surfa­
+
+
+======================================================================
+PAGE 9
+======================================================================
+
+►9
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+ce, shouldn’t exceed 3 centimetres. Most of the sticks have 
+some incline when purchased but an extra curve might be 
+added with the help of a heating gun, boiling water or a sto­
+ve. One has to pay close attention to the safety issues when 
+fixing a blade and this should be only done under surveil­
+lance of an adult. The angle of the incline and the curve is 
+one’s individual preference. A straight blade is good for pas­
+sing but not as good for protecting the ball. Some curve in 
+the head of the blade gives more security to the ball control 
+and some incline in the bottom of the blade provides a good 
+angle when shooting. A high incline also means high shots.
+Eye wear
+Nowadays the use of protective eye wear is recommended 
+especially in the junior level as facial injuries are common in 
+Floorball. Accidental high sticking or balls hitting the eyes are 
+easily prevented with the use of protective glasses. They are not 
+yet compulsory but should be recommended by the coach.
+
+
+======================================================================
+PAGE 10
+======================================================================
+
+10◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Terms and figures used
+Moving without ball
+Passing
+Moving with ball
+Shooting
+Offensive player with
+a.ball
+Offensive player
+Without a.ball
+Opponent without
+a.ball
+Cone
+
+
+======================================================================
+PAGE 11
+======================================================================
+
+►11
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Dice 5
+An defensive formation figure where players 
+are positioned as in dice number five
+Zone power play (area power play)
+When the team is creating a power play situati-
+on in some part of the court
+For example:
+Offensively 2 against 1 situation in the 	
+	
+slot in order to score
+Defensively 1 against 2 situation in defensi-
+ve corner in order to steal the ball from the 
+opponent
+Strong side
+The side of the court where the ball is 
+Also known as the side where the pressure is
+Weak Side
+The opposite side of the strong side
+Usually the side of the court with space and 
+without the ball
+Libero play
+When the team is using a low triangle in the 
+openings
+Libero is the lowest player 
+Low triangle/Back triangle
+When the team is opening up the game with a 
+libero player
+-The other defender and a forward are creating 
+passing lanes with the libero in the formation 
+of a triangle
+Fore checking
+The defensive tactics in the offensive zone
+When the defensive team is trying to cont-
+rol the offensive team in order to make their 
+openings more difficult
+Top fore checker
+The highest fore checker usually in formation 
+1-2-2
+Top fore checker is usually directing the ball 
+carrier into certain area of the court (by the 
+boards) and trying to block the possible pas-
+sing lanes
+•
+•
+•
+1.
+2.
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Tactical terms used
+ 
+Transition/turn over (counter attacks)
+Quick change of direction from defence to 
+offence
+Usually creates a power play situation for the 
+offensive team
+Doubling
+A power play situation (1 against 2) created by 
+the defensive team in order to steal the ball
+Usually happens by the boards and in the 
+corners
+Levelling/to level
+When the players are using different levels of 
+depth on the court when positioning
+Should be used in all areas of the court in or-
+der to create passing lanes when attacking and 
+covering space when defending
+•
+•
+•
+•
+•
+•
+•
+
+
+======================================================================
+PAGE 12
+======================================================================
+
+12◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Individual technique
+ 
+In Floorball, the individual abili-
+ties to perform a certain technical 
+action, determines the success of 
+the cooperation of the whole unit. 
+That is why the individual technical 
+skills should be mastered before all.
+Passing and receiving
+
+Level 1. 	
+The most important thing to emphasise for the beginners in 
+passing is that the objective of each pass is for the receiver to 
+gain instant possession of the ball. Therefore each pass should 
+be accurate and the hardness should be suited to the situation.
+Technically the important things in passing and re-
+ceiving are the posture and the grip. 
+The posture should be game like (picture 1):
+legs shoulder width apart with one foot slightly 
+forward 
+centre of gravity low with bent knees and 
+straight back
+head up 
+blade on the floor 
+•
+•
+•
+•
+Picture 1
+A steady two handed grip:
+upper hand covering the whole upper end, the 
+lower hand at least 20 cm from the upper hand 
+(picture 2)
+The posture and grip change slightly according to different 
+techniques but one thing that remains is the cushion and 
+softness when handling the ball. The distance between 
+players is an important factor while defining the speed 
+and hardness of the pass. All other objects, such as the 
+opponent, sticks and boards should also be noticed while 
+determining the right passing technique.
+•
+picture 2
+
+
+======================================================================
+PAGE 13
+======================================================================
+
+►13
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Passing position
+side-on position 
+feet alongside each other slightly apart with 
+knees bent
+head up
+ball close to the blade (picture 3)
+•
+•
+•
+•
+picture 3
+Pass
+Grip
+Execution
+When
+Forehand 
+pass
+-with follow 
+through
+Steady two handed 
+grip with the lower 
+hand close to the 
+lower edge of the grip
+The pass starts with the ball behind the body. 
+The blade is drawn from behind towards 
+the target with increasing speed. The ball is 
+released from the blade before it has passed 
+the front foot. The blade should always point in 
+the direction of the pass afterwards. The blade 
+should be pressed on the floor to avoid bounc­
+es. A very forceful pass with enough rotation in 
+the upper body, and with right amount of drag 
+from behind the body, the more accurate the 
+pass is.
+Used for example after faking a 
+shot or after the player has drib­
+bled the ball using body protec­
+tion.
+Forehand 
+pass
+-short
+Same as previ­
+ous
+The touch of the ball is very short. The ball is 
+released from the blade without follow through 
+on the level of the front foot. If the ball is hit too 
+much in front, or the angle of the blade is too 
+big, the ball will go up in the air.
+The pass is fast and accurate, 
+and can be executed from almost 
+any position and in small and 
+tight situations.
+Backhand 
+pass
+-long
+The grip is 
+two handed, 
+but hands are 
+closer together 
+than in forehand 
+pass.
+When receiving a pass with a backhand, cush­
+ion as in forehand pass. Also passing with a 
+long back drive with the blade touching the ball 
+all the time. Rotation in the upper body should 
+be followed through.
+Backhand pass is used when 
+passing from forehand side is 
+obstructed by the opponent. 
+Backhand 
+pass
+-short
+Same as previ­
+ous, but also 
+one handed grip 
+possible.
+The blade shouldn’t touch the floor but only the 
+ball. The speed of the blade is controlled by a 
+short backswing.
+Very good to utilise in fakes while 
+passing to yourself.
+Aerial
+The grip as in 
+previous tech­
+niques.
+All the previous passes can be executed in the 
+air. In aerial passes the touch with the ball is 
+crucial and the height of the pass is determined 
+by the angle of the blade.
+The ball is passed slightly in front of the front 
+foot. The speed of the hit is determined by the 
+backswing. The blade slides along the surface 
+in a straight line towards the ball. The blade is 
+angled back the moment it strikes the ball.
+An aerial pass with follow-through 
+is appropriate when a player 
+needs to clear the pressure from 
+the defensive zone or more 
+controlled pass when the oppo­
+nent has covered the space with 
+a stick and the pass needs to be 
+lifted up in the air, for example 2 
+versus 1 situations.
+One hand 
+pass
+-backhand
+-forehand
+Grip with only 
+upper hand 
+used.
+A short backswing used before hitting the ball 
+with either back- or forehand side depending 
+on the situation. The blade should not be lifted 
+higher than knee level. 
+Hitting/directing a loose ball into 
+the right direction or out of op­
+ponent’s reach or after dribbling 
+with one hand used. Gives a bet­
+ter reach to the player and saves 
+time when the player does not 
+have time to take control of the 
+ball. Used by more experienced 
+players.
+
+
+======================================================================
+PAGE 14
+======================================================================
+
+14◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Receiving a pass
+cushion is the most important thing while recei­
+ving a pass
+both stick and body can be used to receive or 
+control a pass, both these methods must be 
+trained frequently especially during level 1
+the ball should be received with the blade 
+(waiting for the ball close to the front foot) and 
+then moving the blade backwards when making 
+contact with the ball (soft hands) – this will stop 
+the ball from hitting the blade and bouncing 
+away from the blade again therefore giving the 
+player immediate control 
+the ball should be received in front of the body
+receiving aerial passes demands good ball hand­
+ling skills 
+also the body can be used to capture an aerial 
+pass (chest, thighs, feet)
+receiving the ball correctly might open gaps in 
+defence and create scoring chances
+•
+•
+•
+•
+•
+•
+•
+Drill 1.
+Objective:
+to practice passing 
+and receiving 
+Organisation:
+players divided 
+in pairs passing 
+to each other in 
+varied distances
+Execution:
+using all passing 
+techniques in ran­
+dom order
+receiving the pass 
+using only stick or 
+body, or both
+
+Modifications:
+can also be exe­
+cuted individually 
+using the boards, in 
+aerial passes using 
+a wall
+•
+•
+•
+•
+•
+Key points:
+head up
+game like position; 
+on toes, knees 
+slightly bent
+correct grip accor­
+ding to the passing 
+technique
+player should al­
+ways move towards 
+the ball while 
+receiving a pass
+the stick should be 
+between the body 
+and the ball while 
+receiving an aerial 
+pass (if the stick is 
+on the side of the 
+body, it demands 
+more ball handling 
+skills to capture 
+the ball, therefore 
+it is easier to loose 
+the possession of 
+the ball) 
+•
+•
+•
+•
+•
+Drill 2. 
+Objective:
+to practice passing 
+and receiving aerial 
+passes
+also good exercise 
+for eye-stick coor­
+dination
+Organisation:
+players are divided 
+in pairs with one 
+ball 
+Execution:
+pairs are passing 
+the ball to each 
+other in air
+emphasis on the 
+taking control of 
+the ball as quickly 
+as possible when 
+receiving an aerial 
+pass
+•
+•
+•
+•
+•
+Modifications:
+either one bounce 
+on the floor allo­
+wed or no bounces
+Key points:
+right distance 
+(depending on the 
+bounces)
+eyes on the ball
+remaining relaxed 
+in both hands and 
+knees will help the 
+player to control 
+the aerial pass 
+quicker
+•
+•
+•
+•
+Drill 3.
+Objective:
+to practice passing 
+and receiving (whi­
+le moving)
+Organisation:
+players are divided 
+in pairs with one 
+ball
+Execution: 
+dribbling from 
+the forehand to 
+backhand side 
+after receiving a 
+pass, taking few 
+steps forward, then 
+passing and taking 
+a few steps back 
+after making the 
+pass
+•
+•
+•
+Modifications:
+also a rotation can 
+be added after 
+receiving a pass 
+before passing 
+back
+Key points:
+players should stay 
+in constant move­
+ment using quick 
+hands
+soft hands
+head up
+•
+•
+•
+•
+
+
+======================================================================
+PAGE 15
+======================================================================
+
+►15
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 4. 
+Objective:
+to practice passing 
+and receiving (while 
+moving)
+to practice rea­
+diness to pass and 
+to receive a pass
+to practice ball 
+handling skills
+Organisation:
+players are divided 
+into groups of three
+two players standing 
+with 10-15 meters 
+distance between 
+them 
+third player in the 
+middle with a ball
+Execution:
+the player in the 
+middle runs back 
+and forth with the 
+ball passing a one-
+timer to the other 
+two at each turn
+45-60 second shifts
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+drill can also be 
+executed so that 
+the two players 
+have one ball each 
+and the third player 
+runs without a ball 
+passing a one-timer 
+at each turn
+the emphasis is on 
+practicing the rea­
+diness to pass and 
+receive
+Key points:
+head up
+soft hands
+game like position 
+with all players
+timing and rea­
+diness to pass and 
+receive
+blade on the floor
+•
+•
+•
+•
+•
+•
+•
+Example 1.
+Example 2.
+
+
+======================================================================
+PAGE 16
+======================================================================
+
+16◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Level 2.
+When the players have learnt the passing techniques or one 
+technique at a time if wished to proceed that way, the coach 
+can add more difficult exercises to the practice. The game 
+likeness should be brought into exercises, and the reason 
+why passing and receiving are important skills to mana­
+ge, and in which types of situations these skills are crucial. 
+Moving the ball in the game happens at speed and therefore 
+should be trained in more complicated exercises where situ­
+ations follow each other. For younger players it is essential 
+to know that each ball should be passed so that the recei­
+ver is capable of gaining the possession of the ball instantly.
+Next thing to emphasise is passing while moving and ti­
+ming. The coach should always encourage the players to:
+pass in motion
+always continue motion after a pass
+receive a pass in motion by moving towards the 
+pass or sideways – do not wait for the ball to 
+come to you
+as a ball carrier to keep head up to locate other 
+players
+as a non-ball carrier to create passing lanes by 
+moving
+readiness to pass and receive
+as a non-ball carrier to show the ball-carrier 
+where to pass, by pointing out with a stick or by 
+using other signals
+shoot straight from a pass if there is a possibility
+•
+•
+•
+•
+•
+•
+•
+•
+Drill 5. 
+Objective:
+to practice passing 
+and receiving while 
+moving
+Organisation:
+players are divided 
+in groups of 5-7 
+players
+these units are 
+divided in half, the 
+other half standing 
+on a line opposite 
+the others with the 
+ball
+5-8 meters distan­
+ce (can be varied)
+one ball each 
+group
+Execution:
+the player with the 
+ball (nr 1) pas­
+ses to the player 
+across (nr 2) and 
+continues moving 
+towards the pass
+player nr 2 passes 
+the ball to player 
+nr 3 and moves 
+towards the pass 
+and so on
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+all different passes 
+can be included; 
+fore hand passes, 
+backhand passes, 
+short aerial passes 
+(more difficult to 
+take control of)
+Key Points:
+head up
+continuous move­
+ment towards the 
+pass
+all players are to 
+move in the direc­
+tion of their pass, 
+moving to the end 
+of the group
+readiness to pass 
+and receive a pass
+blade on the floor
+controlled passes
+not a race 
+•
+•
+•
+•
+•
+•
+•
+•
+
+
+======================================================================
+PAGE 17
+======================================================================
+
+►17
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 6.
+Objective:
+to practice passing 
+and receiving in 
+movement
+to practice moving 
+after a pass
+Organisation:
+players are divided 
+into groups of six in 
+five positions (as in 
+the picture), one ball 
+each group
+all players stand in 
+a circle in game like 
+posture
+two players in one 
+position in the start, 
+the first one with the 
+ball
+Execution:
+the player with the 
+ball starts passing 
+the ball in certain 
+order
+after a pass the 
+player has to follow 
+the pass, that is to 
+keep in constant 
+motion
+players have to be 
+sure about their ball 
+handling skills to 
+keep the head up 
+and still maintain the 
+control of the ball
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+can also be exe­
+cuted with passing 
+in random order
+calling can also be 
+added so that the 
+player with the ball 
+has to shout the 
+name of the players 
+he/she is about to 
+pass to
+groups can add up 
+to seven players
+Key points:
+keeping the head up
+game like position
+blade on the floor
+be ready to receive 
+a pass by turning 
+early enough
+players are not 
+allowed to pass to 
+players next to them
+emphasise commu­
+nication/use of voice 
+as an important tool 
+on the court
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Drill 7.
+Objective:
+to practice passing 
+and receiving while 
+moving
+to practice moving 
+according to the ball 
+carrier
+to practice choosing 
+the right passing 
+technique according 
+to the situation 
+remind the players 
+that there should al­
+ways be three passing 
+options
+Organisation:
+the players are 
+divided into groups 
+of five in a small area 
+(5x5 m)
+the area can be mar­
+ked with cones
+one ball each group
+Execution:
+four of the players 
+are passing the ball 
+to each other keeping 
+in constant motion
+one player in the 
+middle is trying to 
+steal the ball by cut­
+ting the passing lanes
+if the player in the 
+middle touches the 
+ball, he/she will 
+switch places with 
+the player who made 
+the failed pass
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+players are supposed 
+to stay in motion pro­
+viding passing lanes 
+to the player with 
+the ball
+Modifications:
+players can also 
+stand still when only 
+one-time passes are 
+allowed, but then 
+the emphasis is more 
+on moving the ball 
+instead of players
+the player with the 
+ball is not allowed to 
+move
+only aerial passes 
+allowed
+Key points:
+keep in motion
+readiness to pass and 
+receive a pass
+blade on the floor
+players should stay 
+inside the area to 
+keep up the level of 
+difficulty
+player in the middle 
+should be motiva­
+ted to keep up and 
+try to steal the ball 
+even though it seems 
+difficult
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+
+======================================================================
+PAGE 18
+======================================================================
+
+18◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 8.
+Objective:
+to practice passing 
+and receiving while 
+moving and gaining 
+a scoring chance
+to learn how to 
+avoid less effective 
+scoring sectors and 
+to advance straight 
+to the net
+to shoot from even 
+from bad positions
+Organisation:
+the coach should 
+show where the 
+less effective sco­
+ring sectors are (on 
+the sides and in the 
+corners) by placing 
+cones on the spots
+players line up in 
+two corners with 
+the balls
+coach/trainee 
+situated near the 
+opposite goal 
+ready to receive 
+a pass from the 
+first player (after 
+this his/her duty is 
+done)
+Execution:
+A1 starts running 
+without a ball 
+slightly towards the 
+centre
+A2 passes a ball to 
+A1, who receives 
+the pass in moti­
+on and continues 
+towards the middle 
+zone
+after crossing the 
+middle line, A1 
+looks up and passes 
+the ball to the 
+coach/trainee, who 
+passes a one timer 
+back and A1 shoots
+A1 moves on to the 
+other side of the 
+net to be ready to 
+give a one timer to 
+the next player 
+after the first pass, 
+A2 starts by exe­
+cuting the same as 
+A1, receiving a pass 
+from A3 and then 
+receiving the one 
+timer from A2
+after the execution 
+the players will 
+switch lines
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+the drill can be 
+made more difficult 
+by adding a defen­
+der in the play (nr 
+1 becomes a defen­
+der after giving a 
+pass to nr 2)
+both the passer 
+and the receiver 
+has to be even 
+more accurate with 
+the passes and 
+the movement is 
+emphasised
+also a variation 
+with 2-0, the pas­
+ser can also shoot, 
+can be used
+this will teach the 
+players to use their 
+creativity in finis­
+hing attacks
+more options for 
+the ball-carrier 
+creating game like 
+situations
+also movement 
+emphasised
+also 2-1 with de­
+fender
+Key points:
+running slightly 
+towards the first 
+pass, not along the 
+board
+head up
+quick shot straight 
+from the pass, no 
+matter in which 
+position the player 
+is or where the ball 
+is passed to
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+C
+A1
+A2
+A1
+1
+2
+1
+2.A3
+Moving without ball
+Passing
+Moving with ball
+Shooting
+Offensive player with
+a ball
+Offensive player
+Without a ball
+Opponent without
+a ball
+Cone
+
+
+======================================================================
+PAGE 19
+======================================================================
+
+►19
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 9.
+Objective:
+to practice passing 
+and receiving 
+in motion while 
+gaining a scoring 
+chance
+to learn how to 
+avoid less effective 
+scoring sectors and 
+to advance straight 
+to the net
+Organisation:
+players form two li­
+nes in the opposite 
+corners with balls
+one player is situ­
+ated by the board 
+at the middle line 
+and one player in 
+front of the net in 
+respective ends of 
+the rink
+Execution:
+A1 starts by passing 
+a hard and a long 
+pass to B2
+B2 comes towards 
+the pass, takes 
+control of the ball, 
+makes a quick turn 
+and passes the ball 
+to the player on 
+his/her own end of 
+the rink, B3, who 
+shoots
+on the other side, 
+B1 passes the ball 
+to A2, and A2 conti­
+nues passing to A3, 
+who shoots
+after the executi­
+on, A1 becomes A2, 
+A2 becomes A3  and 
+A3 becomes A1
+same rotation in 
+the other end (B1 
+becomes B2, B2 
+becomes B3 and B3 
+becomes B1)
+after a while the 
+drill should be exe­
+cuted as a mirror
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+the drill could 
+also be executed 
+so that A1 passes 
+to A2 
+and A2 to A3 but 
+executed as exp­
+lained the situation 
+can be seen as an 
+opening which ma­
+kes it more game 
+like
+Key points:
+A1 and B1 should 
+start the drill 
+simultaneously
+the players should 
+be encouraged to 
+receive the first 
+pass with backhand 
+(depending whet­
+her the player is a 
+left/right)
+the passes should 
+be accurate and 
+hard
+A2 should go 
+towards the first 
+pass, all the way 
+across the middle 
+line
+A2 should keep in 
+constant motion 
+and head up to see 
+where A3 is
+A1 should pass in 
+motion and con­
+tinue movement 
+immediately after 
+the pass towards 
+the middle line for 
+the next execution
+•
+•
+•
+•
+•
+•
+•
+•
+•
+A1
+B1
+B3
+A2
+A3
+B2
+
+
+======================================================================
+PAGE 20
+======================================================================
+
+20◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Level 3.
+When the team has the ability to pass and receive one timers, 
+shoot straight from the pass, pass and receive while moving, that 
+is when at least most of the players excel these individual skills 
+without difficulties, the coach can proceed to the next level. 
+On the third level the team is ready to transfer the indivi­
+dual skills to be used in a team play system. It should be 
+made clear from the beginning that passing and receiving 
+is a part of a bigger system, and that no team game can be 
+played without working units. This fact can not be empha­
+sised enough. To teach the players to play as a unit demands 
+skills in passing and receiving, and now it is time to take 
+these learned skills into team play. First drills are a bit comp­
+lex modifications of the drills from level 2. The last drills 
+are passing and receiving drills for practising the chosen sys­
+tems in openings and finishing attacks and can be modified.
+Drill 10.
+Objective:
+to practice passing 
+and receiving while 
+moving
+Organisation:
+players divided into 
+groups of five
+three cones forming 
+a triangle (5m x 5m 
+x 5m)
+three players 
+around the triangle 
+and two players 
+inside the triangle
+the players around 
+the triangle has the 
+possession of the 
+ball
+Execution:
+players around the 
+triangle are trying 
+to pass the ball to 
+each other using flat 
+and aerial passes 
+players inside the 
+triangle are trying 
+to block the passing 
+lanes
+whenever players 
+outside succeed in 
+crossing the both 
+lines they score a 
+point
+•
+•
+•
+•
+•
+•
+•
+•
+if a player inside 
+succeeds in blocking 
+the pass, the player 
+will switch places 
+with the player who 
+missed the pass and 
+the score will start 
+over again
+players around the 
+triangle are allowed 
+to move but there 
+should always be 
+two passing direc­
+tions so they can 
+not stand behind 
+the same side of the 
+triangle
+Modifications:
+can also be exe­
+cuted by using a 
+square with four 
+players outside and 
+three players inside
+only two touches on 
+the ball; one to re­
+ceive the pass and 
+the second to pass
+Key Points:
+it should be pointed 
+out that there 
+should always be 
+two passing direc­
+tions
+head up
+the players outside 
+the triangle are not 
+allowed to cross the 
+lines
+•
+•
+•
+•
+•
+•
+•
+A1
+
+
+======================================================================
+PAGE 21
+======================================================================
+
+►21
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 11.
+Objective:
+to practice passing 
+and receiving in 
+motion
+to teach awareness 
+of all the players 
+on the field
+Organisation:
+the players are 
+divided into teams 
+of three persons 
+the court is divided 
+into three sections
+if goals are used, 
+however not neces­
+sary, they can be 
+marked with cones
+it is preferable if 
+the teams have 
+different coloured 
+vests 
+Execution:
+3 vs 3 game
+the player with the 
+ball is not allowed 
+to move, which 
+will activate the 
+players without 
+the ball, who have 
+to create passing 
+lanes by moving to 
+an open space
+a team is supposed 
+to keep the pos­
+session of the ball 
+as long as possible 
+and the passes are 
+counted
+the team with 
+more passes after 
+60 to 90 seconds is 
+the winner
+the player with the 
+ball has to make 
+a pass in three 
+seconds after re­
+ceiving the ball
+if the opponent 
+gains the possessi­
+on of the ball, the 
+roles will automati­
+cally switch
+the teams can rota­
+te after one switch 
+so that the winning 
+team stays on the 
+court and the loser 
+moves on to the 
+next court
+the winner of the 
+whole tournament 
+is therefore the 
+team that has 
+stayed on the same 
+court the longest 
+period of time
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+different rules can 
+be added
+players are only 
+allowed to pass 
+forward
+emphasises the 
+fact that there is 
+actually only one 
+passing opportuni­
+ty because there 
+should always be 
+one player behind 
+the ball carrier, si­
+milar to a defender 
+during a game and 
+this player cannot 
+be passed to
+the levelling of the 
+offensive team is 
+crucial
+emphasis on at­
+tacking
+only one time pas­
+ses allowed
+emphasises the 
+quick reaction and 
+fast speed
+only for very 
+advanced players 
+with good passing 
+skills
+Key points:
+readiness to pass 
+and receive a pass
+head up
+non-ball carriers 
+have to move to 
+create passing 
+lanes and not 
+stay behind the 
+opponent (passing 
+shade)
+rules should be 
+strictly followed 
+and equal
+•
+1.
+•
+•
+•
+2.
+•
+•
+•
+•
+•
+•
+
+
+======================================================================
+PAGE 22
+======================================================================
+
+22◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 12.
+Objective:
+to practice passing 
+and receiving in 
+game like situa­
+tions; openings
+to take the indi­
+vidual techniques 
+into game perfor­
+mance
+to practice the 
+movement in the 
+chosen opening
+Organisation:
+the players can 
+be divided either 
+by their playing 
+positions (defen­
+ders, wings, centre 
+forwards) or can be 
+switched so that 
+every player has to 
+play each position 
+(preferable for the 
+beginners)
+the coach gives 
+the players the 
+positions where to 
+start depending on 
+the way the team 
+wants to open up 
+the play
+Execution:
+example:
+two defenders (A1 
+and A2) on the 
+corner face-off dot 
+giving a hit-in
+winger (A4) on the 
+same side by the 
+board, the centre 
+forward (A3) in the 
+centre few meters 
+from the goal area 
+and the top-st­
+riker (A5) either 
+in front of the 
+opponents goal or 
+by the board on the 
+same side with the 
+pressure (strong 
+side)
+A1 passes the ball 
+to A2 who has two 
+options: 
+1)	
+to pass the 
+ball to A4, who gi­
+ves a one timer to 
+A3, who continues 
+to A5 who shoots
+2)	
+move be­
+hind the goal and 
+pass to A3, who 
+has now moved 
+to the strong side 
+of the court, who 
+gives a one timer 
+to A4, while mo­
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+ving towards the 
+offensive zone, A3 
+passes to A5 who 
+can either pass to 
+A4 or back to A3 
+variations for the 
+movement of the 
+forwards after 
+crossing the middle 
+line are endless 
+the defenders 
+should also move to 
+support the attack
+the attack should 
+always end up with 
+a shot
+one performance 
+should not contain 
+more than 5-6 
+passes
+after one perfor­
+mance the players 
+switch positions 
+(either A1 to A2, A2 
+to A3 etc, or the 
+whole line-up)
+Modifications:
+ways to start can 
+be varied 
+for example A1 and 
+A2 passing with 
+each other in front 
+of the goal
+if the team is 
+practicing libero 
+play, the game is 
+opened by using a 
+low triangle (A1, A2 
+and A4)
+in the beginning 
+this should be exe­
+cuted without an 
+opponent but then 
+adding the defensi­
+ve team makes the 
+play more game 
+like and difficult
+if there are less 
+players the drill 
+can be executed in 
+only one end
+after opening the 
+play, the forwards 
+(A3, A4, A5)  have 
+to go around a 
+cone (or the oppo­
+site goal), re-group 
+and attack against 
+A1 and A2
+   Key Points:
+the main emphasis 
+is on the passes 
+and timing
+passing and recei­
+ving while moving
+head up
+readiness to pass 
+and receive a pass
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+A2
+A3
+A4
+A5
+Option.1
+A2
+A1
+A3
+A4
+A5
+Option.2.
+Modification
+A1
+A2
+A3
+A5
+A4
+
+
+======================================================================
+PAGE 23
+======================================================================
+
+►23
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 13.
+Objective:
+to practice passing 
+and receiving while 
+moving: finishing 
+attacks
+to transfer individual 
+skills into game per­
+formance
+to practice moving 
+in the offensive zone 
+and scoring
+Organisation:
+players are divided as 
+in drill 12
+a defensive team can 
+be added without 
+sticks or by playing 
+with sticks upside 
+down 
+a defensive team can 
+also be simulated by 
+cones in the beginning 
+(as figure dice 5) to 
+emphasise the passing 
+with the attacking 
+team 
+in the beginning, 
+and especially with 
+young players, the 
+passing lanes can be 
+practiced so that the 
+players are only pas­
+sing the ball without 
+movement(figure 1)
+the coach should also 
+make clear before 
+starting where the 
+defensive team is si­
+tuated, and bring out 
+the best options for 
+the attacking teams 
+players’ where to be 
+open for a pass and 
+where are the best 
+places to score by 
+using the tactic board 
+(opponent covering 
+the best scoring sec­
+tor as figure shows)
+Execution:
+A1 and A2 are giving a 
+free-hit by the middle 
+line (figure 2)
+A3 is situated near 
+the rink, A4 in the 
+middle and A5 on the 
+offensive corner on 
+the strong side of the 
+rink
+the forwards can 
+also switch places, in 
+floorball the positions 
+are not designated, 
+especially in the 
+offensive play and the 
+players are encoura­
+ged to be creative in 
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+attacking situations
+the ball is passed 
+around with the 
+players first still 
+standing
+The movement:
+if A1 and A2 are pas­
+sing to each other (fi­
+gure 2) the forwards 
+should move to open 
+spaces (depending on 
+the placed cones, or 
+the opponent) ready 
+to receive a pass
+if in libero play 
+(figure 3) the ball is 
+played to the left side 
+to winger A3, A5 mo­
+ves to the corner on 
+the left side and A4 
+moves closer to the 
+centre (either behind 
+or in front of the goal 
+depending on the 
+opponents moves)
+the attack should end 
+with a shot after 5-6 
+passes
+the same passing 
+figure can be repea­
+ted as many times as 
+necessary until the 
+players have under­
+stood and remembe­
+red the figure, and 
+other variations can 
+be added (also using 
+the creativity of the 
+players themselves)
+after three to four 
+attacks either the 
+positions or the whole 
+line-up should be 
+switched
+Modifications:
+can be modified by 
+changing the number 
+of defensive players 
+(also 5 against 4)
+also the figure of pas­
+sing can be modified 
+depending on the 
+chosen play system 
+(using the centre or 
+the corners)
+Key Points:
+using the open space, 
+avoiding dangerous 
+passes and poor sco­
+ring zones
+readiness to pass and 
+receive
+head up
+players should be en­
+couraged to also use 
+their own creativity 
+the level of the 
+players should be 
+considered
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+A1
+A2
+A3
+A5
+A4
+Starting Position
+Example of.passing lanes
+Example of.the.movement
+A2
+A1
+A4
+A5
+A3
+figure 1
+figure 2
+figure 3
+
+
+======================================================================
+PAGE 24
+======================================================================
+
+24◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 14.
+Objective:
+to practice passing 
+in the offensive zone
+to practice creating 
+space in opening and 
+finishing attacks
+to practice timing of 
+passing and moving
+Organisation:
+A1 behind the goal
+A3 at the middle line 
+near the rink
+A2 in the other cor­
+ner with the rest of 
+the players and balls
+the coach should 
+make the objective 
+of timing the passes 
+and movement clear 
+beforehand
+Execution:
+first part de­
+monstrates an 
+opening in the 
+defensive zone
+A1 starts running 
+towards the corner 
+while receiving a 
+pass from A2
+A1 continues run­
+ning by the board 
+while A3 moves to 
+the centre
+A1 passes a one-
+timer to A3 and 
+continues running 
+towards the middle 
+line 
+- the second part 
+demonstrates an 
+attack in the de­
+fensive zone
+A1 continues fol­
+lowing the middle 
+line, while A2 
+runs by the board 
+towards the line 
+(after the first 
+pass), A2 receives a 
+pass from A1
+A3 waits in the 
+slot, as in game 
+like situation, 
+prepared to receive 
+a pass, but as A1 
+passes to A2, A3 
+moves by the board 
+to receive a pass 
+from A2
+A1 runs towards 
+the slot to receive 
+a pass from A3
+A1 shoots
+A1 becomes A2, A2 
+becomes A3 and A3 
+becomes A1
+•
+•
+•
+•
+•
+•
+•
+•
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+•
+Modifications:
+different variations 
+of running and 
+passing lanes is up 
+to the coach
+Key points:
+the coach should 
+pay special attenti­
+on to the timing of 
+the movement and 
+passing
+A3 empties the slot 
+for A1 to shoot
+movement should 
+be game like
+players should be 
+gathered after the 
+drill to be remin­
+ded about the 
+objectives of the 
+drill
+•
+•
+•
+•
+•
+A2
+A1
+A3
+1
+2
+3
+4
+4
+5
+6
+2
+6
+7
+
+
+======================================================================
+PAGE 25
+======================================================================
+
+►25
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Shooting
+Level 1.
+The shooting techniques are the same as in passing, only 
+more power is used. The grip and the posture should re­
+main the same as in different passing techniques. Shooting 
+should be emphasised early at the start of a player’s career, 
+because the fact is that most of the goals are the product of 
+a shot. Also it should be made clear from the beginning, 
+from where to shoot and what kind of a shot is the most 
+appropriate according to the situation and the position of 
+the player. Even young players should be taught to shoot 
+from different and unfamiliar positions. Also shooting from 
+straight passes, both floor and aerial should be included in 
+each practice. One-timers will make it more difficult for the 
+goalkeeper to react when moving sideways, and the defensi­
+ve team to predict the shot. Shooting straight from the pass 
+demands good passing skills, which should also be mastered.
+Shot
+Grip
+Execution
+When
+Pros
+Cons
+Long wrist 
+shot/drag shot
+Same 
+as in 
+passing 
+forehand
+The opposite sides foot in front, weight is on the back foot. The 
+blade has a long back drive along the surface and the ball is 
+released on the level of the front foot. In the end of the shot, 
+the blade should be pointing towards the goal, and the weight 
+should be transferred totally to the front foot.
+If the shot is shot from protection with rotation of the upper 
+body, it helps the movement if the same side’s foot is in front as 
+the shooting side. 
+When a player
+has time to aim and 
+shoot, usually forwards 
+from the side (especial­
+ly from rotation)
+Accurate
+The back drive 
+takes a long 
+time to execute
+Short wrist 
+shot
+Same as 
+above
+Chest should be towards
+the goal, also the same sides foot in front as the shooting side. 
+The ball is released from the blade close to the foot in front.
+When a player has 
+gained position close to 
+the goal, straight from 
+a pass
+Accurate and fast, 
+can be shot from 
+even bad positions, 
+goalkeeper has less 
+time to react than in 
+other shots
+Player has to be 
+close to the goal
+Forehand 
+drive
+Hands 
+closer 
+each 
+other 
+than in 
+the wrist 
+shot
+The opposite sides foot in front to gain the rotation of the upper 
+body, at the time of the shot the ball should be in front of the 
+body, and slightly to the side. The ball shouldn’t be as close to 
+the body as in wrist shot. The ball is hit with the blade’s heel, so 
+that the ball is lifted up in the air. The backswing might look a 
+bit like in golf. Can also be shot with a shorter back swing when 
+the shot is not as hard but maybe a bit more accurate.   
+When a player has time 
+to take the shot, mostly 
+used by defenders from 
+the middle zone
+Good long distance 
+shot when there are 
+player/s screening 
+the goalkeeper
+The back swing 
+takes time
+Slap shot
+Wider 
+grip 
+similar to 
+wrist shot 
+grip
+The opposite sides foot in front than the shooting side, wide 
+stance, weight on the front foot. The back swing should be quite 
+long but the stick shouldn’t exceed the waist level. Just before 
+hitting the ball the blade should touch the floor and the blade 
+should be pointing towards the goal in the end of the shot. 
+When the player has 
+time to prepare for the 
+shot, also defenders 
+from the middle zone
+Hard and unpre­
+dictable, especially 
+when there is a 
+player screening the 
+goalie
+Takes time to 
+shoot
+Backhand shot Hands 
+close 
+to each 
+other
+The same sides foot in front with same sides shoulder usually 
+facing the goal. Can also be executed with back facing the 
+goal. The blade touches the ball on the level of the front foot, or 
+slightly in front of it.
+When the player does 
+not have the position 
+to shoot from forehand 
+side, or if the oppo­
+nent has blocked the 
+forehand side.
+Unpredictable for 
+the goalkeeper, 
+especially when only 
+one hand is used, 
+can also be shot 
+with back facing the 
+goal.
+Player has to 
+be close to the 
+goal, usually 
+shot from very 
+short distance
+
+
+======================================================================
+PAGE 26
+======================================================================
+
+26◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+It is also good to go through the best scoring sectors in the 
+early stage and always encourage the players to gain to­
+wards those areas and shoot whenever there is a chance.
+1 = The best sector in the slot, close to the net, great oppor­
+tunity to shoot in rebounds and steer in long distance shots 
+2 = The second best sector, bigger area for the goalkeeper to 
+cover, good for sideway passes (one timers) forcing the go­
+alkeeper to move sideways but no chance to reach the ball
+3 = Long distance shots and shots from a small angle might 
+surprise the goalkeeper but are usually saved or blocked
+Drill 15.
+Objective:
+to practice different 
+techniques of shooting
+to learn to keep the 
+head up when shoo­
+ting
+to learn the right grip 
+and posture
+warm up the goalkee­
+per
+Organisation:
+players are standing 
+on a half circle from 
+about eight meters 
+from the goal with 
+one ball each
+players should keep 
+distance to each 
+other and give room 
+for the player next 
+to shoot
+Execution:
+players start one by 
+one from the other 
+end of the line to 
+shoot towards the 
+goal
+different shots used
+first easy shots for 
+the goalkeeper to 
+catch (wrist shot)
+when the goalkeeper 
+is getting warm, 
+more power can be 
+used (slap shot)
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+to get the goal­
+keeper moving 
+sideways, the shoo­
+ters are alternated 
+from side to side 
+to shoot while 
+moving the players 
+can take two steps 
+towards the goal 
+before the shot 
+(otherwise same 
+order)
+to get more repeti­
+tions, or with less 
+players the players 
+can shoot 3-4 balls 
+at the same turn
+Key points:
+head up
+right posture and 
+grip
+give space for the 
+next shooter
+the players should 
+be ordered to 
+collect the balls 
+quickly after one 
+round to able the 
+next round as fast 
+as possible
+if there are 
+children involved, 
+they should be 
+advised not collect 
+the balls from the 
+goal or behind the 
+goal until everybo­
+dy has taken their 
+shot to avoid injury
+•
+•
+•
+•
+•
+•
+•
+•
+3
+3
+3
+2
+1
+
+
+======================================================================
+PAGE 27
+======================================================================
+
+►27
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 16.
+Objective:
+to practice shoo­
+ting from different 
+angles and posi­
+tions
+warm up for the 
+goalkeepers
+Organisation:
+one player stan­
+ding in front of the 
+goal in a game like 
+position (A1)
+other players are 
+standing in half 
+circle with one ball 
+each ready to pass 
+Execution:
+the players start to 
+pass the ball to A1 
+one at a time in or­
+der (either procee­
+ding from the other 
+side or alternating 
+the sides)
+A1 tries to shoot 
+straight from the 
+pass no matter 
+which side or 
+where the ball is 
+passed to
+after shooting A1 
+moves to the line 
+and the next player 
+from the line takes 
+the shots
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+also aerial passes 
+so the player who 
+is shooting has to 
+practice ball eye 
+coordination as 
+well
+for more advanced 
+players, one more 
+pass can be added 
+so that the player 
+who is suppose to 
+give the pass to 
+A1, gives a pass to 
+some other player 
+on the line, who 
+then passes the 
+ball to A1. This 
+way, A1 cannot 
+predict from where 
+the pass comes but 
+has to react to the 
+pass and position 
+him/herself to 
+shoot quickly.
+Key points:
+players should be 
+ready to pass and 
+shoot
+right grip according 
+to the shot
+game like position 
+(knees bent, low 
+posture)
+•
+•
+•
+•
+•
+Drill 17.
+Objective:
+to practice different 
+type of shots
+to practice shooting 
+while moving
+warmup for the goal­
+keeper
+Organisation:
+players form three li­
+nes by the middle line 
+with balls
+cones in the corners
+Execution:
+one player from each 
+line takes a shot at a 
+time
+different shots from 
+different lines
+1)	a short wrist shot
+2)	wrist shot with a 
+long back drive
+3)	penalty shot
+the order will force 
+the goalkeeper to 
+move sideways
+after the shot, players 
+have to go around the 
+cone in the opposi­
+te corner so that a 
+movement forward will 
+follow the shot and 
+that the players wont 
+stay in front of the 
+next shooter
+the player from the 
+middle line has to go 
+around the goal cage
+the lines will rotate in 
+clockwise order
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+shots can be varied
+also lines can be 
+added in the cor­
+ners, from where the 
+player has to shoot a 
+wrist shot from pro­
+tection or a backhand 
+shot
+one timer can also 
+be added so that 
+the player from the 
+line on the left side 
+passes a one timer to 
+the player in the mid­
+dle line, receives the 
+pass back and shoots 
+a one timer
+Key points:
+right grip according 
+to the shot
+players should be 
+encouraged to follow 
+the movement for­
+ward after the shot
+players should not 
+stay in front of the 
+next shooter
+players should wait 
+so that the goalkee­
+per is ready to recei­
+ve the next shot
+players from lines 1) 
+and 2) should not go 
+too close to the goal, 
+however the shot 
+should be accurate 
+rather than hard to 
+warm up the goal­
+keeper
+harder shots can 
+be taken once the 
+goalkeeper has been 
+warmed up
+•
+•
+•
+•
+•
+•
+•
+•
+•
+1
+3
+2
+
+
+======================================================================
+PAGE 28
+======================================================================
+
+28◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 18.
+Objective:
+to practice shoo­
+ting while moving
+warm up for the 
+goalkeeper 
+to practice sideway 
+movement for the 
+goalkeeper
+Organisation:
+players form two 
+lines by the middle 
+line facing the goal 
+with balls
+for beginners there 
+can be cones added 
+to mark the shoo­
+ting spots
+Execution:
+A1 starts running 
+by the rink angling 
+towards the goal
+to get the goalkee­
+per moving side­
+ways, the player 
+should clearly cross 
+the middle sector 
+before shooting
+after shooting, the 
+players continues 
+to the line on the 
+other side to shoot 
+alternately from 
+forehand and back­
+hand side 
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+the players can 
+also start from the 
+corners so that the 
+shots will be shot 
+from protection
+in another varia­
+tion, the players 
+can start from the 
+corners and shoot 
+after the opposite 
+sides cone
+Key points:
+right grip and 
+posture
+shooting from good 
+protection
+the goalkeeper 
+should follow the 
+shooters move­
+ment, not predict 
+the shot or position 
+him/herself already 
+on the other corner 
+of the goal (simu­
+lates game play for 
+the goalkeeper)
+•
+•
+•
+•
+•
+A1
+1
+2
+Drill 19.
+Objective:
+to practice shooting 
+while moving
+to practice direct 
+shot from a pass
+warm-up drill for 
+the goalkeeper
+Organisation:
+players form two 
+lines in the corners 
+with balls
+two cones about 
+three meters from 
+the rink near the 
+middle line to mark 
+the turning point for 
+the players (especi­
+ally beginners)
+Execution:
+A1 starts running 
+by the rink towards 
+the cone without 
+a ball, runs around 
+the cone and makes 
+a fast turn facing 
+the goal
+after the turn the 
+player receives a 
+pass from the oppo­
+site corner (B1)
+the player can 
+either take control 
+of the ball and then 
+shoot (beginners) or 
+shoot direct from 
+the pass which 
+demands good 
+timing and eye-ball 
+coordination
+after the shot A1 
+moves to the other 
+corner
+B1 executes the 
+same, receiving a 
+pass from the oppo­
+site corner (A2)
+for beginners, the 
+pass can be made 
+standing still, but 
+as soon as possible, 
+the players should 
+be encouraged to 
+pass while moving, 
+also this helps to 
+speed up the drill
+it is better to start 
+with a wrist shot 
+and then move on 
+to different shots
+Modifications:
+the coach can 
+determine whether 
+he/she wants the 
+shot to be direct 
+or not
+if the shot is direct, 
+the pass should be 
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+aimed closer to 
+the goal, and if the 
+player is supposed 
+to take control of 
+the ball first, the 
+pass should be 
+aimed further away 
+from the goal
+the ball can also 
+be passed from the 
+same line, that is 
+from behind, which 
+will emphasise the 
+ball control when 
+the player has to 
+receive the ball 
+from behind and 
+dribble around the 
+cone before the 
+shot
+also aerial passes to 
+emphasise the re­
+ceiving a lifted ball 
+which can happen 
+during a game
+when the players 
+are familiar with 
+the drill, it can 
+be executed with 
+double speed so 
+that A1, A2 and 
+B1 are all running 
+before the first ball 
+is passed
+in this case B2 pas­
+ses the ball to A1 
+and A3 passes to B1 
+and B4 to A2
+Key points:
+the ball should be 
+passed while mo­
+ving to keep up and 
+increase the speed
+head should always 
+be lifted up before 
+the shot
+accurate passes 
+(the player shooting 
+should point out 
+where he/she wants 
+the pass) with cor­
+rect speed
+timing of the pass, 
+not too early or 
+too late, attacking 
+player and the ball 
+must meet at the 
+same point at the 
+same time
+it is always good 
+to start with ball 
+control first, and 
+then move forward 
+to direct shots
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+
+======================================================================
+PAGE 29
+======================================================================
+
+►29
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Taking control
+Of.the.ball
+A1
+B1
+A1
+B1
+1
+2
+B2
+A2
+Double speed
+A3
+B4
+Drill 20.
+Objective:
+to practice shoo­
+ting one timers and 
+directing the ball
+to practice accura­
+te shots from both 
+ground and aerial 
+passes
+warm up for the 
+goalkeeper (side­
+ways movement)
+Organisation:
+players form two 
+lines by the rink 
+at the middle line 
+with balls
+Execution:
+A1 starts running 
+towards the slot
+when A1 reaches 
+the goal area, he/
+she will receive a 
+hard pass from A2
+A1 shoots an accu­
+rate shot, or more 
+or less directs the 
+ball towards the 
+goal
+after the pass, A2 
+executes the same
+after the shot, 
+players switch lines
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+also aerial passes
+A1 can also run pa­
+rallel with the mid­
+dle line, receive 
+a short pass from 
+A2 and continue 
+towards the goal 
+performing a shoot 
+out
+Key points:
+the shot shouldn’t 
+be more than a di­
+rective touch with 
+the ball (one time 
+shot)
+both forehand and 
+backhand should be 
+used
+one hand grip 
+should be used to 
+reach the ball
+the player can also 
+receive the pass 
+with forehand and 
+shoot with a back­
+hand side, or vice 
+versa depending on 
+the situation
+•
+•
+•
+•
+•
+•
+A1
+A2
+
+
+======================================================================
+PAGE 30
+======================================================================
+
+30◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Level 2.
+After learning how to shoot technically correct and from 
+where to shoot, the most important thing is to know how to 
+time the shot and choosing the best shot according to the si­
+tuation and position. On the second level the aim is to practi­
+ce the timing of the shot and finding the way to a good shoo­
+ting position. Also evaluating all these in a fraction of time 
+demands skill and reaction speed. To practice these compo­
+nents together, it is best to add more players into the drills.
+By adding a defender to cover the shot makes the situ­
+ation more game like. Hardly ever does a player have 
+an open space for a shot in a game, so to practice shoo­
+ting under pressure enables better chances to score in the 
+game. By adding another offensive player, gives anot­
+her option for the ball carrier, to pass. Therefore also pas­
+sing skills are required, as well as readiness to do so. 
+Assisting the ball carrier to shoot also becomes rele­
+vant. As an offensive player without the ball, it is impor­
+tant to learn how and when to create space for the shot, 
+either by screening the goalkeeper or making space for 
+the ball carrier to shoot. These actions are also practiced. 
+Drill 21.
+Objective: 
+to practice shoo­
+ting from protec­
+tion and while 
+moving
+to practice timing 
+of the shot
+to practice gaining 
+space for a shot
+for the goalkeeper 
+to practice side­
+ways movement 
+and saves at close 
+distance
+Organisation:
+players are in the 
+corners with balls
+Execution:
+A1 starts running 
+towards the slot 
+without a ball
+A2 starts running to­
+wards A1 with a ball 
+when A1 has crossed 
+the middle slot
+A2 gives a drop pass 
+to A1 who shoots
+A2 continues running 
+towards the opposite 
+corner, now without 
+a ball
+A3 leaves from the 
+corner with a ball 
+and gives a drop pass 
+to A2, who shoots 
+and so on
+after execution, the 
+players switch lines 
+to get a shot from 
+the other side
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+the coach can play 
+a defender, haras­
+sing the players 
+to emphasise the 
+importance of the 
+protection of the 
+ball
+close distance 
+shots can also be 
+practiced as direct 
+shots so that a pass 
+is given from the 
+opposite corner
+Key points:
+the drop pass has 
+to be accurate so 
+that the opponent 
+does not have time 
+to intercept the 
+pass
+•
+•
+•
+A2
+
+
+======================================================================
+PAGE 31
+======================================================================
+
+►31
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 22.
+Objective:
+to practice both 
+close distance and 
+long distance shots 
+while moving
+to practice two 
+man screen
+to practice aggres­
+sive play in the slot
+Organisation:
+four lines; two in 
+the corners and 
+two at the middle 
+line by the rink
+all lines facing the 
+goal with balls
+the coach should 
+emphasise the 
+importance of the 
+screen beforehand
+Execution:
+A1 takes few steps 
+from the corner 
+and shoots from a 
+small angle (short 
+wrist shot, back­
+hand)
+A2 does the same 
+from the other 
+corner
+after this both 
+players move to 
+the slot to screen 
+the goalkeeper
+A3 takes few steps 
+towards the middle 
+dot and shoots a 
+long distance shot 
+(long wrist shot, 
+forehand drive, 
+slap shot)
+A4 does the same
+after one round the 
+players rotate in 
+clockwise order
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+A1 and A2 can also 
+play one versus one 
+situation in front 
+of the goal so that 
+A1 is the offensive 
+player and A2 is 
+defensive
+A2 can also have 
+the option to pass 
+to A1 to shoot if A1 
+has a better oppor­
+tunity to score
+Key points:
+best way to screen 
+the goalkeeper is 
+to move, this way 
+the goalkeeper 
+also has to move 
+and therefore it is 
+harder for him/her 
+to see the shot
+this is done so that 
+the two screening 
+players cross each 
+other in front of 
+the goalkeeper at 
+the moment the 
+shot is taken
+it is also better if 
+at least one of the 
+players is about 
+one meter from the 
+goalkeeper
+this way the 
+screening player 
+has time to turn 
+around and hit the 
+rebounds, even if 
+the ball hits the 
+player him/herself
+•
+•
+•
+•
+•
+•
+A1
+A2
+A4
+A3
+
+
+======================================================================
+PAGE 32
+======================================================================
+
+32◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 23.
+Objective:
+to practice a drop 
+pass
+to practice a long 
+distance shot
+to practice scree­
+ning the goalkee­
+per and hitting 
+rebounds
+Organisation:
+players form two 
+lines; one in the 
+corner and one at 
+the middle line by 
+the rink
+balls in the corner
+Execution:
+A1 passes to A2
+A2 comes towards 
+the pass and takes 
+control of the ball
+A1 follows the pass 
+and receives a drop 
+pass from A2 when 
+they cross
+A2 runs straight to 
+the slot without 
+looking back and A1 
+continues towards 
+the middle spot 
+with the ball
+as soon as A2 is 
+ready to screen 
+the goalkeeper, 
+A1 shoots a long 
+distance shot (long 
+wrist shot, slap 
+shot, forehand 
+drive)
+A2 ready for re­
+bounds
+after the execution 
+players switch lines
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+defensive players 
+can be added so 
+that after the shot 
+A1 plays a defen­
+der in front of the 
+goal with the next 
+screening player
+also a defensive 
+player can be 
+added closer to the 
+shooter to block 
+the shot, which 
+makes it harder for 
+the shooter to aim 
+the shot
+Key points:
+the drop pass has 
+to be accurate so 
+that the opponent 
+wont intercept the 
+pass
+A2 should not 
+follow A1 after the 
+drop pass, but to 
+continue straight to 
+the slot
+same main points 
+in screening as in 
+the previous drill
+•
+•
+•
+•
+•
+Drill 24.
+Objective:
+to practice scoring 
+on two against zero
+to practice decision 
+making; shoot or 
+pass
+Organisation:
+players in opposite 
+corners with balls
+Execution:
+A1 starts by run­
+ning by the rink 
+without a ball
+A1 receives a pass 
+from A2
+they both run 
+towards the middle 
+line, A1 with the 
+ball
+after crossing the 
+middle line, A1 has 
+to make a decision 
+whether to give a 
+drop pass to A2 and 
+continue towards 
+the opposite goal 
+to screen the 
+goalkeeper, or to 
+continue running 
+with the ball and 
+shoot, or pass to A2 
+later
+B1 and B2 do the 
+same at the same 
+time
+after the execu­
+tion, they move 
+on to the opposite 
+corner
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+also the goalkeeper 
+can give the first 
+pass to A1
+other variations 
+according to the 
+coach, but the 
+main emphasis 
+should be on a 
+quick finishing
+Key points:
+quick decision to 
+finish the attack in 
+a shot
+the players should 
+leave at the same 
+time from both 
+corners
+•
+•
+•
+•
+A1
+A2
+B1
+B2
+A1
+A2
+
+
+======================================================================
+PAGE 33
+======================================================================
+
+►33
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Level 3.
+When the players have the ability to make the decision ac­
+cording to the situation; whether to shoot directly, pass or 
+dribble, even more complex components can be added to 
+the drills. The scoring situation is made more game like and 
+difficult by adding both an opponent and a team mate to 
+create a situation where the player has to make a fast decisi­
+on. Shooting is also emphasised as the main result of the at­
+tack, as well as the team play leading to an attack. The drills 
+are not only about shooting but more or less finding a way 
+to shoot, either by you or with the help of your team mates. 
+The main point, after all, in any invasive game, is to score. 
+On the third level, the aim is to create chances to do so. 
+Usually the defending opponent is covering the best sco­
+ring sector, either covering players or the zone. The best 
+scoring sector is in the middle where the defensive team is 
+usually situated as follows:
+This should be explained to the players in order for them to 
+realize where the opponent is most likely to be situated. Also 
+it should be emphasised that the best chance to score is in 
+the middle where the invasion should happen. The ball car­
+rier should always aim for the slot as well the non-ball car­
+rier should try to create an open space for him/her to shoot.
+Drill 25.
+Objective:
+to practice scoring
+to practice creating 
+space for the ball 
+carrier to shoot
+Organisation:
+one line by the rink 
+at the middle line 
+with balls
+players A2 and A3 
+as in the figure
+cones marking the 
+opponent (can be 
+replaced by real 
+opponents)
+the coach should 
+make clear be­
+forehand where 
+the opponent is 
+most likely to be 
+situated
+this will help the 
+players to avoid 
+those areas
+Execution:
+A1 passes the ball 
+to A2 who comes 
+towards the pass
+A2 takes the ball 
+under control and 
+continues moving 
+by the rink
+A1 starts moving 
+towards the slot 
+and receives a drop 
+pass from A2 when 
+they cross
+at the same time 
+A3 moves from the 
+centre towards the 
+side creating space 
+to the slot
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+A1 moves towards 
+the corner to a bad 
+position to shoot so 
+he/she passes to A3
+A1 by the near post 
+and A2 in front of 
+the goal are open 
+for a pass from A3 
+and ready to shoot
+after execution A1 
+becomes A2, A2 
+becomes A3 and A3 
+becomes A1
+Modifications:
+the best way to 
+modify the drill is 
+to add defensive 
+players to make it 
+more difficult for 
+the offensive team 
+to score
+also other varia­
+tions of the passing 
+figure and shooting 
+positions can be 
+made
+Key points:
+accurate shots 
+should be 
+emphasised
+A3 should quickly 
+decide whom to 
+pass to and A1 and 
+A2 should be ready 
+to shoot
+the movement of 
+the players should 
+be fast and the 
+timing precise
+•
+•
+•
+•
+•
+•
+•
+•
+A3
+A2
+A1
+A2
+A1
+A3
+Positions in.the.end
+
+
+======================================================================
+PAGE 34
+======================================================================
+
+34◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 26.
+Objective:
+to practice scoring 
+from tight situation
+to practice ball pro­
+tection and fakes
+Organisation:
+goal cages turned 
+toward the corners 
+about 7 meters 
+from the boards 
+(cones marking the 
+area)
+balls on top of the 
+goal
+players divided in 
+four even groups, if 
+two goals (depen­
+ding on the amount 
+of players and 
+goalkeepers)
+two groups forming 
+two different lines 
+on both sides of the 
+goals 
+Execution:
+goalkeeper throws a 
+ball to the corner
+A1 and O1 fight for 
+the ball
+whoever gets the 
+possession becomes 
+attacker and tries 
+to shoot
+if the ball is hit of 
+boundaries, if there 
+is a score or a save, 
+the goalkeeper 
+throws in another 
+ball
+45 second shifts 
+players switch when 
+the coach whistle
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+after 45 seconds, 
+two other players 
+can be added, so 
+that every other 
+shift is played two 
+versus two
+the aim is to shoot 
+and for the other 
+offensive player to 
+get open to a place 
+to shoot a one timer
+Key points:
+to emphasise shoo­
+ting and protecting 
+the ball
+shoot when there is 
+even a slight chance 
+to score
+if there is no space 
+to shoot, move or 
+pass if possible
+encourage the 
+players to turn 
+around and challen­
+ge the opponent
+•
+•
+•
+•
+•
+•
+A1
+O1
+A2
+O2
+Drill 27.
+Objective:
+to practice shoo­
+ting and gaining a 
+chance to shoot
+to practice game 
+reading and decisi­
+on making
+Organisation:
+players are divided 
+in groups of three 
+or four
+the court is divided 
+in half
+if four players in 
+each group, one 
+player is situated 
+by the middle line 
+as a stationary 
+substitute player
+Execution:
+teams are playing 
+three against three
+if a team with the 
+ball (offensive) 
+looses the ball 
+either by:
+scoring
+defensive team 
+steals the ball or 
+intercepts 
+the ball is hit out 
+of boundaries
+then the defensive 
+team has to pass 
+to the stationary/
+substitute player 
+before starting 
+an attack and the 
+player from the 
+offensive team who 
+lost the ball, has to 
+switch with their 
+stationary player
+•
+•
+•
+•
+•
+•
+•
+A.
+B.
+C.
+•
+the stationary/sub­
+stitute player can 
+move sideways to 
+receive, pass and 
+shoot
+if the stationa­
+ry/substitute 
+player is passed to 
+other than after 
+interception, the 
+player has to shoot 
+(demonstrating an 
+defender shooting 
+from the middle 
+line)
+in this case the 
+closest player to 
+the goal has to be 
+ready to screen the 
+goalkeeper
+Modifications:
+only one timers 
+allowed
+there has to be a 
+shot after three 
+passes
+Key points:
+players have to 
+keep moving cons­
+tantly and shoot 
+when ever possible
+players have to be 
+ready to screen the 
+goalie when the 
+defender has the 
+ball
+a player has to 
+switch after loosing 
+the ball
+the rules should be 
+strictly followed
+•
+•
+•
+•
+•
+•
+•
+•
+•
+3.vs 3
+Substitute players
+
+
+======================================================================
+PAGE 35
+======================================================================
+
+►35
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 28.
+Objective:
+to practice scoring 
+as a part of team 
+play
+to practice all the 
+components from 
+previous drills 
+together
+for the defending 
+team to practice a 
+specific defensive  
+game like forma­
+tion
+Organisation:
+players are divided 
+in groups of five, 
+or according to the 
+teams line-ups
+the scrimmage is 
+played five versus 
+five on the offen­
+sive zone and the 
+defending team 
+is playing without 
+sticks 
+Execution:
+a defender of the 
+offensive team has 
+the possession of 
+the ball near the 
+middle line
+the offensive team 
+can play with both 
+using the libero or 
+using defender-de­
+fender pass
+the wingers and 
+the centre for­
+ward/top-striker 
+are trying to move 
+to gain the best 
+shooting position
+in the figures, few 
+options are shown
+Figure 1.
+A1 passes to A4 
+who has run to­
+wards the middle 
+line
+at the same time 
+A5 creates space in 
+the slot by running 
+towards the rink
+Option 1
+when A4 has gained 
+the possession of 
+the ball, he/she 
+passes to A5
+at the same time 
+with this pass, A2 
+moves towards the 
+centre and A3 to 
+the slot
+A5 passes to A3 
+who shoots
+A5 can also pass to 
+A2, in which case 
+A3 will screen the 
+goalkeeper when 
+A2 shoots
+Option 2.
+A4 passes the ball 
+back to A1 who has 
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+◦
+◦
+•
+◦
+◦
+◦
+◦
+•
+◦
+moved closer to 
+the rink
+A4 covers the 
+middle area by 
+following the pass 
+and A5 assists to 
+defend in case of a 
+turn over
+A1 dribbles by the 
+board and passes 
+to A3 who has now 
+moved from the 
+slot towards the 
+rink (creating spa­
+ce in the slot)
+at the same time 
+with the pass A2 
+moves to the slot 
+and A5 can also 
+offer a passing op­
+portunity for A3
+A3 passes to A2 
+who shoots
+A3 can also pass to 
+A5, in which case 
+A2 will screen the 
+goalkeeper
+players can prac­
+tice few figures or 
+just use their own 
+creativity
+first the figures 
+can be practiced 
+without an oppo­
+nent, and there 
+after adding the 
+opponent playing 
+without sticks and 
+then with sticks
+after a shot, there 
+will be another ball 
+in play (passed by 
+the coach or an 
+extra player from 
+the middle line) 
+to begin the drill 
+again
+also defenders can 
+shoot if there is a 
+chance, and then 
+there should always 
+be at least one 
+player screening 
+the goalkeeper
+Modifications:
+variations accor­
+ding to the coaches 
+and players crea­
+tivity
+also see drills 11-13
+Key points:
+shooting should be 
+emphasised
+players should be 
+ready to shoot (bla­
+de on the floor at 
+all times)
+players should not 
+be afraid to screen 
+the goalkeeper
+all the things from 
+previous drills 
+should be brought 
+up and executed 
+during 
+◦
+◦
+◦
+◦
+◦
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+the scrimmage 
+(areas to be avoi­
+ded on the offensi­
+ve zone, staying on 
+the shooting sector, 
+screening, creating 
+space for the shot 
+in the slot etc)
+use of voice 
+amongst players 
+should be encou­
+raged
+it has to be empha­
+sised that 
+the coach can only 
+provide options, 
+in a game situati­
+on it is the player 
+who makes the 
+decisions and those 
+decision have to 
+be suitable for the 
+situation
+also the opponents 
+will have an effect 
+on the play and 
+some options that 
+the coach provides 
+might not be the 
+best ones in certain 
+situations
+•
+•
+•
+A1
+A2
+A3
+A4
+A5
+Starting formation
+A1
+A4
+A3
+A5
+A2
+Option.1.
+Option.2.
+A1
+A2
+A4
+A5
+A3
+Figure 1
+
+
+======================================================================
+PAGE 36
+======================================================================
+
+36◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Dribbling
+Level 1.
+Ball protection is one of the most important things for 
+the players to learn. Eye-ball-stick-coordination should be 
+taught early and re-enforced throughout the player’s career. 
+Controlling the ball with the stick, holding possession of 
+the ball using body and stick protection, dribbling the ball 
+using fakes, receiving aerial passes, hitting the ball in the air 
+and so on, all demands a great deal of technique training. 
+Players should be encouraged to use all their extra time du­
+ring practices to play with the ball. When players stand on 
+the line waiting for their turn, they should just play with the 
+ball, dribbling and lifting the ball up etc. The players should 
+also be encouraged to play with the ball at home, or outside 
+with friends. Some different tricks (examples below) can be 
+practiced individually:
+lifting the ball up with the stick and capturing it, using 
+body or stick, or both
+rotating the ball around the feet (figure of 8)
+bouncing the ball with the blade of the stick, using 
+both forehand- and backhand side, as well as the 
+upper edge of the blade
+dribbling the ball using body moves and fakes
+•
+•
+•
+•
+Key points in ball control
+the same main points are crucial in all skills that 
+demand ball control, including protecting the ball, 
+dribbling, receiving a pass and capturing a ball 
+(aerial)
+protecting the ball using the body:
+posture should be game like: knees bent, weight 
+on toes, low posture to keep the centre of gra-
+vity low (balance), thigh muscles should do the 
+work
+the legs should be kept as wide apart as possible 
+to keep the protection area large (the opponent 
+is not allowed to play the ball between the legs) 
+the grip should be steady and the stick should be 
+grasped with both hands
+head should be up to keep the awareness of 
+team mates and opponent
+protecting the ball using the stick:
+the stick and ball should be kept as far away 
+from the opponent as possible
+the hands move closer to each other when the 
+ball is further away from the body
+the blade should be pressed against the floor in a 
+slight angle
+the body should be between the opponent and 
+ball at all times to protect the ball from any 
+interception
+capturing the ball:
+when the ball is in the air, eyes should be kept 
+on the ball and the ball should then be captured 
+using the body (especially in front of the goal)
+the ball should be captured in such position that 
+the player is able to continue the movement 
+towards the wanted direction, for example:
+if a defender is catching an aerial pass in front 
+of the goal using body, he/she should turn facing 
+the middle or the sides so that he/she is between 
+the ball and the goal, the aim is to take the ball 
+away from the goal area
+in such cases, especially when the slot is crow-
+ded, it is always better to use body to clear the 
+slot, otherwise the defender might accidentally 
+hit the ball and score an own goal
+an offensive player however, can and should turn 
+facing the goal, because he/she obviously wants 
+to score
+dribbling:
+the ball should stay close to the blade
+grip should be two handed (when dribbling on 
+backhand side, a one hand grip can be used to 
+gain distance to the opponent)
+fakes:
+speed and body control should be practiced and 
+developed
+ball handling, quick movement, sudden change of 
+speed and direction are crucial
+the opponent should be tricked into moving in a 
+certain direction with a false cue such as an eye 
+contact to a team mate
+a false shot maybe executed to get past the 
+opponent
+•
+•
+◦
+◦
+◦
+◦
+•
+◦
+◦
+◦
+◦
+•
+◦
+◦
+◦
+◦
+◦
+•
+◦
+◦
+•
+◦
+◦
+◦
+◦
+With juniors (ages 5-9) drills containing previous skill development 
+can be included in different games and plays, such as catches, relays, 
+and competitions. Technical circuits are also efficient but might be 
+too focus demanding for young beginners to keep focus, which can 
+lead to a decrease in motivation. If the tracks are kept simple, and 
+the coach is able to evaluate the level of the concentration of the 
+players, technical circuits are very suitable for the purpose.
+
+
+======================================================================
+PAGE 37
+======================================================================
+
+►37
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 29.
+Objective:
+to practice ball 
+control and ball 
+handling
+Organisation:
+players are stan­
+ding in front of the 
+coach with one ball 
+each
+Execution:
+players dribble the 
+ball standing still 
+keeping head up to 
+see the coach
+when the coach 
+shows different 
+signals, the players 
+follow:
+lifting arms up, 
+players move for­
+ward
+pointing arms for­
+ward, players move 
+backwards
+lifting left arm, 
+players move left
+lifting right arm, 
+players move right
+whistles once, 
+players rotate
+whistles twice, 
+players take a five 
+meters sprint and 
+return to their 
+places
+Modifications:
+the coach can also 
+come up with num­
+bers to correspond 
+a specific fake, for 
+example: 1 = body 
+fake, 2 = fake using 
+stick
+when the coach 
+shouts the number, 
+the players perform 
+the fake
+Key points:
+good grip
+game like position
+head up
+•
+•
+•
+•
+a.
+b.
+c.
+d.
+e.
+f.
+•
+•
+•
+•
+•
+Drill 30.
+Objective:
+to practice dribb­
+ling, fakes, and ball 
+protection
+warm up the players
+Organisation and execu­
+tion:
+players run around 
+the rink with one 
+ball each
+the coach has set up 
+numbers to cor­
+respond a specific 
+action:
+1.	rotation left, con­
+tinue same direction
+2.	change of directi­
+on with a sprint
+3.	rotation right, 
+continue same direc­
+tion
+4.	lifting the ball up 
+and capturing (conti­
+nuous movement)
+every time the coach 
+shouts the number 
+(or uses whistle) the 
+players perform the 
+move
+Modifications:
+different moves, 
+such as fakes can 
+be added
+also a shot at both 
+goals to warm up 
+the goalkeepers
+Key points:
+head up
+game like position
+other body moves 
+should also be 
+executed during 
+dribbling
+players should 
+practice stick hand­
+ling during running
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+
+======================================================================
+PAGE 38
+======================================================================
+
+38◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 31.
+Objective:
+to practice ball 
+handling, ball pro­
+tection, coordinati­
+on, and both body 
+and ball control
+Organisation:
+coach sets up the 
+circuit, preferab­
+le beforehand or 
+while players are 
+doing the previous 
+exercise
+the track should be 
+set up so that there 
+are lot of repeti­
+tions and different 
+actions
+the whole area 
+should be used effi­
+ciently to make the 
+execution intensive 
+and the use of spa­
+ce as economical as 
+possible
+coach explains and 
+demonstrates
+Execution:
+players start by 
+bouncing the ball 
+ten times in the air
+forward and back­
+ward running
+sideway running, 
+moving the ball 
+from forehand to 
+backhand side
+lifting the ball over 
+an obstacle
+running straight, 
+ball moving around 
+the cones
+stick handling 
+around the cones, 
+figure eight and 
+figure X
+wall passes
+running around the 
+cones, ball protec­
+tion with body
+lifting the ball over 
+an obstacle
+passing the ball 
+between the cones 
+(accuracy) to a goal 
+starting all over 
+again
+Modifications:
+different skills can 
+be added, such 
+as shooting and 
+passing
+the circuit can be 
+executed without 
+•
+•
+•
+•
+•
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+•
+•
+the stick and ball 
+first to practice 
+running and co-
+ordination (physical 
+exercise)
+Key points:
+the court should be 
+used efficiently
+players shouldn’t 
+be standing on the 
+lines waiting for 
+each turn, in such 
+cases they should 
+be advised to be 
+active with the 
+stick and ball 
+also physical exer­
+cises can be added, 
+such as abs, push-
+ups and squats
+the circuit can be 
+executed for as 
+long as possible 
+but the coach has 
+to consider the 
+players concentra­
+tion level
+with younger 
+players it is prefe­
+rable to have less 
+exercises during 
+the circuit so that 
+they wont get con­
+fused and forget 
+what is supposed to 
+be done
+•
+•
+•
+•
+•
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+======================================================================
+PAGE 39
+======================================================================
+
+►39
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Level 2.
+Individual technique training should be included in every 
+practice, especially with younger players, in the end all the 
+technical skills are combined in the game itself. Therefore 
+game like drills are an even better way to practice indivi­
+dual technique since many skills are trained at the same 
+time and in real environment. This requires that player’s 
+use certain technical skills while performing tactical actions 
+which simultaneously develops game sense. (Random 
+Practice)
+The level of difficulty is increased by adding an opponent. 
+The sooner the opponent is taken into consideration, the 
+sooner the players are challenged to meet the opponent, 
+not to mention beating the opponent.
+Drill 32.
+Objective:
+to practice ball 
+protection and ball 
+handling
+Organisation:
+players are divided 
+in pairs
+Execution:
+players start wit­
+hout sticks with a 
+ball on the floor
+first one player is 
+protecting the ball 
+by moving around 
+the ball while the 
+other player is 
+trying to kick the 
+ball
+the ball has to stay 
+still
+after a minute, the 
+players switch roles
+Modifications:
+to practice ball 
+protection with a 
+stick, the players 
+do the same with 
+sticks using a small 
+area
+in this case the 
+player with the ball 
+should be using 
+both stick and body 
+to protect the ball
+the other player is 
+trying to take the 
+ball away without 
+hitting the stick
+when the player 
+without the ball 
+succeeds to take 
+the ball, the roles 
+switch automati­
+cally
+also the side of the 
+rink can be used to 
+create a 1 versus 
+1 situation near 
+the rink or in the 
+corner
+in this case the 
+player with the ball 
+should be provided 
+with a solution how 
+to resolve the situ­
+ation: for example 
+a pass to the sides 
+or behind 
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Key points:
+low posture (bent 
+knees, legs wide 
+apart)
+good grip
+no hitting the stick
+continuous move­
+ment
+ball handling (the 
+player with the ball 
+has to protect the 
+ball with the blade 
+on the side where 
+the opponent is)
+•
+•
+•
+•
+•
+
+
+======================================================================
+PAGE 40
+======================================================================
+
+40◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 33.
+Objective:
+to practice ball 
+protection
+to practice shoo­
+ting from protec­
+tion and in tight 
+situation
+for the defender to 
+practice defending 
+and denying space 
+and position from 
+the ball carrier
+Organisation:
+players are in the 
+corners with balls
+Execution:
+A1 and A2 leave at 
+the same time from 
+the corner
+A1 has the ball and 
+A2 tries to obstruct 
+A1 from shooting
+A1 shoots if pos­
+sible
+after the execution 
+they will switch 
+lines and roles
+lines from the 
+corners execute 
+alternately
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+in the beginning 
+the drill can be 
+executed without 
+the opponent, whe­
+re the emphasis is 
+on the technical 
+execution
+Key points:
+the emphasis 
+should be on the 1 
+versus 1 situation, 
+where the ball 
+carrier has to pro­
+tect the ball using 
+the body (body 
+between the ball 
+and the opponent) 
+and the defensive 
+player has to res­
+pond with using the 
+body, not the stick 
+(shoulder against 
+shoulder)
+the ball carrier 
+should try to get 
+to the position to 
+score by changing 
+pace or directi­
+on, or by using 
+quick hands and a 
+suitable shot for 
+the situation (wrist 
+shot, backhand)
+•
+•
+•
+A1
+A2
+Drill 34.
+Objective:
+to practice ball 
+protection
+to practice dribb­
+ling in a tight space
+Organisation:
+players on lines in 
+opposite corners 
+with balls
+the court is divided 
+in half (length 
+wise)
+cones placed on 
+the court as in the 
+figure
+Execution:
+two players (A1 and 
+A2) start running 
+from the corner to­
+wards the first cone
+A1 has the ball and 
+A2 tries to prevent 
+A1 from moving 
+forward
+when they reach the 
+cone, A1 will give a 
+drop pass to A2 and 
+the roles switch
+the players continue 
+until one of them 
+shoots if possible
+after execution, 
+they will start again 
+from the other 
+corner
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+the same player 
+can carry the ball 
+the whole way so 
+that the roles will 
+not switch until 
+players are on the 
+other side
+can also be exe­
+cuted without an 
+opponent so that 
+B1 runs with the 
+ball and makes 
+an escape (a fake 
+where the directi­
+on of movement is 
+changed by quickly 
+rotating towards 
+opposite direction, 
+turning the back 
+against the oppo­
+nent, and covering 
+the ball with the 
+blade, forehand 
+and backhand side) 
+on each cone
+Key points:
+the movement and 
+change of direction 
+should be quick
+hitting the stick 
+must be avoided
+the defensive 
+player should use 
+body to prevent the 
+ball carrier from 
+moving forward
+•
+•
+•
+•
+•
+A1
+A2
+B1
+
+
+======================================================================
+PAGE 41
+======================================================================
+
+►41
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 35.
+Objective:
+to practice ball 
+protection and ball 
+handling
+to practice fakes
+Organisation:
+players are divided 
+in pairs
+each pair has one 
+ball and two cones; 
+one cone in each 
+end of the rink 
+(width wise)
+Execution:
+one of the players 
+is a ball carrier 
+trying to score by 
+taking the ball to 
+the opponents cone
+ball carrier has 
+to challenge the 
+non-ball carrier by 
+making a fake
+when the ball 
+carrier manages 
+to take the ball to 
+the cone, he/she 
+scores a point 
+and is allowed to 
+continue as long as 
+the non-ball carrier 
+is not able to steal 
+the ball
+when the non-ball 
+carrier manages to 
+steal the ball, the 
+roles switch
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+fakes can be prac­
+ticed individually 
+beforehand
+the coach should 
+demonstrate some 
+fakes to the players 
+and give individual 
+feedback (Model­
+ling)
+body fakes, esca­
+pe, use of feet etc
+Key points:
+low posture, on 
+toes
+good and steady 
+grip
+head up
+quick moves and 
+hands
+change of running 
+speed
+a player should 
+practice one fake 
+at a time; it is 
+better to know one 
+fake and succeed 
+in it every time, 
+than know few and 
+succeed in them 
+occasionally
+the defender 
+should have a side-
+on position to react 
+quicker to the 
+opponents moves
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Drill 36.
+Objective:
+to practice different 
+fakes
+Organisation:
+players are in four 
+lines in each corner
+balls in the opposite 
+corners
+Execution:
+A1 starts by running 
+towards the slot to 
+receive a pass from 
+A2
+simultaneously B1 
+executes the same 
+on the opposite end 
+of the rink
+after receiving the 
+pass from A2, A1 
+runs with the ball 
+towards the other 
+end to play a one 
+against one situation 
+with B2
+after passing A2 
+waits at the respec­
+tive end of the rink 
+to play a one against 
+one situation with B1
+after the execution, 
+lines rotate in clock­
+wise order 
+Modifications:
+the coach can de­
+termine which kind 
+of a fake should be 
+performed
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Key points:
+A1 should come 
+towards the first 
+pass as in a game 
+like situation where 
+the other defender 
+opens up the game 
+with a pass through 
+the centre
+the players should 
+keep on their own 
+side to avoid collisi­
+on and injury
+the players should 
+be encouraged to 
+challenge the oppo­
+nent and try diffe­
+rent kinds of fakes
+the defender, B2, 
+should go up to the 
+middle line to meet 
+the ball carrier, A1, 
+so that A1 has time 
+to make the fake 
+and still has space to 
+shoot
+the defender should 
+avoid hitting the 
+stick but use the 
+body to prevent the 
+ball carrier from 
+proceeding
+the defenders posi­
+tion should be low 
+and on toes, he/she 
+should be ready to 
+change direction 
+quickly according to 
+the ball carrier and 
+have the upper hands 
+side towards the ball 
+carrier
+•
+•
+•
+•
+•
+•
+A1
+A2
+B2
+B1
+
+
+======================================================================
+PAGE 42
+======================================================================
+
+42◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Level 3.
+Though previous drills have some game likeness in them, 
+the situations can be made even more realistic. The main 
+point is to create situations, usually one against one, but 
+also two against one etc. where ball protection and ball 
+handling are important. Often the easiest way to win these 
+situations is a pass, however sometimes this is not possible. 
+As said, creating game like drills also develops the player’s 
+game sense at the same time as technical skills are practi­
+ced. By dribbling, one does not score, but it enables the 
+player to proceed to a scoring position by moving or simp­
+ly winning a one against one situation. It is also important 
+to be able to make such a decision whether to shoot, pass 
+or dribble. On this level this decision making is a part of 
+the technical drill itself. 
+Drill 37.
+Objective:
+to create a one 
+against two situati­
+on in the corner
+to practice ball 
+protection
+to practice fakes
+for the defensive 
+players to practice 
+doubling, either 
+in the offensive or 
+defensive zone
+Organisation:
+players form three 
+lines by the rink on 
+the middle line
+two defensive 
+players (non-ball 
+carriers) and one 
+offensive player 
+(ball carrier)
+one line with the 
+balls
+Execution:
+B1 passes the ball 
+to the corner, or to 
+the goalkeeper who 
+passes the ball to 
+the corner
+A1 runs after the 
+release ball and 
+reaches it in the 
+corner
+B1 and B2 starts 
+right after A1 to 
+double A1
+A1 tries to get out 
+from the corner:
+if B1 and B2 have 
+time to double A1, 
+A1 can either try 
+to protect the ball 
+and pass it from 
+between the legs 
+or to the sides to 
+imaginary team 
+mates
+if B1 and B2 are 
+late from doubling 
+and A1 has time 
+to turn around, A1 
+should try to chal­
+lenge B1 and B2 by 
+making a fake
+the situation is 
+played until B1 and 
+B2 gets possession 
+of the ball or until 
+the ball is cleared 
+outside the area 
+or when the coach 
+whistles
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+1.
+2.
+•
+Modifications:
+the coach can also 
+pass a ball from 
+the middle dot or 
+the ball can be 
+shot first to the 
+goalkeeper where 
+after the goalkee­
+per passes the ball 
+to the corner
+the imaginary 
+team mates can be 
+replaced by real 
+players and the 
+situation can be 
+played until a shot
+in this case it has 
+to be determined 
+whether A1 is on 
+his defensive or 
+offensive zone, 
+and who is trying 
+to score and who is 
+trying to clear the 
+zone 
+Key points:
+A1 should be en­
+couraged to chal­
+lenge the opponent 
+if time for a fake
+B1 and B2 should 
+be ready to double 
+A1 at the right 
+time
+A1 should be shown 
+how to protect the 
+ball correctly and 
+B1 and B2 to try 
+to steal the ball 
+correctly, shoulder 
+against shoulder
+•
+•
+•
+•
+•
+•
+A1
+B1
+B2
+Passing
+directions
+Starting point
+-example
+B1.and.B2.late
+from doubling
+
+
+======================================================================
+PAGE 43
+======================================================================
+
+►43
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 38.
+Objective:
+to practice ball 
+protection and ball 
+handling
+to practice fakes
+to practice decisi­
+on making in two 
+against two situa­
+tions
+to develop the 
+players ability to 
+hold possession of 
+the ball in a tight 
+situation
+Organisation:
+players are divided 
+in pairs
+the rink is divided in 
+quarters
+two couples in each 
+quarter
+Execution:
+players start play­
+ing two against two 
+game when the 
+coach whistles
+the ball carrier has 
+to make a fake befo­
+re passing to a team 
+mate
+when the opponent 
+manages to steal the 
+ball, the roles switch 
+automatically
+game is played until 
+the coach whistles
+the length of the 
+shift can be varied 
+from 45 seconds to 2 
+minutes where after 
+there can be a short 
+recovery break or the 
+players can switch 
+the opponent
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+also other rules can 
+be implemented such 
+as, the couple with 
+the ball has to cross 
+and make a drop pass 
+before passing
+the drill can also be 
+played using the cor­
+ner area, with goals 
+facing the boards so 
+a shot can be added
+this will emphasise 
+play in a small area 
+and gaining a scoring 
+chance in a tight 
+situation (also see 
+drills 26 and 37)
+Key points:
+head up (awareness 
+of both the team 
+mate and the oppo­
+nents)
+the ball carrier has 
+to make a fake befo­
+re passing
+the ball carrier has 
+to protect the ball 
+and dribble until 
+he/she is ready to 
+make a fake
+players should be en­
+couraged to challen­
+ge the opponent
+both defending 
+players should try to 
+double the ball car­
+rier and the other of­
+fensive player should 
+create a passing lane 
+by getting close to 
+the ball carrier
+the other offensive 
+player can also crea­
+te space for the ball 
+carrier by screening 
+the opponent
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Drill 39.
+Objective:
+to practice ball 
+protection and ball 
+handling
+to practice decision 
+making as a ball 
+carrier
+Organisation:
+players are divided 
+in groups of three 
+(or four with a sub­
+stitute player)
+rink divided in half, 
+with two goals on 
+each side
+goal cages can be 
+replaced by cones
+Execution:
+three against three 
+game
+players are only 
+allowed to pass 
+backwards
+therefore they 
+have to dribble the 
+ball forward to pass
+the ball also has to 
+be passed to each 
+player once before 
+scoring 
+every time the op­
+ponent scores, the 
+team who didn’t 
+score have to do 
+push-ups or sit-ups 
+which can also be 
+executed after one 
+shift
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+also man coverage 
+emphasises the 
+technical ability to 
+protect the ball
+the game can also 
+be played with one 
+goal using half of 
+the rink as in drill 
+27
+Key points:
+players should be 
+aware of where the 
+opponent as well as 
+the team mates are 
+situated
+non-ball carriers 
+should create pas­
+sing lanes behind 
+the ball carrier as 
+he/she is allowed 
+to only pass back­
+wards
+the rules should be 
+strictly followed 
+and equal
+•
+•
+•
+•
+•
+
+
+======================================================================
+PAGE 44
+======================================================================
+
+44◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Individual tactics
+A players profile is made up by technical and phy-
+sical abilities together with game sense. Game sen-
+se consists of understanding the game, reading 
+the game and decision making. Reading the pre-
+sent game situation and predicting the next action 
+helps the player to make the best decision depen-
+ding on the position they are in. Individual tactics are 
+best learned with the help of game situation roles.
+Game situation roles
+The ball carrier has three options. First aim is to score, the­
+refore to shoot. The second option is to pass to a player who 
+has even a better chance to shoot. The third option a ball car­
+rier has is to dribble the ball into a better position to shoot 
+or pass. This demands reaction speed and the ability to read 
+the game. Even though the ball carrier has the responsibili­
+ty to make the decision, the non-ball carriers also have the 
+responsibility to assist him/her by screening, creating space 
+and passing lanes etc. Inside the game, all the roles and du­
+ties interact. They all demand the player’s ability to estimate 
+space, speed, direction and time. The duties of different game 
+situation roles are shown in the table, as well as the technical 
+skills a player should possess in a certain role. It must be un­
+derstood however, that the roles switch very quickly during 
+a game and a player is in a respective role only for a short 
+period of time. With junior players these individual tactics 
+should not be emphasised as they are shown in the table. This 
+would probably end up with total confusion, so the roles and 
+the duties should be introduced gradually in the progression 
+with the development of the game sense.
+
+
+======================================================================
+PAGE 45
+======================================================================
+
+►45
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Offensive player with the ball
+Defending a player with the ball
+Receiving a pass/gaining the possession of the ball
+Protecting the ball
+Shoot
+Pass
+By dribbling move to a better position to shoot or 
+pass
+•
+•
+•
+•
+•
+Angling the ball carrier to less favourable areas
+Denying space
+Stealing the ball
+Blocking passing lanes
+Blocking shots
+Readiness to attack
+Active man cover and slowing down the opponent
+•
+•
+•
+•
+•
+•
+•
+Technical Skills
+Movement
+Stick handling
+Fakes
+Passing
+Shooting
+Protection of the ball
+1 vs 1
+•
+•
+•
+•
+•
+•
+•
+Technical Skills
+Changing the direction of movement
+Blocking passing lanes and shots
+Stick obstruction
+Interceptions
+1 vs 1
+•
+•
+•
+•
+•
+Offensive player without the ball
+Defending a player without the ball
+Create passing lanes by moving
+Keep close distance to the ball carrier
+Create space for the ball carrier
+Get open for a pass or a shot
+Screen the goalkeeper
+Readiness to defend
+•
+•
+•
+•
+•
+•
+Man cover
+Blocking passing lanes
+Readiness to attack
+Keep eye contact on both the ball and the opponent
+Stay between the opponent and own goal
+•
+•
+•
+•
+•
+Technical Skills
+Movement
+Screening
+Fakes
+Receiving a pass
+1 vs 1
+•
+•
+•
+•
+•
+Technical Skills
+Changing the direction of movement
+Blocking passing lanes
+Covering man
+Stick obstruction
+1 vs 1
+•
+•
+•
+•
+•
+Also the ability to outplay the opponent by transferring the 
+situations from two against two to two against one, or even 
+two against zero, is crucial. By creating zone power plays, (2 
+against 1, 3 against 2 or vice versa in a small area) helps the 
+defending team to steal the ball from the opponent, and on 
+the offensive side, it always creates a better scoring possibi­
+lity.
+To teach individual tactics to serve team tactics is an impor­
+tant issue, especially when trying to diminish selfishness in 
+game situations. The players should be motivated to think 
+and choose when to be selfish, and when to pass or help 
+team mates.  
+The next stage is therefore to teach the players how to read 
+the situation and react with the best option. By adding more 
+players to the drill forces the player to make a decision quick­
+ly according to the situation. The individual skills should be 
+so well mastered that a player does not have to think about 
+the technical execution during a game. This is of course a 
+dream situation, because players hardly ever concentrate on 
+the execution, especially young players, and therefore techni­
+cal skills should be practiced constantly.
+
+
+======================================================================
+PAGE 46
+======================================================================
+
+46◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Level 1.
+Almost all the previous drills contain individual tactical 
+skills and decision making. All drills that have more than 
+one option and the player is forced to make a decision, de­
+velops players ability to read the game.
+On the first level the amount of options should be minimal 
+and the drills should be simple. For young players simplicity 
+means concentration on the obvious, decision making, and 
+for more advanced players, the drills can be seen as warm 
+up drills where they can, for example, concentrate on shoo­
+ting. It is always up to the coach which skill he/she wants to 
+emphasise to the players. Three against zero situation is de­
+manding because of the amount of options which to choose 
+from, and three against two situations because of the dec­
+reased amount of time and space.
+Drill 40.
+Objective:
+to practice decision 
+making, passing or 
+shooting
+warm up for the 
+goalkeeper
+Organisation:
+players form two 
+lines in the corners 
+with balls
+can be executed 
+at both ends of the 
+rink
+Execution:
+A1 starts by passing 
+a hard cross field 
+pass to A2
+A2 receives the ball 
+while moving
+both players run 
+towards the middle 
+line and the centre 
+where they cross
+A2 can either pass 
+back to A1 or give 
+a drop pass when 
+crossing
+the ball carrier 
+either shoots or 
+passes
+after execution, 
+they will switch 
+lines
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+the first pass can 
+be passed behind 
+the goal or by the 
+goalkeeper
+can also be exe­
+cuted using the 
+whole rink so that 
+the drill is exe­
+cuted alternately 
+from each end
+Key points:
+players should be 
+ready to pass and 
+receive a pass
+the non-ball carrier 
+should not get 
+upset if he/she 
+wont receive a pass 
+(emphasising the 
+shooting)
+the execution 
+should be fast and 
+not contain more 
+than four to five 
+passes
+if the drill is 
+executed using the 
+whole rink, the 
+execution from 
+both ends can 
+overlap so that the 
+next couple starts 
+when the previous 
+are crossing the 
+middle line
+in this case the 
+players should head 
+for the scoring 
+sector to avoid 
+collision
+•
+•
+•
+•
+•
+•
+•
+A1
+A2
+
+
+======================================================================
+PAGE 47
+======================================================================
+
+►47
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 41.
+Objective:
+to practice decision 
+making in one 
+against one situa­
+tion
+the player is 
+forced to choose 
+from dribbling or 
+shooting
+Organisation:
+the rink is divided 
+in half length wise
+the players form 
+two lines in each 
+side of the rink
+one line in the cor­
+ner and one line by 
+the centre spot
+balls in the corner
+Execution:
+A1 starts from the 
+corner by passing 
+to A2
+A2 passes back 
+to A1 who takes 
+control of the ball 
+and they play one 
+against one situati­
+on in the other end 
+of the rink
+players at the 
+other end executes 
+the same
+after the execution 
+A1 becomes A2 and 
+A2 becomes B1
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+can also be 
+executed using 
+only half of the 
+court where after 
+receiving the pass, 
+A1 turns before the 
+middle line
+this variation is 
+used if there are 
+less players or only 
+one goalkeeper 
+available
+Key points:
+the emphasis 
+should be on ma­
+king the decision 
+whether to dribble 
+and try to make a 
+fake, directing the 
+defender to the 
+other direction or 
+shoot if the defen­
+der is at a distance
+the technical per­
+formance should be 
+so well learnt that 
+whether the ball 
+carrier decides to 
+shoot or dribble, 
+he/she should gain 
+the scoring chance
+•
+•
+•
+•
+Drill 42.
+Objective:
+to practice decision 
+making in three 
+against one situa­
+tion
+the amount of 
+options is increased 
+by the number of 
+players but the lar­
+ge amount of time 
+and space should 
+make the decision 
+making easier for 
+the players
+Organisation:
+players form four 
+lines in each corner 
+of the half rink
+balls in one corner
+Execution:
+B1 passes the ball 
+behind the goal to 
+A1 and moves in to 
+a defensive role in 
+front of the goal 
+area
+A1 passes the ball 
+to A2 and follows 
+the pass
+A2 takes control of 
+the ball and simul­
+taneously A3 starts 
+from respective 
+side to run towards 
+A2
+•
+•
+•
+•
+•
+•
+•
+A2 gives a drop 
+pass to A3
+there after they 
+will attack while B1 
+defends
+after the executi­
+on, the lines will 
+rotate in clockwise 
+order
+Modifications:
+can also be exe­
+cuted first without 
+the defender and 
+also with two de­
+fenders
+also the whole rink 
+can be used
+Key points:
+the execution 
+should be fast and 
+it should always 
+end up with a shot
+the coach should 
+let the players first 
+make their own 
+decisions and then 
+question the deci­
+sions when giving 
+feedback
+•
+•
+•
+•
+•
+•
+•
+B1
+A1
+A2
+A3
+3
+4
+A1
+A2
+B2
+B1
+
+
+======================================================================
+PAGE 48
+======================================================================
+
+48◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 43.
+Objective: 
+for the offensive 
+player to practice 
+decision making, 
+whether to shoot 
+or pass
+to practice scoring 
+and one against 
+one situation in 
+front of the goal 
+Organisation:
+A1 in front of the 
+goal as an offensive 
+player
+B1 in front of the 
+goal defending 
+against A1
+A2 and A3 on the 
+respective sides
+rest of the players 
+form a line by the 
+middle spot with 
+the balls
+Execution:
+A4 passes to A1 
+who has to make a 
+decision whether 
+to turn and shoot 
+if given enough 
+space(Option 1), or 
+to pass to either A2 
+or A3 (Option 2)
+A2 and A3 should 
+be moving and as­
+sist A1 by creating 
+passing lanes and 
+be ready to shoot 
+quickly
+B1 should try to 
+obstruct A1 from 
+making the deci­
+sion
+if A1 passes to 
+either A2 or A3, B1 
+should try to block 
+the shot
+if A1 gives a pass to 
+A2, A3 should try to 
+screen the goal­
+keeper
+after the executi­
+on, A1 becomes A2, 
+A2 becomes A3, A3 
+becomes A4, and 
+A4 becomes B1
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+Modifications:
+the pass can also 
+be an aerial pass, 
+which makes it 
+more technically 
+challenging for the 
+receiver
+it can also be 
+determined that 
+either A2 or A3 has 
+to go and screen 
+the goalkeeper so 
+A1 is left with only 
+one passing oppor­
+tunity
+this also forces the 
+non-ball carriers to 
+make a decision
+Key points:
+A1 should come 
+towards the pass to 
+gain distance from 
+B1, who can turn 
+and shoot
+if B1 is able to 
+close the gap, A1 
+should keep his/her 
+head up to see 
+whom to pass to
+taking control 
+of the ball when 
+receiving the pass 
+should be fast and 
+the action follo­
+wing that just as 
+fast
+A2 and A3 should 
+be ready to receive 
+a pass and shoot, 
+or screen
+•
+•
+•
+•
+•
+•
+•
+A3
+B1
+A1
+A2
+Option.2
+Option.1
+A4
+A4
+A2
+A3
+A1
+B1
+
+
+======================================================================
+PAGE 49
+======================================================================
+
+►49
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Level 2.
+By altering the amount of space and time changes the 
+demand level of the drill. To force the player to make the 
+decision quickly, and in a tight situation, develops the 
+ability to do so also in a game. The situation is created by 
+constantly altering the amount of players, which will auto­
+matically reduce both time and space therefore developing 
+the players’ ability to make decisions.
+On the next level the amount of options are increased by 
+the number of players. The drills are mostly continuous, 
+therefore the players must be ready to read and react at all 
+times. These drills might not be suitable for beginners, but 
+should be introduced as soon as the players are somewhat 
+aware of the game situation roles.  
+Drill 44.
+Objective:
+developing the abi­
+lity to understand 
+game situation roles 
+and the different 
+options a player has 
+in each role
+to practice moving, 
+passing, and reading 
+the opponent by 
+blocking the passing 
+lanes and man cover
+Organisation:
+the rink divided in 
+quarters
+two against two 
+game in each quar­
+ter
+see drill 38
+Execution:
+coach signals for 
+45-60 seconds shifts, 
+where after the 
+players switch the 
+opponent
+the aim is to play 
+two against two 
+without any particu­
+lar rules
+Modifications:
+coach can add rules 
+to emphasise a spe­
+cific skill
+to emphasise pas­
+sing the players are 
+allowed to touch the 
+ball only twice, then 
+they must pass to a 
+team mate
+the area can be 
+made smaller to 
+emphasise protec­
+ting the ball in tight 
+situation
+Key points:
+following all the 
+four games can be 
+difficult for the coa­
+ch which makes the 
+players responsible 
+for obeying the rules 
+strictly if rules are 
+added
+players should keep 
+their head up to see 
+where both their 
+team mate and the 
+opponent is
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+
+======================================================================
+PAGE 50
+======================================================================
+
+50◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 45.
+Objective:
+to practice decision 
+making in a two 
+against two situati­
+on where all game 
+situation roles are 
+present and cons­
+tantly changing
+transition from 
+either defence to 
+offence or vice 
+versa, depending 
+on the starting 
+situation
+Organisation:
+players form four 
+lines, two beside 
+both goals
+the goals can be 
+brought closer 
+together to make 
+the court smaller 
+or the cages can be 
+placed in one end 
+of the rink
+Execution:
+the goalkeeper 
+passes the ball to 
+the first attacking 
+couple (A1 and 
+A2). A1 and A2 will 
+attack two against 
+zero
+when the ball is 
+saved by the goal­
+keeper or hit out 
+of the boundaries, 
+the goalkeeper will 
+start the attack 
+by passing another 
+ball to B1 or B2
+A1 and A2 will 
+make a fast transi­
+tion from offence 
+into defence
+after playing in 
+defence against B1 
+and B2, A1 and A2 
+will return behind 
+their own goal and 
+another couple, A3 
+and A4 will start an 
+attack against B1 
+and B2
+if A1 or A2 succeeds 
+in stealing the ball 
+from B1 and B2, 
+they can imme­
+diately pass the 
+ball to A3 or A4
+the drill continues 
+until the coaches 
+stops the drill
+•
+•
+•
+•
+1.
+2.
+3.
+•
+•
+•
+Modifications:
+to emphasise tran­
+sition from defence 
+to offence, the 
+drill is started as 
+a two against two 
+situation where:
+A1 and A2 will 
+attack against B1 
+and B2
+after the attack B1 
+and B2 will attack 
+against A3 and A4 
+who have already 
+positioned themsel­
+ves in front of their 
+own goal to defend 
+the attack
+Key points:
+in the beginning it 
+is easier to instruct 
+the players by tell­
+ing them whether 
+they should attack 
+or defend first
+the players waiting 
+for their turn should 
+be ready to take 
+their positions 
+the defending play­
+ers should meet the 
+attack at the middle 
+line
+in offence the play­
+ers should move 
+towards the middle 
+line in order to 
+receive the pass 
+while moving
+the goalkeeper 
+should be ready 
+to pass the ball as 
+soon as he/she 
+makes a save or 
+the ball is hit out of 
+the boundaries
+•
+◦
+◦
+•
+•
+•
+•
+•
+B1
+B2
+A1
+A2
+Phase 1
+B1
+B2
+A1
+A2
+A3
+A4
+Phase 2
+A1
+A2
+A3
+A4
+B1
+B2
+Phase 3
+
+
+======================================================================
+PAGE 51
+======================================================================
+
+►51
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 46.
+Objective:
+to practice decision 
+making in order 
+to get a scoring 
+situation
+to practice all 
+different game 
+situation roles and 
+defining options in 
+the roles
+Organisation:
+players form five 
+lines at one end of 
+the rink by the goal 
+line
+balls in the same 
+end of the rink
+Execution:
+A1 will start an 
+attack against the 
+goalkeeper
+after a shot A1 will 
+turn to defend an 
+attack by A2 who 
+has started as soon 
+as A1 has crossed 
+the middle line
+when A2 has 
+crossed the middle 
+line, B1, B2 and 
+B3 will launch an 
+attack against A1 
+and A2
+after the executi­
+on, the lines will 
+rotate in clock wise 
+order
+Modifications:
+can also be exe­
+cuted in one end of 
+the rink
+players have to go 
+around the cones 
+placed by the mid­
+dle line
+Key points:
+players should rota­
+te in right order to 
+keep the lines even
+players should be 
+ready to make fast 
+decisions because 
+they have to react 
+to the next situati­
+on quickly
+players should 
+clear the court 
+right after the 
+execution to give 
+space for the next 
+players
+•
+•
+•
+•
+1.
+2.
+3.
+•
+•
+•
+•
+•
+•
+players should be 
+aware of both the 
+team mates and 
+the opponent
+in one against 
+one situation, the 
+ball carrier should 
+be encouraged 
+to challenge the 
+opponent
+•
+•
+A1
+A2
+B1
+B2
+B3
+Phase 1
+A1
+A2
+B1
+B2
+B3
+Phase 2
+A1
+A2
+B3
+B2
+B1
+Phase 3
+
+
+======================================================================
+PAGE 52
+======================================================================
+
+52◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Level 3.
+Drills on the third level are all executed with more than 
+two players on each side. The main point is that players are 
+aware of all the other players and their positions as well as 
+their own role. This demands a high level of understanding 
+and ability to read the game. With junior players, or begin­
+ners, it should not be expected that they are able to read the 
+game and react to every situation accordingly, so the objec­
+tives should be explained staying on the level for the players.
+Performing different team tactics are included in the drills 
+such as openings, transition and defensive tactics. Most im­
+portant are the individual skills that players have to per­
+form while playing according to a certain tactical system. 
+
+
+======================================================================
+PAGE 53
+======================================================================
+
+►53
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 47.
+Objective:
+to develop players 
+ability to read the 
+game situation 
+by outplaying the 
+opponent
+to practice quick 
+transition from 
+defence to offence 
+and the readiness 
+to attack
+to increase the 
+amount of players, 
+and therefore the 
+amount of options 
+given, to three 
+against three situ­
+ation
+by decreasing the 
+amount of time, to 
+develop the players 
+ability to make 
+quick decisions
+Organisation:
+players form two 
+lines at the middle 
+line near the rink 
+facing their respec­
+tive goals
+two players, B1 and 
+B2 in front of their 
+own goal ready to 
+defend
+balls are in the goal 
+or on top of the 
+goal cage
+Execution:
+Phase 1. A1 and 
+A2 receives a pass 
+from the goalkee­
+per and they start 
+an attack against 
+B1 and B2. As soon 
+as A1 and A2 have 
+passed the middle 
+line, a third de­
+fensive player, B3, 
+will back check, 
+ready to receive an 
+opening pass from 
+either B1, B2 or the 
+goalkeeper
+Phase 2. when the 
+ball is saved, hit 
+out of the bounda­
+ries or the defensi­
+ve players, in this 
+case B1 or B2, gets 
+the possession of 
+the ball, another 
+attack is launched 
+by B1, B2 and B3. 
+A3 and A4 have 
+now positioned 
+themselves in front 
+of their own goal to 
+•
+•
+•
+•
+•
+•
+•
+1.
+2.
+defend the attack. 
+A1 and A2 now join 
+the starting lines at 
+the middle of the 
+court
+Phase 3. as soon as 
+the attackers cross 
+the middle line, 
+a back checker, 
+A5, will assist the 
+defenders and if 
+the defenders will 
+get possession of 
+the ball A5 is ready 
+to attack
+Modifications:
+the drill can be 
+played as a two 
+against two situa­
+tion first, to make 
+it more simple 
+for the players to 
+understand
+the third player 
+can be added as 
+soon as the players 
+understand the 
+rotation
+Key points:
+the defenders 
+should be ready to 
+defend and they 
+should have the 
+readiness to attack 
+once they gain the 
+possession of the 
+ball
+there are various 
+options players 
+have in each role 
+and they should be 
+encouraged to use 
+their creativity
+the back checker 
+should be either 
+ready to receive 
+the opening pass, 
+or be ready to rush 
+to the slot as soon 
+as the defenders 
+get the possession 
+of the ball
+the opponent 
+should be outp­
+layed by a fast 
+transition with a 
+power play situati­
+on in the offensive 
+zone
+the power play 
+situation is crea­
+ted by the back 
+checker
+3.
+•
+•
+•
+•
+•
+•
+•
+B1
+B2
+A1
+A2
+B3
+A3
+A4
+Phase 1
+B3
+B2
+B1
+A1
+A2
+A3
+A4
+A5
+B4
+B5
+Phase 2
+B4
+B5
+A3
+A4
+B1
+B2
+B3
+Phase 3
+A2
+A1
+
+
+======================================================================
+PAGE 54
+======================================================================
+
+54◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Drill 48.
+Objective:
+to practice decision 
+making in a two 
+against three situ­
+ation
+to develop indivi­
+dual tactic skills in:
+for the defensive 
+players to practice 
+fore checking in 
+order to get the 
+possession of the 
+ball
+for the offensive 
+players (players 
+with the ball) to 
+practice defending 
+by maintaining 
+possession of the 
+ball in their own 
+defensive zone and 
+also to practice 
+transition from de­
+fence to offence
+also team tactics 
+is practiced based 
+on the system the 
+team has chosen
+Organisation:
+players form five 
+lines in the other 
+end of the rink 
+behind the goal
+three defensive 
+players (B1, B2, B3) 
+and two offensive 
+players (A1, A2) 
+Execution:
+the goalkeeper 
+throws a ball in the 
+corner
+A1 or A2 will start 
+first by running to 
+get possession of 
+the ball
+B1, B2 and B3 will 
+run after A1 and 
+A2 in order to get 
+possession of the 
+ball by positioning 
+themselves in de­
+termined places
+if the team has 
+chosen to play with 
+a top fore checker 
+(using formation 
+1-2-2) only B1 is 
+going to cover the 
+ball carrier
+if the team has 
+chosen to double 
+the ball carrier in 
+the corner, B1 and 
+B2 will run after 
+the ball carrier and 
+B3 will cover the 
+player without the 
+ball 
+•
+•
+•
+◦
+•
+•
+•
+•
+•
+•
+◦
+◦
+of course the 
+situation depends 
+on the timing of 
+the players so they 
+have to have some 
+ability to read the 
+situation
+if A1 and A2 will 
+succeed in maintai­
+ning possession of 
+the ball, they can 
+counterattack once
+if the fore checkers 
+will get possession 
+of the ball they will 
+try to score, while 
+A1 and A2 posi­
+tion themselves in 
+defence
+the drill continues 
+until the coach 
+whistles
+Modifications:
+the court can be 
+made smaller by 
+placing the other 
+goal cage and the 
+lines closer to the 
+other end, but not 
+closer than the 
+middle line as in 
+the pictures
+also a third offen­
+sive player, A3, can 
+be added to assist 
+A1 and A2 if and 
+when they get pos­
+session of the ball
+Key points:
+players should be 
+ready to defend
+players should play 
+according to the 
+tactic the team 
+is using in a fore 
+checking situation
+altering situations 
+should be conside­
+red; if B1 goes af­
+ter the ball carrier, 
+B2 and B3 should 
+know were to place 
+themselves and 
+whether to cover 
+man or area 
+also A1 and A2 
+should be aware 
+of the team mates 
+positions; if for 
+example A1 goes to 
+the ball, A2 should 
+be close enough in 
+order to be open 
+for a pass and rea­
+dy to attack
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+A1
+A2
+B1
+B2
+B3
+Example of.a.
+counterattack
+
+
+======================================================================
+PAGE 55
+======================================================================
+
+►55
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+Movivng without ball
+Passing
+Movivng with ball
+Shooting
+Offef nsive player with
+a ball
+Offef nsive player
+Without a ball
+Opponent without
+a ball
+Cone
+Conclusion
+Hopefully this material will assist you as a coach to teach 
+the players the technical and tactical skills in a game like 
+environment. The emphasis is on bringing out the optimal 
+and best performance in each player and to improve their 
+ability to read the game. But above all, the most important 
+thing is to encourage players to excel themselves through 
+achievement and good performance and for you as a coach 
+to see the improvement in each player and spread the ent­
+husiasm towards the game itself. Have a pleasant practice!
+Bibliography
+The education material of the Finnish Floorball Federation:
+Tekniikka- ja perustilanteet, 1999
+Salibandyn nuoriso- ja aikuisvalmennus 2006
+Unihockey Techniques DVD, Swiss Unihockey Associa­
+tion/IFF, 2006
+Decision Training, A New Approach to Coaching, Dr. 
+J.N.Vickers, Faculty of Kinesiology and The National 
+Coaching institute-Calgary, University of Calgary
+Innebandytaktik, SISU Idrottsböcker/Swedish Floorball 
+Federation, 2003
+
+
+======================================================================
+PAGE 56
+======================================================================
+
+56◄
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+
+
+======================================================================
+PAGE 57
+======================================================================
+
+►57
+INDIVIDUAL TECHNIQUE AND TACTICS 
+International Floorball Federation
+
+
