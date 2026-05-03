@@ -7,6 +7,9 @@ hero:
   tagline: 系统化的训练内容，涵盖个人技术、团队战术
 
 features:
+  - title: 软曲简介
+    details: 了解软式曲棍球（Floorball）
+    link: /软曲简介/
   - title: 个人技术基础
     details: 控球、传球、射门、带球、防守
     link: /个人技术基础/
@@ -19,14 +22,14 @@ features:
   - title: 团队训练
     details: 防守战术、进攻战术与定位球
     link: /团队训练/
-  - title: 发力原理解析
-    details: 体能训练与生物力学分析
-    link: /发力原理解析/
-  - title: 热身及小游戏
-    details: 训练前热身与趣味活动
-    link: /热身及小游戏/
+  - title: 训练计划
+    details: 系统化的训练安排
+    link: /训练计划/
+  - title: 装备器材
+    details: 球杆、装备选择与维护
+    link: /装备器材/
   - title: 其他
-    details: 换人策略与比赛经验
+    details: 换人策略、比赛经验、发力原理与热身
     link: /其他/
 ---
 

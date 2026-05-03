@@ -3,6 +3,9 @@ import container from 'markdown-it-container'
 
 // All H1 sections and their H2 children
 const sidebar = {
+  '/软曲简介/': [
+    { text: '概述', link: '/软曲简介/' },
+  ],
   '/个人技术基础/': [
     { text: '概述', link: '/个人技术基础/' },
     { text: '控球训练', link: '/个人技术基础/控球训练' },
@@ -30,17 +33,18 @@ const sidebar = {
     { text: '5打4战术', link: '/团队训练/5打4战术' },
     { text: '任意球战术', link: '/团队训练/任意球战术' },
   ],
-  '/发力原理解析/': [
-    { text: '概述', link: '/发力原理解析/' },
-    { text: '体能训练', link: '/发力原理解析/体能训练' },
+  '/训练计划/': [
+    { text: '概述', link: '/训练计划/' },
   ],
-  '/热身及小游戏/': [
-    { text: '概述', link: '/热身及小游戏/' },
+  '/装备器材/': [
+    { text: '概述', link: '/装备器材/' },
   ],
   '/其他/': [
     { text: '概述', link: '/其他/' },
     { text: '换人', link: '/其他/换人' },
     { text: '比赛经验', link: '/其他/比赛经验' },
+    { text: '发力原理解析', link: '/其他/发力原理解析' },
+    { text: '热身及小游戏', link: '/其他/热身及小游戏' },
   ],
 }
 
@@ -85,14 +89,15 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
+      { text: '软曲简介', link: '/软曲简介/' },
       {
         text: '个人技术基础',
         items: [
           { text: '控球训练', link: '/个人技术基础/控球训练' },
           { text: '传球训练', link: '/个人技术基础/传球训练' },
           { text: '射门训练', link: '/个人技术基础/射门训练' },
-          { text: '带球训练', link: '/个人技术基础/1.4 带球训练' },
-          { text: '防守动作', link: '/个人技术基础/1.5 防守动作' },
+          { text: '带球训练', link: '/个人技术基础/带球训练' },
+          { text: '防守动作', link: '/个人技术基础/防守动作' },
         ],
       },
       {
@@ -120,8 +125,8 @@ export default defineConfig({
           { text: '任意球战术', link: '/团队训练/任意球战术' },
         ],
       },
-      { text: '发力原理解析', link: '/发力原理解析/' },
-      { text: '热身及小游戏', link: '/热身及小游戏/' },
+      { text: '训练计划', link: '/训练计划/' },
+      { text: '装备器材', link: '/装备器材/' },
       { text: '其他', link: '/其他/' },
     ],
 
