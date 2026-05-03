@@ -9,9 +9,13 @@
         </div>
       </div>
     </template>
+    <template #sidebar-nav-before>
+      <TreeTOC />
+    </template>
   </DefaultTheme.Layout>
 </template>
 
 <script setup>
 import DefaultTheme from 'vitepress/theme'
+import TreeTOC from './TreeTOC.vue'
 </script>

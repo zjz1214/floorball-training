@@ -30,8 +30,11 @@ h1, h2, h3, h4, h5, h6,
   background: #000;
 }
 
-/* Bold/strong text in red */
-.vp-doc strong {
+/* Bold/strong text in red — only in headings and standalone paragraphs */
+.vp-doc h2 strong,
+.vp-doc h3 strong,
+.vp-doc h4 strong,
+.vp-doc > p strong {
   color: #c00;
 }
 
@@ -40,10 +43,41 @@ h1, h2, h3, h4, h5, h6,
   border-left-color: var(--vp-c-brand-1);
 }
 
-/* H2 styling */
+/* ===== Heading visual hierarchy ===== */
+
+.vp-doc h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* h2: 大章节 — 深色粗体，左侧品牌色竖线 + 渐变背景条 */
 .vp-doc h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--vp-c-brand-1);
-  padding-left: 12px;
+  border-left: 4px solid var(--vp-c-brand-1);
+  padding: 10px 0 10px 16px;
+  margin: 36px 0 18px;
+  background: linear-gradient(90deg, var(--vp-c-bg-soft) 0%, transparent 100%);
+}
+
+/* h3: 子章节 — 中号，左侧次级竖线 */
+.vp-doc h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-left: 3px solid var(--vp-c-divider);
+  padding: 6px 0 6px 20px;
+  margin: 28px 0 12px;
+}
+
+/* h4: 知识点 — 常规字号，左侧细竖线，较浅文字 */
+.vp-doc h4 {
+  font-size: 1.02rem;
+  font-weight: 500;
+  border-left: 2px solid var(--vp-c-bg-soft);
+  padding: 4px 0 4px 24px;
+  margin: 20px 0 8px;
+  color: var(--vp-c-text-2);
 }
 
 /* Home page hero */
@@ -155,6 +189,32 @@ html.dark .author-card:hover {
   font-size: 1.1rem;
 }
 
+/* Nested ordered lists — distinguish levels */
+.vp-doc ol {
+  list-style-type: decimal;
+  padding-left: 1.5em;
+}
+.vp-doc ol ol {
+  list-style-type: lower-alpha;
+}
+.vp-doc ol ol ol {
+  list-style-type: lower-roman;
+}
+.vp-doc ul {
+  padding-left: 1.5em;
+}
+.vp-doc li {
+  margin: 4px 0;
+}
+
+/* Media inside list items — prevent breaking layout */
+.vp-doc li > img,
+.vp-doc li > video {
+  max-width: 50%;
+  display: block;
+  margin: 8px 0;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .vp-doc img,
@@ -168,6 +228,19 @@ html.dark .author-card:hover {
 
   .media-grid {
     grid-template-columns: 1fr;
+  }
+
+  .vp-doc h2 {
+    font-size: 1.3rem;
+    margin: 28px 0 14px;
+  }
+  .vp-doc h3 {
+    font-size: 1.08rem;
+    margin: 20px 0 10px;
+  }
+  .vp-doc h4 {
+    font-size: 1rem;
+    margin: 14px 0 6px;
   }
 }
 
