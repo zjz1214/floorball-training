@@ -29,7 +29,7 @@ features:
     details: 球杆、装备选择与维护
     link: /装备器材/
   - title: 其他
-    details: 换人策略、比赛经验、发力原理与热身
+    details: 比赛经验、发力原理与热身
     link: /其他/
 ---
 
