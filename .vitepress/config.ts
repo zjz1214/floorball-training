@@ -11,7 +11,6 @@ const sidebar = {
     { text: '控球训练', link: '/个人技术基础/控球训练' },
     { text: '传球训练', link: '/个人技术基础/传球训练' },
     { text: '射门训练', link: '/个人技术基础/射门训练' },
-    { text: '带球训练', link: '/个人技术基础/带球训练' },
     { text: '防守动作', link: '/个人技术基础/防守动作' },
   ],
   '/个人技术进阶/': [
@@ -19,6 +18,7 @@ const sidebar = {
     { text: '控球', link: '/个人技术进阶/控球' },
     { text: '传球', link: '/个人技术进阶/传球' },
     { text: '射门', link: '/个人技术进阶/射门' },
+    { text: '运球', link: '/个人技术进阶/运球' },
   ],
   '/专项练习/': [
     { text: '概述', link: '/专项练习/' },
@@ -72,6 +72,44 @@ export default defineConfig({
             : '</div>\n'
         },
       })
+      // Wrap h3/h4 sections in card containers
+      md.core.ruler.push('heading_cards', (state) => {
+        const Token = state.Token
+        const newTokens: typeof state.tokens = []
+        const cardStack: string[] = []
+
+        function closeCards(upTo: number) {
+          while (cardStack.length > upTo) {
+            const tag = cardStack.pop()
+            newTokens.push(Object.assign(new Token('html_block', '', 0), { content: `</div><!-- close ${tag}-card -->` }))
+          }
+        }
+
+        for (let i = 0; i < state.tokens.length; i++) {
+          const token = state.tokens[i]
+
+          if (token.type === 'heading_open') {
+            if (token.tag === 'h2') {
+              closeCards(0)
+            } else if (token.tag === 'h3') {
+              closeCards(0)
+              cardStack.push('h3')
+              newTokens.push(Object.assign(new Token('html_block', '', 0), { content: '<div class="h3-card">' }))
+            } else if (token.tag === 'h4') {
+              closeCards(1)
+              cardStack.push('h4')
+              newTokens.push(Object.assign(new Token('html_block', '', 0), { content: '<div class="h4-card">' }))
+            }
+          }
+
+          newTokens.push(token)
+        }
+
+        closeCards(0)
+
+        state.tokens = newTokens
+      })
+
       const defaultRender = md.render.bind(md)
       md.render = (src, env) => {
         let html = defaultRender(src, env)
@@ -102,7 +140,6 @@ export default defineConfig({
           { text: '控球训练', link: '/个人技术基础/控球训练' },
           { text: '传球训练', link: '/个人技术基础/传球训练' },
           { text: '射门训练', link: '/个人技术基础/射门训练' },
-          { text: '带球训练', link: '/个人技术基础/带球训练' },
           { text: '防守动作', link: '/个人技术基础/防守动作' },
         ],
       },
@@ -112,6 +149,7 @@ export default defineConfig({
           { text: '控球', link: '/个人技术进阶/控球' },
           { text: '传球', link: '/个人技术进阶/传球' },
           { text: '射门', link: '/个人技术进阶/射门' },
+          { text: '运球', link: '/个人技术进阶/运球' },
         ],
       },
       {

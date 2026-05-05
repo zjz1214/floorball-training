@@ -119,6 +119,54 @@ h1, h2, h3, h4, h5, h6,
   margin: 24px 0 12px;
 }
 
+/* ===== h3 card — card-wrapped h3 sections (injected by config.ts plugin) ===== */
+.vp-doc .h3-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg);
+  padding: 20px 24px 16px;
+  margin: 24px 0;
+  transition: box-shadow 0.15s ease;
+}
+.vp-doc .h3-card:hover {
+  box-shadow: 0 0 0 1px var(--vp-c-brand-soft);
+}
+html.dark .vp-doc .h3-card {
+  background: var(--vp-c-bg-soft);
+}
+
+/* h3 inside card: reduce top margin, keep left bar */
+.vp-doc .h3-card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* First element after h3 in a card shouldn't push down */
+.vp-doc .h3-card h3 + * {
+  margin-top: 0;
+}
+
+/* ===== h4 card — nested inside h3-card or standalone ===== */
+.vp-doc .h4-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  background: var(--vp-c-bg-soft);
+  padding: 14px 18px 12px;
+  margin: 16px 0;
+}
+html.dark .vp-doc .h4-card {
+  background: var(--vp-c-bg-alt);
+}
+
+.vp-doc .h4-card h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.vp-doc .h4-card h4 + * {
+  margin-top: 0;
+}
+
 /* Home page hero */
 .VPHero .name {
   font-size: 2.4rem;

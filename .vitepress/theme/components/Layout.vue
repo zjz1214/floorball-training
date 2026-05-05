@@ -10,7 +10,6 @@
       </div>
     </template>
     <template #sidebar-nav-before>
-      <TreeTOC />
     </template>
   </DefaultTheme.Layout>
 </template>

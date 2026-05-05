@@ -11,10 +11,10 @@ features:
     details: 了解软式曲棍球（Floorball）
     link: /软曲简介/
   - title: 个人技术基础
-    details: 控球、传球、射门、带球、防守
+    details: 控球、传球、射门、防守
     link: /个人技术基础/
   - title: 个人技术进阶
-    details: 进阶控球、传球与射门技巧
+    details: 进阶控球、传球、射门与运球技巧
     link: /个人技术进阶/
   - title: 专项练习
     details: 前锋与后卫专项训练
