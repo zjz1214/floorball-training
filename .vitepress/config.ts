@@ -44,6 +44,8 @@ const sidebar = {
   ],
   '/装备器材/': [
     { text: '概述', link: '/装备器材/' },
+    { text: '球杆选择', link: '/装备器材/球杆选择' },
+    { text: '拍头选择', link: '/装备器材/拍头选择' },
   ],
   '/其他/': [
     { text: '概述', link: '/其他/' },
@@ -61,6 +63,10 @@ export default defineConfig({
   cleanUrls: true,
   ignoreDeadLinks: true,
   srcExclude: ['**/manual.md', '**/*.py', '**/feishu-export/**', '**/README.md', '**/CLAUDE.md', '**/todo.md'],
+
+  head: [
+    ['script', { async: '', src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js' }],
+  ],
 
   markdown: {
     config: (md) => {
@@ -178,7 +184,13 @@ export default defineConfig({
           { text: '个人战术', link: '/训练计划/个人战术' },
         ],
       },
-      { text: '装备器材', link: '/装备器材/' },
+      {
+        text: '装备器材',
+        items: [
+          { text: '球杆选择', link: '/装备器材/球杆选择' },
+          { text: '拍头选择', link: '/装备器材/拍头选择' },
+        ],
+      },
       { text: '其他', link: '/其他/' },
     ],
 
