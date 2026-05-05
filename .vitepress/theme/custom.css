@@ -1,15 +1,49 @@
-/* Custom styles for 软曲教学 */
+/* Custom styles for 软曲教学 — Mintlify design system */
+/* DESIGN.md: Inter for Latin, Microsoft YaHei for CJK */
 
-/* Unified font: Times New Roman for Latin, Microsoft YaHei for CJK */
 :root {
-  --vp-font-family-base: "Times New Roman", "Microsoft YaHei", sans-serif;
+  /* Mintlify palette — mapped to VitePress vars */
+  --vp-c-brand-1: #00b48a;
+  --vp-c-brand-2: #00d4a4;
+  --vp-c-brand-3: #7cebcb;
+  --vp-c-brand-soft: rgba(0, 180, 138, 0.12);
+
+  --vp-c-text-1: #0a0a0a;
+  --vp-c-text-2: #3a3a3c;
+  --vp-c-text-3: #5a5a5c;
+
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f7f7f7;
+  --vp-c-bg-alt: #fafafa;
+  --vp-c-divider: #e5e5e5;
+
+  /* Typography — Inter + CJK fallback */
+  --vp-font-family-base: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
+  --vp-font-family-mono: "Geist Mono", "SF Mono", Menlo, Consolas, monospace;
+}
+
+/* Dark mode */
+html.dark {
+  --vp-c-brand-1: #00d4a4;
+  --vp-c-brand-2: #7cebcb;
+  --vp-c-brand-3: #b5f2e2;
+  --vp-c-brand-soft: rgba(0, 212, 164, 0.16);
+
+  --vp-c-text-1: #f7f8f8;
+  --vp-c-text-2: #b3b3b3;
+  --vp-c-text-3: #888888;
+
+  --vp-c-bg: #0a0a0a;
+  --vp-c-bg-soft: #1c1c1e;
+  --vp-c-bg-alt: #161618;
+  --vp-c-divider: #1f1f1f;
 }
 
 html, body, .vp-doc, .VPSidebar, .VPNav, .VPNavBar,
 h1, h2, h3, h4, h5, h6,
 .vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4, .vp-doc h5, .vp-doc h6,
 .VPNavBarTitle, .VPSidebarItem, .VPLink {
-  font-family: "Times New Roman", "Microsoft YaHei", sans-serif;
+  font-family: var(--vp-font-family-base);
 }
 
 /* Image sizing */
@@ -41,43 +75,48 @@ h1, h2, h3, h4, h5, h6,
 /* Callout/Tip styling */
 .vp-doc .tip {
   border-left-color: var(--vp-c-brand-1);
+  background: var(--vp-c-bg-alt);
+  border-radius: 8px;
 }
 
-/* ===== Heading visual hierarchy ===== */
+/* ===== Heading visual hierarchy (Mintlify-inspired) ===== */
 
 .vp-doc h1 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: var(--vp-c-text-1);
 }
 
-/* h2: 大章节 — 深色粗体，左侧品牌色竖线 + 渐变背景条 */
+/* h2: main section — brand green left bar */
 .vp-doc h2 {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--vp-c-brand-1);
   border-left: 4px solid var(--vp-c-brand-1);
   padding: 10px 0 10px 16px;
-  margin: 36px 0 18px;
+  margin: 40px 0 20px;
   background: linear-gradient(90deg, var(--vp-c-bg-soft) 0%, transparent 100%);
 }
 
-/* h3: 子章节 — 中号，左侧次级竖线 */
+/* h3: sub-section — slate left bar */
 .vp-doc h3 {
   font-size: 1.15rem;
   font-weight: 600;
+  color: var(--vp-c-text-1);
   border-left: 3px solid var(--vp-c-divider);
-  padding: 6px 0 6px 20px;
-  margin: 28px 0 12px;
+  padding: 8px 0 8px 20px;
+  margin: 32px 0 16px;
 }
 
-/* h4: 知识点 — 常规字号，左侧细竖线，较浅文字 */
+/* h4: detail point — subtle left bar */
 .vp-doc h4 {
   font-size: 1.02rem;
   font-weight: 500;
+  color: var(--vp-c-text-2);
   border-left: 2px solid var(--vp-c-bg-soft);
   padding: 4px 0 4px 24px;
-  margin: 20px 0 8px;
-  color: var(--vp-c-text-2);
+  margin: 24px 0 12px;
 }
 
 /* Home page hero */
@@ -85,39 +124,26 @@ h1, h2, h3, h4, h5, h6,
   font-size: 2.4rem;
 }
 
-/* Author card — right side of hero section */
-.VPHero .image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.VPHero .image-bg {
-  display: none;
-}
-
+/* Author card — Mintlify card-base style */
 .author-card {
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 16px 20px;
+  padding: 20px 24px;
   border-radius: 12px;
-  background: var(--vp-c-bg-soft);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s, box-shadow 0.2s;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .author-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-}
-
-html.dark .author-card {
-  box-shadow: 0 2px 16px rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 2px 0px;
 }
 
 html.dark .author-card:hover {
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.10);
+  box-shadow: none;
+  border-color: var(--vp-c-brand-1);
 }
 
 .author-avatar {
@@ -157,7 +183,7 @@ html.dark .author-card:hover {
   }
 }
 
-/* Cards grid for section overview pages */
+/* Cards grid — Mintlify card-base: 12px radius, hairline border */
 .vp-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -167,19 +193,19 @@ html.dark .author-card:hover {
 
 .vp-card {
   display: block;
-  padding: 20px;
+  padding: 24px;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 10px;
+  border-radius: 12px;
   text-decoration: none;
   color: var(--vp-c-text-1);
-  transition: all 0.2s;
+  background: var(--vp-c-bg);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .vp-card:hover {
-  border-color: var(--vp-c-brand-1);
-  background: var(--vp-c-bg-soft);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-color: var(--vp-c-brand-2);
+  transform: translateY(-1px);
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 2px 0px;
   text-decoration: none;
 }
 
