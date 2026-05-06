@@ -5,7 +5,7 @@ __pycache__/
 .DS_Store
 Thumbs.db
 node_modules/
-.vitepress/dist/
+.vitepress/dist*/
 .vitepress/cache/
 CLAUDE.md
 todo.md
