@@ -16,6 +16,9 @@
         <span>&nbsp;|&nbsp;</span>
         <span><span id="busuanzi_value_site_uv">-</span> 人</span>
       </div>
+      <ClientOnly>
+        <Live2DCanvas />
+      </ClientOnly>
     </template>
   </DefaultTheme.Layout>
 </template>

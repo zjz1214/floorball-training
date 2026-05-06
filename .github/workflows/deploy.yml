@@ -22,6 +22,6 @@ jobs:
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist/
+          path: .vitepress/dist-site/
       - id: deployment
         uses: actions/deploy-pages@v4

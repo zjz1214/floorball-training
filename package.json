@@ -12,5 +12,9 @@
   "devDependencies": {
     "markdown-it-container": "^4.0.0",
     "vitepress": "^1.6.4"
+  },
+  "dependencies": {
+    "pixi-live2d-display": "^0.5.0-beta",
+    "pixi.js": "^7.4.3"
   }
 }
