@@ -66,7 +66,7 @@ export default defineConfig({
 
   head: [
     ['script', { async: '', src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js' }],
-    // Live2D Cubism Core is loaded dynamically in Live2DCanvas.vue
+    ['script', { src: '/floorball-training/live2d/live2dcubismcore.min.js' }],
   ],
 
   outDir: '.vitepress/dist-site',

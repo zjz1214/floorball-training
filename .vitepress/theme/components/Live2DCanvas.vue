@@ -11,6 +11,10 @@ let app: any = null
 function loadScript(src: string): Promise<void> {
   return new Promise((resolve, reject) => {
     if (!src) return reject(new Error('empty src'))
+    // Don't re-add if already present (survives SPA navigation)
+    if (document.head.querySelector(`script[src="${src}"]`)) {
+      return resolve()
+    }
     const s = document.createElement('script')
     s.src = src
     s.onload = () => resolve()
