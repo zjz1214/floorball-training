@@ -136,10 +136,11 @@ onUnmounted(() => {
   pointer-events: auto;
 }
 
-/* Hide on small screens */
+/* Smaller on mobile */
 @media (max-width: 768px) {
   .live2d-canvas {
-    display: none;
+    transform: scale(0.55);
+    transform-origin: bottom right;
   }
 }
 </style>
