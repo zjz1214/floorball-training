@@ -9,4 +9,7 @@
     <a class="vp-card" href="拍头选择">
         <h3>拍头选择</h3>
     </a>
+    <a class="vp-card" href="品牌选择">
+        <h3>品牌选择</h3>
+    </a>
 </div>
