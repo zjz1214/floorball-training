@@ -182,7 +182,30 @@ html.dark .vp-doc .h4-card {
   margin-top: 48px;
 }
 
-/* Author card — Mintlify card-base style */
+/* Author card & friend links — in hero image slot, side by side with title */
+.author-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 260px;
+}
+
+/* Override VPHero image-container when author-area is present */
+.VPHero:has(.author-area) .image-container {
+  width: auto !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  transform: none !important;
+}
+.VPHero:has(.author-area) .image-bg {
+  display: none !important;
+}
+.VPHero:has(.author-area) .image {
+  margin: 0 !important;
+}
 .author-card {
   display: flex;
   align-items: center;
@@ -232,6 +255,39 @@ html.dark .author-card:hover {
 
 .author-email:hover {
   color: var(--vp-c-brand-1);
+}
+
+.friend-links {
+  border-radius: 12px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
+  overflow: hidden;
+}
+.friend-links-header {
+  padding: 8px 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  border-bottom: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+}
+.friend-link-item {
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  color: var(--vp-c-brand-1);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: var(--vp-c-divider);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+.friend-link-item:last-child {
+  border-bottom: none;
+}
+.friend-link-item:hover {
+  color: var(--vp-c-brand-2);
+  text-decoration-color: var(--vp-c-brand-2);
+  background: var(--vp-c-bg-soft);
 }
 
 @media (max-width: 959px) {
