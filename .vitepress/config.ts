@@ -145,6 +145,10 @@ export default defineConfig({
   themeConfig: {
     search: { provider: 'local' },
 
+    // 登录验证问题（答对才能查看受保护内容）
+    authQuestion: '暂时不能给您____的答复。',
+    authAcceptedAnswers: ['明确'],
+
     nav: [
       { text: '首页', link: '/' },
       { text: '软曲简介', link: '/软曲简介/' },
