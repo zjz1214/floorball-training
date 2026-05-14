@@ -58,6 +58,7 @@ const sidebar = {
     { text: '概述', link: '/装备器材/' },
     { text: '球杆选择', link: '/装备器材/球杆选择' },
     { text: '拍头选择', link: '/装备器材/拍头选择' },
+    { text: '品牌选择', link: '/装备器材/品牌选择' },
   ],
   '/其他/': [
     { text: '概述', link: '/其他/' },
@@ -228,6 +229,7 @@ export default defineConfig({
         items: [
           { text: '球杆选择', link: '/装备器材/球杆选择' },
           { text: '拍头选择', link: '/装备器材/拍头选择' },
+          { text: '品牌选择', link: '/装备器材/品牌选择' },
         ],
       },
       { text: '其他', link: '/其他/' },
