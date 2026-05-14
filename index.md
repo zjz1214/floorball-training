@@ -22,6 +22,9 @@ features:
   - title: 团队训练
     details: 防守战术、进攻战术与定位球
     link: /团队训练/
+  - title: 校队训练记录
+    details: 校队每次训练的内容与要点记录
+    link: /校队训练记录/
   - title: 训练计划
     details: 系统化的训练安排
     link: /训练计划/
