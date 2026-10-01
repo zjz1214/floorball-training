@@ -8,13 +8,13 @@ hero:
 
 features:
   - title: 软曲简介
-    details: 了解软式曲棍球（Floorball）
+    details: 了解软式曲棍球（Floorball）与 3v3 比赛规则
     link: /软曲简介/
   - title: 个人技术基础
-    details: 控球、传球、射门、防守
+    details: 控球、运球、传球、射门、防守
     link: /个人技术基础/
   - title: 个人技术进阶
-    details: 进阶控球、传球、射门与运球技巧
+    details: 进阶控球、传球与射门技巧
     link: /个人技术进阶/
   - title: 专项练习
     details: 前锋与后卫专项训练

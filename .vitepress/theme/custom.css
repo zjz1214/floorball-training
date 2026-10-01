@@ -405,3 +405,43 @@ html.dark .author-card:hover {
   text-align: center;
   font-size: 0.9rem;
 }
+
+/* Let desktop categories use only the space left by search and utility controls. */
+.VPNavBar .content,
+.VPNavBar .content-body { min-width: 0; }
+.VPNavBar .content-body > .VPNavBarMenu { display: none; }
+.VPNavBar .content-body > .search { order: -1; flex-grow: 0; }
+.VPNavBar .content-body > :not(.responsive-nav) { flex-shrink: 0; }
+
+/* Pager controls stay above the pet, below navigation and authentication UI. */
+.VPDocFooter .pager-link {
+  position: relative;
+  z-index: 12;
+  background-color: var(--vp-c-bg);
+}
+
+/* Keep site interaction targets above the pet, including custom TOC rows. */
+:root {
+  --floorball-z-pet: 9;
+  --floorball-z-interactive: 12;
+}
+.VPContent :where(
+  a, button, input, textarea, select, label, summary,
+  video[controls], audio[controls], [onclick],
+  [role="button"], [role="link"], [tabindex], .toc-link
+) {
+  position: relative;
+  z-index: var(--floorball-z-interactive) !important;
+}
+/* Hover transforms create a stacking context around the author links. */
+.VPHero .author-area {
+  position: relative;
+  z-index: var(--floorball-z-interactive);
+}
+
+/* The court diagram needs the full text-column width for readable labels. */
+.vp-doc img[src$="floorball-3v3-court.svg"] {
+  width: 100%;
+  max-width: 100%;
+  background-color: #f7faf8;
+}

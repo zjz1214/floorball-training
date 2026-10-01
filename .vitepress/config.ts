@@ -5,10 +5,13 @@ import container from 'markdown-it-container'
 const sidebar = {
   '/软曲简介/': [
     { text: '概述', link: '/软曲简介/' },
+    { text: '校内 3v3 规则', link: '/软曲简介/校内3v3规则' },
+    { text: '3v3 世锦赛规则', link: '/软曲简介/3v3规则' },
   ],
   '/个人技术基础/': [
     { text: '概述', link: '/个人技术基础/' },
     { text: '控球训练', link: '/个人技术基础/控球训练' },
+    { text: '运球', link: '/个人技术基础/运球' },
     { text: '传球训练', link: '/个人技术基础/传球训练' },
     { text: '射门训练', link: '/个人技术基础/射门训练' },
     { text: '防守动作', link: '/个人技术基础/防守动作' },
@@ -18,7 +21,6 @@ const sidebar = {
     { text: '控球', link: '/个人技术进阶/控球' },
     { text: '传球', link: '/个人技术进阶/传球' },
     { text: '射门', link: '/个人技术进阶/射门' },
-    { text: '运球', link: '/个人技术进阶/运球' },
   ],
   '/专项练习/': [
     { text: '概述', link: '/专项练习/' },
@@ -75,7 +77,7 @@ export default defineConfig({
   base: '/floorball-training/',
   cleanUrls: true,
   ignoreDeadLinks: true,
-  srcExclude: ['**/manual.md', '**/*.py', '**/feishu-export/**', '**/README.md', '**/CLAUDE.md', '**/todo.md'],
+  srcExclude: ['**/manual.md', '**/*.py', '**/feishu-export/**', '**/README.md', '**/AGENTS.md', '**/DESIGN.md', '**/CLAUDE.md', '**/todo.md'],
 
   head: [
     ['script', { async: '', src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js' }],
@@ -85,6 +87,15 @@ export default defineConfig({
   outDir: '.vitepress/dist-site',
 
   vite: {
+    server: {
+      watch: {
+        ignored: [
+          '**/.vitepress/.temp/**',
+          '**/.vitepress/dist-site/**',
+          '**/.vitepress/cache/**',
+        ],
+      },
+    },
     build: {
       emptyOutDir: true,
     },
@@ -164,11 +175,19 @@ export default defineConfig({
 
     nav: [
       { text: '首页', link: '/' },
-      { text: '软曲简介', link: '/软曲简介/' },
+      {
+        text: '软曲简介',
+        items: [
+          { text: '概述', link: '/软曲简介/' },
+          { text: '校内 3v3 规则', link: '/软曲简介/校内3v3规则' },
+          { text: '3v3 世锦赛规则', link: '/软曲简介/3v3规则' },
+        ],
+      },
       {
         text: '个人技术基础',
         items: [
           { text: '控球训练', link: '/个人技术基础/控球训练' },
+          { text: '运球', link: '/个人技术基础/运球' },
           { text: '传球训练', link: '/个人技术基础/传球训练' },
           { text: '射门训练', link: '/个人技术基础/射门训练' },
           { text: '防守动作', link: '/个人技术基础/防守动作' },
@@ -180,7 +199,6 @@ export default defineConfig({
           { text: '控球', link: '/个人技术进阶/控球' },
           { text: '传球', link: '/个人技术进阶/传球' },
           { text: '射门', link: '/个人技术进阶/射门' },
-          { text: '运球', link: '/个人技术进阶/运球' },
         ],
       },
       {

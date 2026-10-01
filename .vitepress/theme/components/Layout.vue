@@ -1,5 +1,8 @@
 <template>
   <DefaultTheme.Layout>
+    <template #nav-bar-content-before>
+      <ResponsiveNav />
+    </template>
     <template #nav-bar-content-after>
       <ClientOnly>
         <button v-if="!authState.authenticated" class="auth-nav-btn" @click="showAuthModal = true">
@@ -64,6 +67,7 @@ import { useData, useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { useAuth } from '../composables/useAuth'
 import AuthModal from './AuthModal.vue'
+import ResponsiveNav from './ResponsiveNav.vue'
 import Live2DCanvas from './Live2DCanvas.vue'
 
 const { theme } = useData()
@@ -90,6 +94,7 @@ function handleLogout() {
 <style>
 /* Nav auth button */
 .auth-nav-btn {
+  margin-inline-start: 12px;
   padding: 4px 14px;
   border-radius: 6px;
   font-size: 13px;
