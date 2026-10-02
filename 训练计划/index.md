@@ -1,3 +1,7 @@
+---
+pageClass: technical-reading
+---
+
 # 训练计划
 
 本部分内容源自国际软式曲棍球联合会（IFF）官方教练手册 *Individual Technique and Tactics*（Anniina Paavilainen, 2007），包含 48 个结构化训练项目，按三级教学体系组织：

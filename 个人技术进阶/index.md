@@ -1,3 +1,7 @@
+---
+pageClass: technical-reading
+---
+
 # 个人技术进阶
 
 

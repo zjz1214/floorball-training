@@ -1,3 +1,7 @@
+---
+pageClass: reading-preview
+---
+
 # 其他
 
 <div class="vp-cards">

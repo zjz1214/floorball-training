@@ -1,3 +1,7 @@
+---
+pageClass: reading-preview
+---
+
 # 装备器材
 
 主流的厂商有oxdog、salming、unihoc以及fatpipe。目前在国内都能以一些渠道买到。但是如果图性价比的话从海淘（如efloorball）会更便宜

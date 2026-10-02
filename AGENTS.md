@@ -20,7 +20,8 @@
 ## Dribbling discussion integration
 
 - Integrate the user-provided discussion into 个人技术基础/运球.md, preserving existing video demonstrations.
-- Label the six-action classification as a teaching framework from the discussion, not an official IFF classification.
+- Label the six-action classification as a teaching framework, not an official IFF classification. Keep discussion provenance in project documentation rather than public teaching copy.
+- Dribbling discussion reference: https://chatgpt.com/share/6abe6070-9f14-83e9-a5c0-ad62d7e52dce
 - Keep search keywords and training progressions on this page; link existing detailed drills in 训练计划/带球与控制.md rather than duplicating them.
 
 ## Ball control and dribbling
@@ -53,3 +54,44 @@
 - Keep the agreed 3+1 players, 2 by 10 minutes, 2 m restart distance, goalkeeper throw-ins, and 5 m single-hit penalty shots. Keep 3v3 penalties separate from 5v5 crease rules.
 - Link video references to their publisher, explain different event rules, and do not invent timestamps or claim unverified footage.
 - Validate the site build, local page response, diagram XML, and navigation links after editing.
+
+## Local school 3v3 video
+
+- Keep the user-provided goalkeeper throw-in clip at public/floorball-3v3-goalkeeper-throw-in.mp4 and embed it with native video controls on the school rules page.
+- Emphasize the sequence: ball out, referee indicates the awarded direction, that team's goalkeeper stands up, retrieves a new ball, and throws it in.
+- Preserve the source video outside the repository. Label supplied footage as an action demonstration without assuming its publisher or event.
+
+- Keep the user-provided foul restart clip at public/floorball-3v3-free-hit.mp4, under the school rules page's centre-line free-hit section, with native video controls. Explain the awarded possession, nearest centre-line spot and 2 m defensive distance.
+
+- Keep the supplied penalty-shot clip as a browser-compatible H.264 MP4 at public/floorball-3v3-penalty-shot.mp4, embedded under five-metre penalty shots. Preserve the source MKV outside the repository; emphasize one hit, no dribbling approach and no follow-up shot.
+
+## Public-facing editorial conventions
+
+- Write published pages for players, coaches and visitors. State the applicable rules and learning points directly.
+- Keep implementation history, change summaries, user-supplied-file notes, chat references and repository storage details out of published copy; record such context in project documentation when needed.
+- Preserve meaningful event/version scope, source attribution, verification dates and distinctions between school rules and IFF event rules.
+- Video captions explain the demonstrated action and relevant rules; do not invent a publisher or competition for unattributed clips.
+
+## Markdown emphasis
+
+- When bold text ends with punctuation and is followed by Chinese prose, put a space after the closing ** delimiter so CommonMark recognizes the emphasis. Verify generated visible text does not expose emphasis delimiters.
+
+## Rule demonstration cards
+
+- Keep each school 3v3 demonstration video and its full related rule explanation in one shared h3 card. Use a bold paragraph for video captions instead of a separate h3/h4 card.
+
+## School rule typography
+
+- Scope reading styles to the rules-reading page class. Keep complete rules visible and preserve shared rule/video cards.
+- Use readable line height, distinct list-item spacing, short bold rule labels and flow paragraphs. Maintain light/dark contrast and mobile spacing without changing rule meanings.
+
+## Reading design system
+
+- Follow DESIGN.md as the current project design specification. Its adoption scope, reading profiles and media constraints take precedence over legacy reference styles. Keep this document synchronized with approved design changes.
+- The user approved applying DESIGN.md to every published page. Use reading-preview for introduction, equipment and explanatory reference pages; use technical-reading for all drills, tactics, training plans and team training records, preserving body typography and media geometry. Apply the shared palette globally, including home and navigation. Keep navigation structure, auth behavior, rules and media intact.
+- Site-wide adoption is authorized. Preserve complete text and shared explanation/video cards; further media sizing or body typography changes for training pages require a separate proposal.
+- Validate the build, text contrast, generated content and mobile/desktop light/dark rendering.
+
+- For technical-reading pages, share light/dark palette tokens, reduce decorative borders and use a consistent heading hierarchy. Do not apply reading-preview typography or media-width overrides.
+
+- Technical heading refinements may adjust heading font sizes and whitespace. Keep body and media sizing intact. On control-training, promote drill labels to semantic headings without adding card padding around media grids.

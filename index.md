@@ -1,4 +1,5 @@
 ---
+pageClass: site-home
 layout: home
 
 hero:

@@ -1,3 +1,7 @@
+---
+pageClass: technical-reading
+---
+
 # 专项练习
 
 

@@ -1,3 +1,7 @@
+---
+pageClass: technical-reading
+---
+
 # 团队训练
 
 
