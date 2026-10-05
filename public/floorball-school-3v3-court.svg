@@ -1,23 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 540" role="img" aria-labelledby="title desc">
-<title id="title">校内 3v3 场地图：24 × 12 米</title><desc id="desc">每队三名场上球员加一名守门员。大禁区深4米宽5米，小禁区深1米宽2.5米。中线两个任意球点各距长边2米，罚球点距球门线5米。</desc>
+<title id="title">校内 3v3 场地图：22 × 11 米</title>
+<desc id="desc">每队三名场上球员加一名守门员。球门底部后沿至端板内侧净距1.6米。按球门底部深0.65米绘制，球门线距端板2.25米。大禁区深4米宽5米，小禁区深1米宽2.5米。中线任意球点距长边2米，罚球点距球门线5米。</desc>
 <rect width="860" height="540" rx="16" fill="#f7faf8"/>
-<rect x="70" y="70" width="720" height="360" rx="18" fill="#e4f1e9" stroke="#076b61" stroke-width="4"/>
-<path d="M430 70V430" stroke="#076b61" stroke-width="2"/>
-<g fill="#b6d5c4" stroke="#076b61" stroke-width="2"><rect x="155.5" y="175" width="120" height="150"/><rect x="584.5" y="175" width="120" height="150"/></g>
-<g fill="#e8bd71" stroke="#946314" stroke-width="2"><rect x="175" y="212.5" width="30" height="75"/><rect x="655" y="212.5" width="30" height="75"/></g>
-<g fill="none" stroke="#183035" stroke-width="3"><rect x="151" y="226" width="24" height="48"/><rect x="685" y="226" width="24" height="48"/></g>
-<g fill="#076b61"><circle cx="430" cy="250" r="5"/><circle cx="430" cy="130" r="6"/><circle cx="430" cy="370" r="6"/></g>
-<g fill="#183035"><circle cx="325" cy="250" r="5"/><circle cx="535" cy="250" r="5"/></g>
-<g stroke="#586e73" fill="none"><path d="M175 350H325M535 350H685"/><path d="M430 75V122" stroke-dasharray="4 3"/></g>
+<rect id="court" x="100" y="75" width="660" height="330" rx="18" fill="#e4f1e9" stroke="#076b61" stroke-width="4"/>
+<path d="M430 75V405" stroke="#076b61" stroke-width="2"/>
+<g fill="#b6d5c4" stroke="#076b61" stroke-width="2"><rect id="left-crease" x="148" y="165" width="120" height="150"/><rect id="right-crease" x="592" y="165" width="120" height="150"/></g>
+<g fill="#e8bd71" stroke="#946314" stroke-width="2"><rect id="left-keeper-area" x="167.5" y="202.5" width="30" height="75"/><rect id="right-keeper-area" x="662.5" y="202.5" width="30" height="75"/></g>
+<g fill="none" stroke="#183035" stroke-width="3"><rect id="left-goal" x="148" y="216" width="19.5" height="48"/><rect id="right-goal" x="692.5" y="216" width="19.5" height="48"/></g>
+<g fill="#076b61"><circle cx="430" cy="240" r="5"/><circle cx="430" cy="135" r="6"/><circle cx="430" cy="345" r="6"/></g>
+<g fill="#183035"><circle id="left-penalty" cx="317.5" cy="240" r="5"/><circle id="right-penalty" cx="542.5" cy="240" r="5"/></g>
+<g stroke="#586e73" fill="none"><path d="M167.5 350H317.5M542.5 350H692.5"/><path d="M430 80V127" stroke-dasharray="4 3"/>
+<path d="M100 385H148M712 385H760M100 380V390M148 380V390M712 380V390M760 380V390"/>
+<path d="M100 405V422M148 405V422M712 405V422M760 405V422" stroke-dasharray="3 3"/></g>
 <g font-family="Microsoft YaHei,system-ui,sans-serif" fill="#183035" font-size="16" text-anchor="middle">
-<text x="430" y="34" font-size="22" font-weight="bold">校内 3v3 · 场地 24 × 12 米</text>
-<text x="35" y="250" transform="rotate(-90 35 250)">宽 12 m</text>
-<text x="215" y="151">大禁区 4 × 5 m</text><text x="645" y="151">大禁区 4 × 5 m</text>
-<text x="210" y="310" font-size="12">小禁区 1 × 2.5 m</text><text x="650" y="310" font-size="12">小禁区 1 × 2.5 m</text>
-<text x="469" y="104" font-size="14">2 m</text><text x="500" y="135">任意球点</text><text x="490" y="255">中点</text><text x="500" y="376">任意球点</text>
-<text x="325" y="228">罚球点</text><text x="535" y="228">罚球点</text>
-<text x="250" y="374" font-size="14">距球门线 5 m</text><text x="610" y="374" font-size="14">距球门线 5 m</text>
+<text x="430" y="34" font-size="22" font-weight="bold">校内 3v3 · 场地 22 × 11 米</text>
+<text x="65" y="240" transform="rotate(-90 65 240)">宽 11 m</text>
+<text x="208" y="144">大禁区 4 × 5 m</text><text x="652" y="144">大禁区 4 × 5 m</text>
+<text x="210" y="303" font-size="12">小禁区 1 × 2.5 m</text><text x="650" y="303" font-size="12">小禁区 1 × 2.5 m</text>
+<text x="467" y="110" font-size="14">2 m</text><text x="500" y="140">任意球点</text><text x="487" y="245">中点</text><text x="500" y="350">任意球点</text>
+<text x="317.5" y="219">罚球点</text><text x="542.5" y="219">罚球点</text>
+<text x="242.5" y="374" font-size="14">距球门线 5 m</text><text x="617.5" y="374" font-size="14">距球门线 5 m</text>
+<text x="124" y="377" font-size="11">1.6 m</text><text x="736" y="377" font-size="11">1.6 m</text>
+<text x="124" y="438" font-size="12">门后净距 1.6 m</text><text x="736" y="438" font-size="12">门后净距 1.6 m</text>
 <text x="430" y="465">绿色：大禁区（守门员权限）　金色：小禁区（守门员保护）</text>
-<text x="430" y="495" font-size="14">球门线距端线 3.5 m；禁区边线属于区域内</text>
-<text x="430" y="520" font-size="13">位置示意，球门与标记视觉放大；实际划线以规则文字尺寸为准</text>
+<text x="430" y="493" font-size="14">门后净距从球门底部后沿量至端板内侧；禁区边线属于区域内</text>
+<text x="430" y="518" font-size="13">按球门底部深 0.65 m 绘制，球门线距端板 2.25 m；实际布场以门后净距为准</text>
 </g></svg>

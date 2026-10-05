@@ -49,9 +49,10 @@
 ## School 3v3 adaptation
 
 - Keep the detailed school adaptation at 软曲简介/校内3v3规则.md, next to the original IFF event handbook.
-- Use a 24 m by 12 m court with standard 5v5 goal creases (4 m deep by 5 m wide) and goalkeeper areas (1 m deep by 2.5 m wide); distinguish the rules of the two areas.
+- Use a 22 m by 11 m court, with 1.6 m clear distance from the bottom rear edge of each goal cage to the inside of the end board. The school diagram assumes a 0.65 m bottom goal depth, placing each goal line 2.25 m from the end board; measure the actual cage depth for on-site positioning. Keep standard 5v5 goal creases (4 m deep by 5 m wide) and goalkeeper areas (1 m deep by 2.5 m wide); distinguish the rules of the two areas.
 - Preserve the original event page and diagram. Keep the school court diagram in public/floorball-school-3v3-court.svg and clearly identify school modifications.
 - Keep the agreed 3+1 players, 2 by 10 minutes, 2 m restart distance, goalkeeper throw-ins, and 5 m single-hit penalty shots. Keep 3v3 penalties separate from 5v5 crease rules.
+- Explain that ordinary free-hits may be taken after the award signal without a second restart whistle, and do not require waiting for opponents to take position; opponents correctly retreating during a quick restart are not automatically penalised. Penalty shots require a start whistle. Distinguish non-contact feints from playing the ball once; identify this as an interpretation of sections 501 and 508, not an explicit IFF feint provision.
 - Link video references to their publisher, explain different event rules, and do not invent timestamps or claim unverified footage.
 - Validate the site build, local page response, diagram XML, and navigation links after editing.
 
