@@ -51,7 +51,7 @@
 - Keep the detailed school adaptation at 软曲简介/校内3v3规则.md, next to the original IFF event handbook.
 - Use a 22 m by 11 m court, with 1.6 m clear distance from the bottom rear edge of each goal cage to the inside of the end board. The school diagram assumes a 0.65 m bottom goal depth, placing each goal line 2.25 m from the end board; measure the actual cage depth for on-site positioning. Keep standard 5v5 goal creases (4 m deep by 5 m wide) and goalkeeper areas (1 m deep by 2.5 m wide); distinguish the rules of the two areas.
 - Preserve the original event page and diagram. Keep the school court diagram in public/floorball-school-3v3-court.svg and clearly identify school modifications.
-- Keep the agreed 3+1 players, 2 by 10 minutes, 2 m restart distance, goalkeeper throw-ins, and 5 m single-hit penalty shots. Keep 3v3 penalties separate from 5v5 crease rules.
+- Keep the agreed 3+1 players, 2 by 12 minutes with a 3-minute half-time interval, 2 m restart distance, goalkeeper throw-ins, and 5 m single-hit penalty shots. Keep 3v3 penalties separate from 5v5 crease rules.
 - Explain that ordinary free-hits may be taken after the award signal without a second restart whistle, and do not require waiting for opponents to take position; opponents correctly retreating during a quick restart are not automatically penalised. Penalty shots require a start whistle. Distinguish non-contact feints from playing the ball once; identify this as an interpretation of sections 501 and 508, not an explicit IFF feint provision.
 - Link video references to their publisher, explain different event rules, and do not invent timestamps or claim unverified footage.
 - Validate the site build, local page response, diagram XML, and navigation links after editing.
@@ -89,10 +89,23 @@
 ## Reading design system
 
 - Follow DESIGN.md as the current project design specification. Its adoption scope, reading profiles and media constraints take precedence over legacy reference styles. Keep this document synchronized with approved design changes.
-- The user approved applying DESIGN.md to every published page. Use reading-preview for introduction, equipment and explanatory reference pages; use technical-reading for all drills, tactics, training plans and team training records, preserving body typography and media geometry. Apply the shared palette globally, including home and navigation. Keep navigation structure, auth behavior, rules and media intact.
+- The user approved applying DESIGN.md to every published page. Use reading-preview for introduction, equipment and explanatory reference pages; use technical-reading for all drills, tactics, training plans and team training records, preserving body typography and media geometry. Apply the shared palette globally, including home and navigation. Keep navigation structure, rules and media intact. Access behavior follows the direct-access convention below.
 - Site-wide adoption is authorized. Preserve complete text and shared explanation/video cards; further media sizing or body typography changes for training pages require a separate proposal.
 - Validate the build, text contrast, generated content and mobile/desktop light/dark rendering.
 
 - For technical-reading pages, share light/dark palette tokens, reduce decorative borders and use a consistent heading hierarchy. Do not apply reading-preview typography or media-width overrides.
 
 - Technical heading refinements may adjust heading font sizes and whitespace. Keep body and media sizing intact. On control-training, promote drill labels to semantic headings without adding card padding around media grids.
+
+## Direct content access
+
+- All published training pages are directly readable without answering a question or logging in.
+- Do not mount authentication dialogs, content overlays or navigation login buttons. Render the Live2D pet on all pages without authentication conditions.
+- Remove the question and accepted-answer settings from site configuration. Keep unused legacy authentication files until file deletion is explicitly authorized.
+- Validate with npm run build and check generated pages and assets for authentication prompts and overlays.
+
+## School rules PDF export
+
+- Keep the full school rules PDF at public/floorball-school-3v3-rules.pdf, separate from the IFF event handbook.
+- Keep export intermediates and rendered QA images under .vitepress/cache/pdf-school-rules/. Preserve complete rule explanations and the embedded court diagram. Shared PDFs must be self-contained: remove local preview and file links, omit video playback prompts and internal export notes, and keep only public official source links. Add page numbers.
+- Verify heading/content completeness, Chinese text, and rendered page layout before delivery.

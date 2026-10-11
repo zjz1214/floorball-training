@@ -413,7 +413,7 @@ html.dark .author-card:hover {
 .VPNavBar .content-body > .search { order: -1; flex-grow: 0; }
 .VPNavBar .content-body > :not(.responsive-nav) { flex-shrink: 0; }
 
-/* Pager controls stay above the pet, below navigation and authentication UI. */
+/* Pager controls stay above the pet, below navigation. */
 .VPDocFooter .pager-link {
   position: relative;
   z-index: 12;
@@ -572,5 +572,3 @@ html.dark .control-training .vp-doc .h3-card { background: none; }
 /* Home follows the shared palette without changing its layout. */
 .site-home .vp-doc strong { color: var(--vp-c-text-1); }
 .site-home .VPFeature { border-color: color-mix(in srgb, var(--vp-c-divider) 60%, transparent); }
-html.dark :is(.auth-nav-btn-active, .auth-overlay-btn, .auth-btn-submit) { color: var(--vp-button-brand-text); }
-html.dark .auth-nav-btn-active:hover { color: var(--vp-button-brand-hover-text); }
