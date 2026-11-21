@@ -1,5 +1,12 @@
 import { defineConfig } from 'vitepress'
 import container from 'markdown-it-container'
+import editorPages from '../.local-editor/pages.json'
+import pageOrder from '../.local-editor/order.json'
+import { sortByOrder, sidebarPage } from '../.local-editor/order.mjs'
+import directoryNames from '../.local-editor/names.json'
+import { applyNavigationNames } from '../.local-editor/names.mjs'
+import directoryGroups from '../.local-editor/groups.json'
+import { groupSidebar } from '../.local-editor/groups.mjs'
 
 // All H1 sections and their H2 children
 const sidebar = {
@@ -70,6 +77,23 @@ const sidebar = {
   ],
 }
 
+// Pages created locally join the existing sidebar; hand-maintained entries keep their order.
+for (const entry of editorPages as { category: string; path: string; title: string }[]) {
+  const key = `/${entry.category}/`
+  const items = (sidebar as Record<string, { text: string; link: string }[]>)[key]
+  const link = `/${entry.path.replace(/\.md$/, '')}`
+  if (items && !items.some(item => item.link === link)) items.push({ text: entry.title, link })
+}
+for (const [key,items] of Object.entries(sidebar)) {
+  const category=key.replace(/^\//,'').replace(/\/$/,'')
+  ;(sidebar as Record<string, { text: string; link: string }[]>)[key]=sortByOrder(items,(pageOrder as Record<string,string[]>)[category]||[],item=>sidebarPage(item.link))
+  for (const item of items) {
+    const name=(directoryNames.pages as Record<string,string>)[sidebarPage(item.link)]
+    if(name)item.text=name
+  }
+  ;(sidebar as Record<string, any[]>)[key]=groupSidebar((sidebar as Record<string, any[]>)[key],(directoryGroups as Record<string,any[]>)[category]||[],item=>sidebarPage(item.link))
+}
+
 export default defineConfig({
   title: '软曲教学',
   description: '软式曲棍球（Floorball）校队训练内容',
@@ -77,7 +101,7 @@ export default defineConfig({
   base: '/floorball-training/',
   cleanUrls: true,
   ignoreDeadLinks: true,
-  srcExclude: ['**/manual.md', '**/*.py', '**/feishu-export/**', '**/README.md', '**/AGENTS.md', '**/DESIGN.md', '**/CLAUDE.md', '**/todo.md'],
+  srcExclude: ['**/.local-editor/**', '**/manual.md', '**/*.py', '**/feishu-export/**', '**/README.md', '**/AGENTS.md', '**/DESIGN.md', '**/CLAUDE.md', '**/todo.md'],
 
   head: [
     ['script', { async: '', src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js' }],
@@ -103,6 +127,22 @@ export default defineConfig({
 
   markdown: {
     config: (md) => {
+      md.use(container, 'element', {
+        render(tokens, idx) {
+          if (tokens[idx].nesting === -1) return '</figure>\n'
+          const title = md.utils.escapeHtml(tokens[idx].info.trim().slice('element'.length).trim())
+          return `<figure class="element-block">${title ? `<figcaption class="element-title">${title}</figcaption>` : ''}\n`
+        },
+      })
+      // Content links use root-relative paths; VitePress adds the deployment base once.
+      // Accept earlier editor links that already included that base without rewriting content.
+      md.core.ruler.push('normalize_site_links', state => {
+        for (const block of state.tokens) for (const token of block.children || []) {
+          if (token.type !== 'link_open') continue
+          const href = token.attrGet('href')
+          if (href?.startsWith('/floorball-training/')) token.attrSet('href', href.replace(/^(?:\/floorball-training)+(?=\/|$)/, '') || '/')
+        }
+      })
       md.use(container, 'media-grid', {
         render: (tokens, idx) => {
           return tokens[idx].nesting === 1
@@ -169,7 +209,7 @@ export default defineConfig({
   themeConfig: {
     search: { provider: 'local' },
 
-    nav: [
+    nav: applyNavigationNames([
       { text: '首页', link: '/' },
       {
         text: '软曲简介',
@@ -247,7 +287,7 @@ export default defineConfig({
         ],
       },
       { text: '其他', link: '/其他/' },
-    ],
+    ],directoryNames),
 
     sidebar,
   },

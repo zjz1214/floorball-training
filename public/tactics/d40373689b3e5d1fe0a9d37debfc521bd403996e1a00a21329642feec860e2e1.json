@@ -1,0 +1,240 @@
+{
+  "version": 1,
+  "title": "",
+  "description": "",
+  "court": {
+    "size": "small",
+    "view": "full",
+    "orientation": "landscape",
+    "color": "#f5f8f2",
+    "markings": true
+  },
+  "frames": [
+    {
+      "id": "t14098917695d4182922fdf2bc7791435",
+      "duration": 2,
+      "note": "",
+      "objects": [
+        {
+          "id": "t3b39475eb8424b01911b74777a54bad7",
+          "type": "player",
+          "x": 6.529335776891175,
+          "y": 12.707864653916355,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "1",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t66f6fd69d39f46b89db34f9208fcff22",
+          "type": "player",
+          "x": 14.069911233301122,
+          "y": 16.802750260084565,
+          "angle": -210,
+          "color": "#b45147",
+          "label": "",
+          "number": "2",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t8100c013e2244b79ad23593af7a51021",
+          "type": "player",
+          "x": 16.281989894163345,
+          "y": 16.078651184754037,
+          "angle": 0,
+          "color": "#4754b3",
+          "label": "",
+          "number": "3",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "ta2a48f4c8d0b4b5596868c0619b3ebac",
+          "type": "ball",
+          "x": 7.56320160624748,
+          "y": 12.982522858180781,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "tee64f8b01fcb4c2d9854bd2f601f1da4",
+          "type": "arrow",
+          "x": 7.613138422495139,
+          "y": 12.982522858180781,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": true,
+          "x2": 13.171035206071226,
+          "y2": 16.50312174272888,
+          "ballId": "ta2a48f4c8d0b4b5596868c0619b3ebac"
+        }
+      ]
+    },
+    {
+      "id": "t1e6bf78fec6246f59418e710a818dbaf",
+      "duration": 2,
+      "note": "",
+      "objects": [
+        {
+          "id": "t3b39475eb8424b01911b74777a54bad7",
+          "type": "player",
+          "x": 6.529335776891175,
+          "y": 12.707864653916355,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "1",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t66f6fd69d39f46b89db34f9208fcff22",
+          "type": "player",
+          "x": 14.069911233301122,
+          "y": 16.802750260084565,
+          "angle": -210,
+          "color": "#b45147",
+          "label": "",
+          "number": "2",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t8100c013e2244b79ad23593af7a51021",
+          "type": "player",
+          "x": 16.281989894163345,
+          "y": 16.078651184754037,
+          "angle": 0,
+          "color": "#4754b3",
+          "label": "",
+          "number": "3",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "ta2a48f4c8d0b4b5596868c0619b3ebac",
+          "type": "ball",
+          "x": 13.171035206071226,
+          "y": 16.50312174272888,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t8efa621553dc4abd978a05d348b76424",
+          "type": "dribble",
+          "x": 14.069911233301122,
+          "y": 16.802750260084565,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false,
+          "x2": 18.614230090665693,
+          "y2": 17.0024975250752,
+          "playerId": "t66f6fd69d39f46b89db34f9208fcff22",
+          "ballId": "ta2a48f4c8d0b4b5596868c0619b3ebac"
+        }
+      ]
+    },
+    {
+      "id": "ta0f7a0c8bc724513bdd0a956b02b8a32",
+      "duration": 2,
+      "note": "",
+      "objects": [
+        {
+          "id": "t3b39475eb8424b01911b74777a54bad7",
+          "type": "player",
+          "x": 6.529335776891175,
+          "y": 12.707864653916355,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "1",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t66f6fd69d39f46b89db34f9208fcff22",
+          "type": "player",
+          "x": 18.614230090665693,
+          "y": 17.0024975250752,
+          "angle": 225,
+          "color": "#b45147",
+          "label": "",
+          "number": "2",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t8100c013e2244b79ad23593af7a51021",
+          "type": "player",
+          "x": 16.281989894163345,
+          "y": 16.078651184754037,
+          "angle": 0,
+          "color": "#4754b3",
+          "label": "",
+          "number": "3",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "ta2a48f4c8d0b4b5596868c0619b3ebac",
+          "type": "ball",
+          "x": 19.25701612764604,
+          "y": 17.180896265718452,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "tb665275ba33e49e3a90709646f2ed499",
+          "type": "arrow",
+          "x": 18.69928307654444,
+          "y": 16.827716763240957,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": true,
+          "x2": 26.304617900786056,
+          "y2": 9.262172898707183,
+          "ballId": "ta2a48f4c8d0b4b5596868c0619b3ebac"
+        }
+      ]
+    }
+  ]
+}

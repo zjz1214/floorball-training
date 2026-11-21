@@ -1,0 +1,384 @@
+{
+  "version": 1,
+  "title": "",
+  "description": "",
+  "court": {
+    "size": "small",
+    "view": "full",
+    "orientation": "landscape",
+    "color": "#f5f8f2",
+    "markings": true
+  },
+  "frames": [
+    {
+      "id": "t14098917695d4182922fdf2bc7791435",
+      "duration": 2,
+      "note": "",
+      "objects": [
+        {
+          "id": "t3b39475eb8424b01911b74777a54bad7",
+          "type": "player",
+          "x": 6.529335776891175,
+          "y": 12.707864653916355,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "1",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t66f6fd69d39f46b89db34f9208fcff22",
+          "type": "player",
+          "x": 14.069911233301122,
+          "y": 16.802750260084565,
+          "angle": -210,
+          "color": "#b45147",
+          "label": "",
+          "number": "2",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t8100c013e2244b79ad23593af7a51021",
+          "type": "player",
+          "x": 16.95146593336488,
+          "y": 15.67915093987047,
+          "angle": 0,
+          "color": "#4754b3",
+          "label": "",
+          "number": "3",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "ta2a48f4c8d0b4b5596868c0619b3ebac",
+          "type": "ball",
+          "x": 7.56320160624748,
+          "y": 12.982522858180781,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        }
+      ]
+    },
+    {
+      "id": "t692626398e804741a66a63f2bbe5e061",
+      "duration": 2,
+      "note": "",
+      "objects": [
+        {
+          "id": "t3b39475eb8424b01911b74777a54bad7",
+          "type": "player",
+          "x": 6.529335776891175,
+          "y": 12.707864653916355,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "1",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t66f6fd69d39f46b89db34f9208fcff22",
+          "type": "player",
+          "x": 14.069911233301122,
+          "y": 16.802750260084565,
+          "angle": -210,
+          "color": "#b45147",
+          "label": "",
+          "number": "2",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t8100c013e2244b79ad23593af7a51021",
+          "type": "player",
+          "x": 16.95146593336488,
+          "y": 15.67915093987047,
+          "angle": 0,
+          "color": "#4754b3",
+          "label": "",
+          "number": "3",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "tb196a6d8e2e149e58f03df6d97f00485",
+          "type": "arrow",
+          "x": 7.613138422495139,
+          "y": 13.13233521189119,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": true,
+          "x2": 13.02122856726311,
+          "y2": 16.353309389018463
+        },
+        {
+          "id": "tcbd530f9fefe41a58f883bd5e4ee0e18",
+          "type": "ball",
+          "x": 13.42072309724439,
+          "y": 16.103621497845303,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        }
+      ]
+    },
+    {
+      "id": "tab3e47c5a26447c3934e58ed7edcfda6",
+      "duration": 2,
+      "note": "",
+      "objects": [
+        {
+          "id": "t3b39475eb8424b01911b74777a54bad7",
+          "type": "player",
+          "x": 6.529335776891175,
+          "y": 12.707864653916355,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "1",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t66f6fd69d39f46b89db34f9208fcff22",
+          "type": "player",
+          "x": 19.612983560325773,
+          "y": 16.70287662758924,
+          "angle": -135,
+          "color": "#b45147",
+          "label": "",
+          "number": "2",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t8100c013e2244b79ad23593af7a51021",
+          "type": "player",
+          "x": 16.95146593336488,
+          "y": 15.67915093987047,
+          "angle": 0,
+          "color": "#4754b3",
+          "label": "",
+          "number": "3",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "tb196a6d8e2e149e58f03df6d97f00485",
+          "type": "arrow",
+          "x": 7.613138422495139,
+          "y": 13.13233521189119,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": true,
+          "x2": 13.02122856726311,
+          "y2": 16.353309389018463
+        },
+        {
+          "id": "t3ada51278edc4070a4467ed3eb616a35",
+          "type": "ball",
+          "x": 19.34846930763375,
+          "y": 15.828965198548312,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        }
+      ]
+    },
+    {
+      "id": "t45e7bc7bcd9140a3867e2a0cd2e21f84",
+      "duration": 2,
+      "note": "",
+      "objects": [
+        {
+          "id": "t3b39475eb8424b01911b74777a54bad7",
+          "type": "player",
+          "x": 6.529335776891175,
+          "y": 12.707864653916355,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "1",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t66f6fd69d39f46b89db34f9208fcff22",
+          "type": "player",
+          "x": 19.612983560325773,
+          "y": 16.70287662758924,
+          "angle": -135,
+          "color": "#b45147",
+          "label": "",
+          "number": "2",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t8100c013e2244b79ad23593af7a51021",
+          "type": "player",
+          "x": 16.95146593336488,
+          "y": 15.67915093987047,
+          "angle": 0,
+          "color": "#4754b3",
+          "label": "",
+          "number": "3",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "tb196a6d8e2e149e58f03df6d97f00485",
+          "type": "arrow",
+          "x": 7.613138422495139,
+          "y": 13.13233521189119,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": true,
+          "x2": 13.02122856726311,
+          "y2": 16.353309389018463
+        },
+        {
+          "id": "t3ada51278edc4070a4467ed3eb616a35",
+          "type": "ball",
+          "x": 19.34846930763375,
+          "y": 15.828965198548312,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "tbcdf1d4b23234b64acd74236bef40782",
+          "type": "arrow",
+          "x": 19.747971457484752,
+          "y": 15.67915093987047,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false,
+          "x2": 26.304617900786056,
+          "y2": 9.511860789880343
+        }
+      ]
+    },
+    {
+      "id": "ted3727385b3c49f6a1d3325a37b9c6a4",
+      "duration": 2,
+      "note": "",
+      "objects": [
+        {
+          "id": "t3b39475eb8424b01911b74777a54bad7",
+          "type": "player",
+          "x": 6.529335776891175,
+          "y": 12.707864653916355,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "1",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t66f6fd69d39f46b89db34f9208fcff22",
+          "type": "player",
+          "x": 19.612983560325773,
+          "y": 16.70287662758924,
+          "angle": -135,
+          "color": "#b45147",
+          "label": "",
+          "number": "2",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t8100c013e2244b79ad23593af7a51021",
+          "type": "player",
+          "x": 16.95146593336488,
+          "y": 15.67915093987047,
+          "angle": 0,
+          "color": "#4754b3",
+          "label": "",
+          "number": "3",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "tb196a6d8e2e149e58f03df6d97f00485",
+          "type": "arrow",
+          "x": 7.613138422495139,
+          "y": 13.13233521189119,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": true,
+          "x2": 13.02122856726311,
+          "y2": 16.353309389018463
+        },
+        {
+          "id": "t3ada51278edc4070a4467ed3eb616a35",
+          "type": "ball",
+          "x": 19.34846930763375,
+          "y": 15.828965198548312,
+          "angle": 0,
+          "color": "#b45147",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        }
+      ]
+    }
+  ]
+}
