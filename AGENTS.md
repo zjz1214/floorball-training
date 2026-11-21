@@ -38,6 +38,7 @@
 - Each grouped category has an overview page in the same directory as its child pages; derive its overflow link from that directory, not the displayed category label.
 - Reuse VitePress menu components and their keyboard interaction; measurement elements must be hidden from accessibility and focus.
 - Validate home and content pages at desktop, narrow desktop, and mobile widths, including resizing back to a wider viewport.
+- Build dropdown page/group entries from the final sidebar through .local-editor/navigation.mjs, so editor-created pages, labels, ordering and third-level groups appear in both places. Preserve top-level category order and link-only items. Derive overflow category links recursively when all pages are nested in groups; 更多 still shows category links only. Keep the school-team overview's current-term entry visible while retaining prior-term records.
 
 ## Interactive layer order
 

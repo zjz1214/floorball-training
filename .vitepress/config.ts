@@ -7,6 +7,7 @@ import directoryNames from '../.local-editor/names.json'
 import { applyNavigationNames } from '../.local-editor/names.mjs'
 import directoryGroups from '../.local-editor/groups.json'
 import { groupSidebar } from '../.local-editor/groups.mjs'
+import { syncNavigation } from '../.local-editor/navigation.mjs'
 
 // All H1 sections and their H2 children
 const sidebar = {
@@ -209,7 +210,7 @@ export default defineConfig({
   themeConfig: {
     search: { provider: 'local' },
 
-    nav: applyNavigationNames([
+    nav: applyNavigationNames(syncNavigation([
       { text: '首页', link: '/' },
       {
         text: '软曲简介',
@@ -287,7 +288,7 @@ export default defineConfig({
         ],
       },
       { text: '其他', link: '/其他/' },
-    ],directoryNames),
+    ],sidebar),directoryNames),
 
     sidebar,
   },

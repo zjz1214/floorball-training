@@ -11,7 +11,7 @@ const cache=path.join(root,'.vitepress/cache/content-editor');
 const fixture=path.join(cache,'tactics-browser-'+Date.now());
 for(const dir of ['.local-editor','.vitepress/theme','个人技术基础','public/tactics-runtime','public/live2d','downloads'])await fs.mkdir(path.join(fixture,dir),{recursive:true});
 await fs.copyFile(path.join(root,'public/live2d/live2dcubismcore.min.js'),path.join(fixture,'public/live2d/live2dcubismcore.min.js'));
-for(const name of ['order.json','order.mjs','names.mjs','groups.mjs'])await fs.copyFile(path.join(root,'.local-editor',name),path.join(fixture,'.local-editor',name));
+for(const name of ['order.json','order.mjs','names.mjs','groups.mjs','navigation.mjs'])await fs.copyFile(path.join(root,'.local-editor',name),path.join(fixture,'.local-editor',name));
 for(const [name,value] of [['pages.json','[]'],['names.json','{"pages":{},"categories":{}}'],['groups.json','{}']])await fs.writeFile(path.join(fixture,'.local-editor',name),value+'\n');
 for(const name of ['model.js','render.js','player.js','player.css','boot.js'])await fs.copyFile(path.join(root,'public/tactics-runtime',name),path.join(fixture,'public/tactics-runtime',name));
 // This fixture itself lives in the cache; only ignore its own generated cache,

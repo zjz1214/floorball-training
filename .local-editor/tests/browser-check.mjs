@@ -17,6 +17,7 @@ await fs.copyFile(path.join(root,'.local-editor/order.json'),path.join(fixture,'
 await fs.copyFile(path.join(root,'.local-editor/order.mjs'),path.join(fixture,'.local-editor/order.mjs'));
 await fs.copyFile(path.join(root,'.local-editor/names.mjs'),path.join(fixture,'.local-editor/names.mjs'));
 await fs.copyFile(path.join(root,'.local-editor/groups.mjs'),path.join(fixture,'.local-editor/groups.mjs'));
+await fs.copyFile(path.join(root,'.local-editor/navigation.mjs'),path.join(fixture,'.local-editor/navigation.mjs'));
 await fs.writeFile(path.join(fixture,'.local-editor/groups.json'),'{}\n');
 await fs.writeFile(path.join(fixture,'.local-editor/names.json'),'{"pages":{},"categories":{}}\n');
 await fs.copyFile(path.join(root,'.vitepress/config.ts'),path.join(fixture,'.vitepress/config.ts'));

@@ -3,6 +3,7 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import VPNavBarMenuLink from 'vitepress/dist/client/theme-default/components/VPNavBarMenuLink.vue'
 import VPNavBarMenuGroup from 'vitepress/dist/client/theme-default/components/VPNavBarMenuGroup.vue'
+import { firstNavigationLink } from '../../../.local-editor/navigation.mjs'
 
 const { theme } = useData()
 const route = useRoute()
@@ -16,10 +17,10 @@ const overflowItem = computed(() => ({
   text: '更多',
   items: items.value.slice(visibleCount.value).map((item) => {
     if ('link' in item || 'component' in item) return item
-    const firstPage = item.items.find((child) => 'link' in child)
-    if (!firstPage || !('link' in firstPage)) return item
+    const firstPage = firstNavigationLink(item.items)
+    if (!firstPage) return item
     // Grouped categories have an overview in their child pages' directory.
-    const link = firstPage.link.slice(0, firstPage.link.lastIndexOf('/') + 1)
+    const link = firstPage.slice(0, firstPage.lastIndexOf('/') + 1)
     return { text: item.text, link, activeMatch: item.activeMatch }
   })
 }))
