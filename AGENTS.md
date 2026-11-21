@@ -1,5 +1,13 @@
 # Project conventions
 
+## Equipment product-line reference
+
+- Keep the five-brand stick/blade overview at 装备器材/产品线介绍.md, using reading-preview and the existing equipment directory. Register the page in .local-editor/pages.json and order.json, and link it from the equipment overview.
+- Use current official manufacturer sources, record the verification date and distinguish shaft families, blade shapes, materials, profiles and cosmetic editions. Qualify season- or model-specific specifications; do not invent market shares, cross-brand performance rankings or universal position recommendations.
+- Product parameter tables must identify the exact model, blade material and reference length for weights. Separate shaft length from overall stick length, and unspecified data from unavailable options. Keep each table compact for mobile reading and link numerical specifications to official product pages.
+- Keep one consolidated shaft-series table per brand; list variants within the series row and explain naming conventions in prose. Weight references remain configuration-specific even when grouped by series. Explain Salming Q/P positioning separately from material families and distinguish kickpoint location from flex stiffness.
+- When Oxdog manufacturer pages omit complete-stick weights, cite the seller's own product specification record as a seller-listed value, retain its exact season/profile/blade scope and disclose any missing reference length. Never describe seller listings as manufacturer weights or physical measurements.
+
 - This repository is a VitePress floorball training documentation site.
 - Keep training pages in the existing topic directories, using descriptive Markdown filenames consistent with nearby pages.
 - Keep site configuration and theme code in .vitepress/; keep static assets in public/.

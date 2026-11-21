@@ -4,7 +4,7 @@ pageClass: reading-preview
 
 # 装备器材
 
-主流的厂商有oxdog、salming、unihoc以及fatpipe。目前在国内都能以一些渠道买到。但是如果图性价比的话从海淘（如efloorball）会更便宜
+从球杆长度、软硬度和拍头形状入手，再比较 Oxdog、Salming、Zone、Unihoc 与 Fat Pipe 的产品系列和具体配置。
 
 <div class="vp-cards">
     <a class="vp-card" href="球杆选择">
@@ -15,5 +15,9 @@ pageClass: reading-preview
     </a>
     <a class="vp-card" href="品牌选择">
         <h3>品牌选择</h3>
+    </a>
+    <a class="vp-card" href="产品线介绍">
+        <h3>产品线介绍</h3>
+        <p>五个品牌的球杆系列、拍头与命名说明</p>
     </a>
 </div>

@@ -528,6 +528,8 @@ html.dark .reading-preview .vp-doc .h3-card { background: var(--vp-c-bg-soft); }
 .reading-preview .vp-doc a { text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .reading-preview .vp-doc a:focus-visible { outline: 2px solid var(--vp-c-brand-1); outline-offset: 3px; border-radius: 2px; }
 .reading-preview .vp-doc table { display: block; width: 100%; max-width: 100%; overflow-x: auto; font-size: 15px; margin: 24px 0; }
+.equipment-products .vp-doc :is(td,th) { min-width: 110px; }
+.equipment-products .vp-doc :is(td,th):first-child { min-width: 160px; }
 .reading-preview .vp-doc :is(td,th) { padding: 12px 14px; line-height: 1.75; border-color: var(--vp-c-divider); }
 .reading-preview .vp-doc th { background: var(--vp-c-bg-soft); color: var(--vp-c-text-1); font-weight: 650; text-align: left; }
 .reading-preview .vp-doc tr { background: var(--vp-c-bg); }
