@@ -224,7 +224,7 @@ export default defineConfig({
   themeConfig: {
     search: { provider: 'local' },
 
-    nav: applyNavigationNames(syncNavigation([
+    nav: syncNavigation(applyNavigationNames([
       { text: '首页', link: '/' },
       {
         text: '软曲简介',
@@ -304,7 +304,7 @@ export default defineConfig({
       { text: '比赛经验', items: [{text:'比赛经验',link:'/比赛经验/'}] },
       { text: '发力原理解析', items: [{text:'发力原理解析',link:'/发力原理解析/'}] },
       { text: '热身及小游戏', items: [{text:'热身及小游戏',link:'/热身及小游戏/'}] },
-    ],sidebar,(pageOrder as Record<string,string[]>).$categories||[]),directoryNames,0,pageTitles),
+    ],directoryNames,0,pageTitles),sidebar,(pageOrder as Record<string,string[]>).$categories||[]),
 
     sidebar,
   },
