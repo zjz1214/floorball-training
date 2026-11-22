@@ -27,7 +27,7 @@ export function runTool(command,args,{onProgress,timeout=30*60*1000,signal}={}) 
     child.stdout.on('data',b=>{stdout=(stdout+String(b)).slice(-4*1024*1024);onProgress?.(String(b));});
     child.stderr.on('data',b=>{stderr=(stderr+String(b)).slice(-6000);});
     child.on('error',e=>{clean();reject(new Error(e.code==='ENOENT'?'未找到视频压缩工具，请联系维护者配置 FFmpeg。':e.message));});
-    child.on('exit',code=>{clean();if(signal?.aborted)reject(new Error('处理已取消'));else if(code===0)resolve(stdout);else reject(new Error('视频处理失败：'+stderr.slice(-1200)));});
+    child.on('exit',code=>{clean();if(signal?.aborted)reject(new Error('处理已取消'));else if(code===0)resolve(stdout);else reject(new Error('视频处理失败：'+(stderr.slice(-1200)||'进程退出代码 '+code+'，请检查视频工具及其运行库。')));});
   });
 }
 export async function probeVideo(filename) {

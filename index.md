@@ -32,9 +32,15 @@ features:
   - title: 装备器材
     details: 球杆、装备选择与维护
     link: /装备器材/
-  - title: 其他
-    details: 比赛经验、发力原理与热身
-    link: /其他/
+  - title: 比赛经验
+    details: 换人与比赛中的实践要点
+    link: /比赛经验/
+  - title: 发力原理解析
+    details: 动作发力与身体能力
+    link: /发力原理解析/
+  - title: 热身及小游戏
+    details: 热身活动与趣味练习
+    link: /热身及小游戏/
 ---
 
 ::: tip 训练重点

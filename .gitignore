@@ -12,3 +12,5 @@ todo.md
 manual.md
 *.py
 feishu-export/
+# Portable desktop packages are local build outputs.
+desktop-release/

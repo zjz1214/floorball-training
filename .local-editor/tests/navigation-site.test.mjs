@@ -12,3 +12,10 @@ test('empty groups remain usable links to their category overview',()=>{
 test('overflow finds the category even when all pages are nested',()=>{
  const link=firstNavigationLink([{text:'26春',items:[{text:'总纲',link:'/校队训练记录/总纲'}]}]);assert.equal(link.slice(0,link.lastIndexOf('/')+1),'/校队训练记录/');assert.equal(firstNavigationLink([]),undefined);
 });
+
+test('category order reaches top/mobile navigation while home stays fixed and new categories append',()=>{
+ const nav=[{text:'首页',link:'/'},{text:'基础',items:[{text:'概述',link:'/个人技术基础/'}]},{text:'装备',items:[{text:'概述',link:'/装备器材/'}]},{text:'其他',link:'/其他/'}];
+ const sidebar={'/个人技术基础/':[{text:'控球',link:'/个人技术基础/控球训练'}],'/装备器材/':[{text:'球杆',link:'/装备器材/球杆选择'}]};
+ const before=JSON.stringify({nav,sidebar});const result=syncNavigation(nav,sidebar,['装备器材','个人技术基础']);
+ assert.deepEqual(result.map(item=>item.text),['首页','装备','基础','其他']);assert.equal(result[1].items[0].link,'/装备器材/球杆选择');assert.ok(!result.some(item=>item.text==='更多'));assert.equal(JSON.stringify({nav,sidebar}),before);
+});

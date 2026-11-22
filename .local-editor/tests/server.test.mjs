@@ -52,12 +52,24 @@ test('page ordering persists without touching content and rejects stale or inval
  r=await post('/api/order',{category:group.category,paths,version:initial.orderVersion});assert.equal(r.status,409);
  for(const invalid of [[paths[0],paths[0]],paths.slice(1),['其他/秘密.md',...paths.slice(1)]]){r=await post('/api/order',{category:group.category,paths:invalid,version:reopened.orderVersion});assert.equal(r.status,400);}
 });
-test('directory renaming persists display names while preserving content, paths and ordering',async()=>{
+test('first-level category order persists without changing pages and rejects stale/invalid writes',async()=>{
+ await fs.mkdir(path.join(root,'软曲简介'),{recursive:true});await fs.writeFile(path.join(root,'软曲简介/index.md'),'# 简介\n');
+ const before=await page();const initial=await(await fetch(origin+'/api/tree')).json();const ids=initial.groups.map(group=>group.category).reverse();
+ const pages=initial.groups.find(group=>group.category==='个人技术基础').pages.map(page=>page.path);const old=await fs.readFile(path.join(root,'.local-editor/order.json'),'utf8');
+ const r=await post('/api/category-order',{categories:ids,version:initial.orderVersion});assert.equal(r.status,200);const saved=await r.json();assert.deepEqual(saved.groups.map(group=>group.category),ids);
+ assert.deepEqual(saved.groups.find(group=>group.category==='个人技术基础').pages.map(page=>page.path),pages);assert.deepEqual(await page(),before);
+ const reopened=await(await fetch(origin+'/api/tree')).json();assert.deepEqual(reopened.groups.map(group=>group.category),ids);assert.deepEqual(JSON.parse(await fs.readFile(path.join(root,'.local-editor/order.json'),'utf8')).$categories,ids);
+ assert.equal((await post('/api/category-order',{categories:ids,version:initial.orderVersion})).status,409);
+ for(const invalid of [[],[ids[0],ids[0]],['更多',...ids.slice(1)],['../秘密',...ids.slice(1)],null])assert.equal((await post('/api/category-order',{categories:invalid,version:reopened.orderVersion})).status,400);
+ const backups=await fs.readdir(path.join(root,'.vitepress/cache/content-editor/backups'));assert.ok((await Promise.all(backups.filter(name=>name.includes('order.json')).map(name=>fs.readFile(path.join(root,'.vitepress/cache/content-editor/backups',name),'utf8')))).includes(old));
+});
+
+test('directory renaming synchronizes H1 while preserving other content, paths and ordering',async()=>{
  const initial=await(await fetch(origin+'/api/tree')).json();const before=await fs.readFile(path.join(root,'个人技术基础/测试.md'),'utf8');
  const ordered=initial.groups.find(g=>g.category==='个人技术基础').pages.map(p=>p.path);
  let r=await post('/api/rename',{kind:'page',key:'个人技术基础/测试.md',name:'新目录显示名',version:initial.namesVersion});assert.equal(r.status,200);let state=await r.json();
  assert.equal(state.groups.find(g=>g.category==='个人技术基础').pages.find(p=>p.path==='个人技术基础/测试.md').title,'新目录显示名');
- assert.deepEqual(state.groups.find(g=>g.category==='个人技术基础').pages.map(p=>p.path),ordered);assert.equal(await fs.readFile(path.join(root,'个人技术基础/测试.md'),'utf8'),before);
+ assert.deepEqual(state.groups.find(g=>g.category==='个人技术基础').pages.map(p=>p.path),ordered);assert.equal(await fs.readFile(path.join(root,'个人技术基础/测试.md'),'utf8'),before.replace(/^# .+$/m,'# 新目录显示名'));
  r=await post('/api/rename',{kind:'category',key:'个人技术基础',name:'基础课程',version:state.namesVersion});assert.equal(r.status,200);state=await r.json();assert.equal(state.groups.find(g=>g.category==='个人技术基础').displayName,'基础课程');
  const reopened=await(await fetch(origin+'/api/tree')).json();assert.equal(reopened.groups.find(g=>g.category==='个人技术基础').displayName,'基础课程');
  r=await post('/api/rename',{kind:'page',key:'个人技术基础/测试.md',name:'冲突',version:initial.namesVersion});assert.equal(r.status,409);
@@ -113,6 +125,21 @@ test('cross-origin writes, missing session and content/config path escapes are d
   for(const headers of [{'X-Editor-Session':''},{Origin:'https://example.com'}])assert.equal((await post('/api/save',{path:d.path,version:d.version,document:d},headers)).status,403);
   for(const name of ['../.env','.vitepress/config.ts','个人技术基础/../../.env','个人技术基础\\测试.md','AGENTS.md'])assert.equal((await fetch(origin+'/api/page?path='+encodeURIComponent(name))).status,400);
 });
+test('saving H1 refreshes tree labels even when legacy aliases remain',async()=>{
+ const doc=await page();doc.blocks.find(block=>block.type==='heading'&&block.meta.level===1).raw='# 保存后的标题\n';
+ const r=await post('/api/save',{path:doc.path,version:doc.version,document:doc});assert.equal(r.status,200);assert.equal((await r.json()).title,'保存后的标题');
+ const tree=await(await fetch(origin+'/api/tree')).json();assert.equal(tree.groups.flatMap(group=>group.pages).find(page=>page.path===doc.path).title,'保存后的标题');
+});
+
+test('promoted topics appear as independent editable categories with matching reading profiles',async()=>{
+ for(const [category,profile] of [['比赛经验','reading-preview'],['发力原理解析','reading-preview'],['热身及小游戏','technical-reading']]){
+  await fs.mkdir(path.join(root,category),{recursive:true});await fs.writeFile(path.join(root,category,'index.md'),'# '+category+'\n');
+  const r=await post('/api/create',{category,title:'新增内容'});assert.equal(r.status,200);assert.equal((await r.json()).profile,profile);
+ }
+ const tree=await(await fetch(origin+'/api/tree')).json();assert.ok(!tree.groups.some(group=>group.category==='其他'));for(const category of ['比赛经验','发力原理解析','热身及小游戏'])assert.ok(tree.groups.some(group=>group.category===category&&group.pages.some(page=>page.path===category+'/新增内容.md')));
+ assert.equal((await post('/api/create',{category:'其他',title:'旧分类'})).status,400);
+});
+
 test('junctions and symbolic links cannot escape the content root',async t=>{
   const outside=path.join(root,'outside');await fs.mkdir(outside);await fs.writeFile(path.join(outside,'test.md'),'not a site page');
   try{await fs.symlink(outside,path.join(root,'装备器材'),process.platform==='win32'?'junction':'dir');}catch(e){if(['EPERM','EACCES'].includes(e.code)){t.skip('Host does not permit creating test links');return;}throw e;}

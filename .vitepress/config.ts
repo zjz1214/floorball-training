@@ -1,10 +1,13 @@
 import { defineConfig } from 'vitepress'
+import { readFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
+import { relative } from 'node:path'
 import container from 'markdown-it-container'
 import editorPages from '../.local-editor/pages.json'
 import pageOrder from '../.local-editor/order.json'
 import { sortByOrder, sidebarPage } from '../.local-editor/order.mjs'
 import directoryNames from '../.local-editor/names.json'
-import { applyNavigationNames } from '../.local-editor/names.mjs'
+import { applyNavigationNames, pageTitle } from '../.local-editor/names.mjs'
 import directoryGroups from '../.local-editor/groups.json'
 import { groupSidebar } from '../.local-editor/groups.mjs'
 import { syncNavigation } from '../.local-editor/navigation.mjs'
@@ -39,7 +42,7 @@ const sidebar = {
     { text: '概述', link: '/团队训练/' },
     { text: '防守战术', link: '/团队训练/防守战术' },
     { text: '进攻战术', link: '/团队训练/进攻战术' },
-    { text: '进攻的局部技术', link: '/团队训练/进攻的局部技术' },
+    { text: '进攻的局部技术', link: '/团队训练/进攻的局部技术（积累默契）' },
     { text: '5打4战术', link: '/团队训练/5打4战术' },
     { text: '任意球战术', link: '/团队训练/任意球战术' },
   ],
@@ -70,12 +73,9 @@ const sidebar = {
     { text: '拍头选择', link: '/装备器材/拍头选择' },
     { text: '品牌选择', link: '/装备器材/品牌选择' },
   ],
-  '/其他/': [
-    { text: '概述', link: '/其他/' },
-    { text: '比赛经验', link: '/其他/比赛经验' },
-    { text: '发力原理解析', link: '/其他/发力原理解析' },
-    { text: '热身及小游戏', link: '/其他/热身及小游戏' },
-  ],
+  '/比赛经验/': [{ text: '比赛经验', link: '/比赛经验/' }],
+  '/发力原理解析/': [{ text: '发力原理解析', link: '/发力原理解析/' }],
+  '/热身及小游戏/': [{ text: '热身及小游戏', link: '/热身及小游戏/' }],
 }
 
 // Pages created locally join the existing sidebar; hand-maintained entries keep their order.
@@ -85,11 +85,16 @@ for (const entry of editorPages as { category: string; path: string; title: stri
   const link = `/${entry.path.replace(/\.md$/, '')}`
   if (items && !items.some(item => item.link === link)) items.push({ text: entry.title, link })
 }
+const pageTitles: Record<string,string>={}
+function readPageTitle(name:string){try{return pageTitle(readFileSync(new URL(`../${name}`,import.meta.url),'utf8'))}catch{return ''}}
+pageTitles['index.md']=readPageTitle('index.md')
 for (const [key,items] of Object.entries(sidebar)) {
   const category=key.replace(/^\//,'').replace(/\/$/,'')
   ;(sidebar as Record<string, { text: string; link: string }[]>)[key]=sortByOrder(items,(pageOrder as Record<string,string[]>)[category]||[],item=>sidebarPage(item.link))
   for (const item of items) {
-    const name=(directoryNames.pages as Record<string,string>)[sidebarPage(item.link)]
+    const file=sidebarPage(item.link)
+    pageTitles[file]=readPageTitle(file)
+    const name=pageTitles[file]||(directoryNames.pages as Record<string,string>)[file]
     if(name)item.text=name
   }
   ;(sidebar as Record<string, any[]>)[key]=groupSidebar((sidebar as Record<string, any[]>)[key],(directoryGroups as Record<string,any[]>)[category]||[],item=>sidebarPage(item.link))
@@ -112,6 +117,15 @@ export default defineConfig({
   outDir: '.vitepress/dist-site',
 
   vite: {
+    plugins: [{name:'sync-saved-page-titles',async handleHotUpdate(context){
+      const name=relative(fileURLToPath(new URL('../',import.meta.url)),context.file).replace(/\\/g,'/')
+      if(Object.hasOwn(pageTitles,name)){const title=pageTitle(readFileSync(context.file,'utf8'));if(title!==pageTitles[name]){
+        pageTitles[name]=title
+        // Use VitePress's configuration reload, which also resets its search and Markdown caches.
+        setTimeout(()=>context.server.watcher.emit('change',fileURLToPath(import.meta.url).replace(/\\/g,'/')),0)
+        return []
+      }}
+    }}],
     server: {
       watch: {
         ignored: [
@@ -250,7 +264,7 @@ export default defineConfig({
         items: [
           { text: '防守战术', link: '/团队训练/防守战术' },
           { text: '进攻战术', link: '/团队训练/进攻战术' },
-          { text: '进攻的局部技术', link: '/团队训练/进攻的局部技术' },
+          { text: '进攻的局部技术', link: '/团队训练/进攻的局部技术（积累默契）' },
           { text: '5打4战术', link: '/团队训练/5打4战术' },
           { text: '任意球战术', link: '/团队训练/任意球战术' },
         ],
@@ -287,8 +301,10 @@ export default defineConfig({
           { text: '品牌选择', link: '/装备器材/品牌选择' },
         ],
       },
-      { text: '其他', link: '/其他/' },
-    ],sidebar),directoryNames),
+      { text: '比赛经验', items: [{text:'比赛经验',link:'/比赛经验/'}] },
+      { text: '发力原理解析', items: [{text:'发力原理解析',link:'/发力原理解析/'}] },
+      { text: '热身及小游戏', items: [{text:'热身及小游戏',link:'/热身及小游戏/'}] },
+    ],sidebar,(pageOrder as Record<string,string[]>).$categories||[]),directoryNames,0,pageTitles),
 
     sidebar,
   },

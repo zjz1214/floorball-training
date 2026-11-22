@@ -1,0 +1,98 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {spawn,execFile} from 'node:child_process';
+import {promisify} from 'node:util';
+import assert from 'node:assert/strict';
+import {fileURLToPath} from 'node:url';
+const exec=promisify(execFile),root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const packageInfo=JSON.parse(await fs.readFile(path.join(root,'.vitepress/cache/content-editor/desktop-latest.json'),'utf8'));
+const fixture=path.join(root,'.vitepress/cache/content-editor','desktop-smoke-'+Date.now());
+for(const dir of ['.local-editor','.vitepress','public/tactics-runtime','个人技术基础'])await fs.mkdir(path.join(fixture,dir),{recursive:true});
+for(const name of await fs.readdir(path.join(root,'.local-editor')))if(name.endsWith('.mjs'))await fs.copyFile(path.join(root,'.local-editor',name),path.join(fixture,'.local-editor',name));
+await fs.cp(path.join(root,'.local-editor/web'),path.join(fixture,'.local-editor/web'),{recursive:true});
+await fs.cp(path.join(root,'.vitepress/theme'),path.join(fixture,'.vitepress/theme'),{recursive:true});
+await fs.copyFile(path.join(root,'.vitepress/config.ts'),path.join(fixture,'.vitepress/config.ts'));
+await fs.cp(path.join(root,'public/tactics-runtime'),path.join(fixture,'public/tactics-runtime'),{recursive:true});
+for(const [name,data] of Object.entries({'pages.json':[],'order.json':{},'names.json':{pages:{},categories:{}},'groups.json':{}}))await fs.writeFile(path.join(fixture,'.local-editor',name),JSON.stringify(data));
+await fs.writeFile(path.join(fixture,'package.json'),'{"type":"module"}');
+await fs.symlink(path.join(root,'node_modules'),path.join(fixture,'node_modules'),'junction');
+await fs.writeFile(path.join(fixture,'index.md'),'# 桌面验证\n');
+const page='个人技术基础/测试.md';
+await fs.writeFile(path.join(fixture,page),'---\npageClass: technical-reading\n---\n\n# 桌面测试\n\n正文内容\n\n| 列一 | 列二 |\n| --- | --- |\n| 原文 | 数据 |\n');
+await fs.writeFile(path.join(fixture,'个人技术基础/粘贴目标.md'),'# 粘贴目标\n\n先观察，再传球。遇到防守时先观察，再传球。\n');
+const fixtureGit=(...args)=>exec('git',args,{cwd:fixture,windowsHide:true});
+await fixtureGit('init','-q','-b','main');
+await fixtureGit('config','user.name','Desktop QA');
+await fixtureGit('config','user.email','test@example.invalid');
+await fixtureGit('add','--',page);
+await fixtureGit('commit','-qm','Initial fixture');
+const clip=path.join(fixture,'sample.mp4');await exec('D:/LosslessCut-win-x64/resources/ffmpeg.exe',['-v','error','-f','lavfi','-i','testsrc2=size=320x240:rate=24','-t','1','-c:v','libx264',clip]);
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));let proc,ws,mainWS,next=0;const pending=new Map(),mainPending=new Map();let info;let launches=0;
+const env={...process.env};delete env.ELECTRON_RUN_AS_NODE;
+async function launch(reopen=false){
+ const report=path.join(fixture,'report-'+Date.now()+'.json');const debugPort=9400+launches++*2;
+ proc=spawn(packageInfo.exe,[...(reopen?[]:['--project='+fixture]),'--user-data='+path.join(fixture,'profile'),'--smoke-test='+report,'--debug-port='+debugPort,'--main-debug-port='+(debugPort+1)],{cwd:root,env,windowsHide:false,stdio:['ignore','pipe','pipe']});
+ let log='';proc.stderr.on('data',data=>{log+=data});
+ for(let i=0;i<200;i++){try{info=JSON.parse(await fs.readFile(report,'utf8'));break;}catch{}if(proc.exitCode!==null)throw Error('Desktop failed: '+log);await delay(100);}
+ assert.ok(info?.packaged,'Packaged desktop did not start');
+ const tabs=await fetch('http://127.0.0.1:'+debugPort+'/json/list').then(r=>r.json());const tab=tabs.find(t=>t.type==='page'&&t.url.startsWith(info.origin));assert.ok(tab);
+ ws=new WebSocket(tab.webSocketDebuggerUrl);await new Promise(resolve=>ws.onopen=resolve);
+ ws.onmessage=event=>{const message=JSON.parse(event.data);if(message.id){const request=pending.get(message.id);pending.delete(message.id);message.error?request?.reject(message.error):request?.resolve(message.result);}else if(message.method==='Runtime.exceptionThrown')console.log('Renderer exception:',JSON.stringify(message.params));else if(message.method==='Log.entryAdded')console.log('Renderer log:',JSON.stringify(message.params));else if(message.method==='Page.javascriptDialogOpening')call('Page.handleJavaScriptDialog',{accept:true}).catch(error=>console.log('Dialog handling:',error.message));};
+ await call('Page.enable');await call('Log.enable');await call('Runtime.enable');await wait("document.querySelectorAll('.tree-page').length>=2");console.log('Window ready',info.pid);
+ const mainTabs=await fetch('http://127.0.0.1:'+(debugPort+1)+'/json/list').then(r=>r.json());mainWS=new WebSocket(mainTabs[0].webSocketDebuggerUrl);await new Promise(resolve=>mainWS.onopen=resolve);mainWS.onmessage=event=>{const message=JSON.parse(event.data);if(message.id){const request=mainPending.get(message.id);mainPending.delete(message.id);message.error?request?.reject(message.error):request?.resolve(message.result);}};
+ await mainEvaluate("globalThis.__dialogs=[];globalThis.__response=1;globalThis.__desktopElectron=process.mainModule.require('electron');__desktopElectron.dialog.showMessageBox=async(...args)=>{__dialogs.push(args.at(-1));return {response:args.at(-1).message?.includes('本机未保存草稿')?0:__response};}");
+}
+function mainCall(method,params={}){return new Promise((resolve,reject)=>{const id=++next;const timer=setTimeout(()=>{mainPending.delete(id);reject(Error('Main protocol timed out: '+method));},10000);mainPending.set(id,{resolve:value=>{clearTimeout(timer);resolve(value)},reject:error=>{clearTimeout(timer);reject(error)}});mainWS.send(JSON.stringify({id,method,params}));});}
+async function mainEvaluate(expression){const r=await mainCall('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.exception?.description);return r.result?.value;}
+function call(method,params={}){return new Promise((resolve,reject)=>{const id=++next;const timer=setTimeout(()=>{pending.delete(id);reject(Error('Renderer protocol timed out: '+method));},10000);pending.set(id,{resolve:value=>{clearTimeout(timer);resolve(value)},reject:error=>{clearTimeout(timer);reject(error)}});ws.send(JSON.stringify({id,method,params}));});}
+async function evaluate(expression){const r=await call('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.text+': '+r.exceptionDetails.exception?.description);return r.result?.value;}
+async function wait(expression){for(let i=0;i<200;i++){if(await evaluate(expression))return;await delay(100);}const details=await evaluate("JSON.stringify({toast:document.querySelector('#toast')?.textContent,media:document.querySelector('#media-queue')?.textContent,video:document.querySelectorAll('video').length,body:document.querySelector('#warnings')?.textContent})");throw Error('Timed out: '+expression+' '+details);}
+async function native(action,button){const result=await exec('powershell.exe',['-NoProfile','-ExecutionPolicy','Bypass','-File',path.join(root,'.desktop/native-check.ps1'),'-DesktopProcessId',String(info.pid),'-Action',action,...(button?['-Button',button]:[])],{encoding:'utf8'});console.log(result.stdout.trim());}
+async function requestClose(response=1){await mainEvaluate(`__response=${response};setTimeout(()=>__desktopElectron.BrowserWindow.getAllWindows()[0].close(),25);true;`);}
+try{
+ await launch();assert.equal(await evaluate('typeof window.require'),'undefined');assert.equal(await evaluate('typeof window.floorballDesktop.openPreview'),'function');
+ assert.ok(await mainEvaluate('__desktopElectron.BrowserWindow.getAllWindows()[0].isVisible()'));
+ await mainEvaluate("globalThis.__pickers=0;__desktopElectron.dialog.showOpenDialog=async()=>{__pickers++;return {canceled:true,filePaths:[]}};__desktopElectron.Menu.getApplicationMenu().items[0].submenu.items[0].click();");await delay(200);assert.equal(await mainEvaluate('__pickers'),1);assert.equal(await evaluate('location.origin'),info.origin);
+ await mainEvaluate("globalThis.__external=[];__desktopElectron.shell.openExternal=async url=>{__external.push(url)};");await evaluate("window.open('https://example.com/floorball','_blank');true;");await delay(200);assert.deepEqual(await mainEvaluate('__external'),['https://example.com/floorball']);
+ await evaluate("document.querySelector('.tree-page[data-path=\"个人技术基础/测试.md\"]').click()");await wait("document.querySelector('.block-table table')");
+ await evaluate("const cell=document.querySelector('.block-table tbody td:last-child');cell.textContent='桌面编辑成功';cell.closest('.rich-field').dispatchEvent(new Event('input',{bubbles:true}))");
+ await evaluate("const stepCell=document.querySelector('.block-table tbody td:last-child');stepCell.innerHTML='<ol start=\"3\"><li><strong>桌面编辑成功</strong></li><li>贴地传球<ul><li>抬头观察</li></ul></li></ol>';stepCell.closest('.rich-field').dispatchEvent(new Event('input',{bubbles:true}))");
+ await evaluate("document.querySelector('[data-add=media]').click()");await wait("document.querySelector('#media-dialog').open");
+ const doc=await call('DOM.getDocument');const input=await call('DOM.querySelector',{nodeId:doc.root.nodeId,selector:'#media-files'});await call('DOM.setFileInputFiles',{nodeId:input.nodeId,files:[clip]});await wait("document.querySelector('#media-queue').textContent.length>0");await evaluate("document.querySelector('#media-form').requestSubmit()");await wait("!document.querySelector('#media-dialog').open && !!document.querySelector('.editor-media video')");
+ await evaluate("document.querySelector('[data-add=tactics]').click()");await wait("document.querySelector('#tactics-dialog').open");await evaluate("const t=document.querySelector('#tactics-title');t.value='桌面战术';t.dispatchEvent(new Event('input',{bubbles:true}));document.querySelector('#tactics-commit').click()");await wait("!document.querySelector('#tactics-dialog').open");
+ await evaluate("document.querySelector('#save').click()");await wait("document.querySelector('#save-state').textContent==='已保存到本机'");const saved=await fs.readFile(path.join(fixture,page),'utf8');assert.match(saved,/桌面编辑成功/);assert.match(saved,/editor-media/);assert.match(saved,/tactics/);
+ await wait("document.documentElement.dataset.desktopBusy==='false'");
+ await evaluate("document.querySelector('#github-open').click()");
+ await wait("document.querySelector('#github-files input[value$=\"测试.md\"]')?.checked");
+ await evaluate("document.querySelector('#github-files input[value$=\"测试.md\"]').closest('.github-file').querySelector('button').click()");
+ await wait("document.querySelector('#github-diff').textContent.includes('桌面编辑成功')");
+ await evaluate("document.querySelectorAll('#github-files input:checked').forEach(input=>input.checked=input.value.endsWith('/测试.md'));document.querySelector('#github-message').value='桌面提交验证';document.querySelector('#github-commit').click()");
+ await wait("document.querySelector('#github-status').textContent.includes('已提交到本地')");
+ assert.equal((await fixtureGit('log','-1','--format=%s')).stdout.trim(),'桌面提交验证');
+ await evaluate("document.querySelector('#github-close').click()");
+ assert.equal(await evaluate("document.querySelector('.block-table ol')?.start"),3);assert.equal(await evaluate("document.querySelectorAll('.block-table ol>li').length"),2);assert.ok(await evaluate("!!document.querySelector('.block-table ol strong')&&!!document.querySelector('.block-table ul')"));
+ await evaluate("const normal=document.querySelector('.block-text .rich-field');normal.focus();const range=document.createRange();range.selectNodeContents(normal);getSelection().removeAllRanges();getSelection().addRange(range)");await mainEvaluate('__desktopElectron.BrowserWindow.getAllWindows()[0].webContents.copy();');await delay(100);assert.equal(await mainEvaluate('__desktopElectron.clipboard.readText()'),'正文内容');
+ await evaluate("getSelection().removeAllRanges();document.querySelector('.block-table .block-bar').focus()");await mainEvaluate('__desktopElectron.BrowserWindow.getAllWindows()[0].webContents.copy();');await delay(100);assert.match(await evaluate('window.floorballDesktop.readBlockClipboard()'),/data-floorball-editor-block=/);await mainEvaluate('__desktopElectron.BrowserWindow.getAllWindows()[0].webContents.paste();');await wait("document.querySelectorAll('.block-table').length===2");await evaluate("document.querySelector('#undo').click()");assert.equal(await evaluate("document.querySelectorAll('.block-table').length"),1);
+ for(const type of ['table','video','tactics']){
+  if(type==='table')await evaluate("const title=document.querySelector('.block-table .element-title-input');title.value='整块复制的标题';title.dispatchEvent(new Event('input',{bubbles:true}))");
+  const count=await evaluate(`document.querySelectorAll('.block-${type}').length`);
+  await evaluate(`document.querySelector('.block-${type} [aria-label="复制整个元素"]').click()`);await wait("document.querySelector('#toast').textContent.includes('元素已复制')");
+  await evaluate("document.querySelector('#paste-block').click()");await wait(`document.querySelectorAll('.block-${type}').length===${count+1}`);
+  await evaluate("document.querySelector('#undo').click()");assert.equal(await evaluate(`document.querySelectorAll('.block-${type}').length`),count);
+  await evaluate("document.querySelector('#redo').click()");assert.equal(await evaluate(`document.querySelectorAll('.block-${type}').length`),count+1);
+ }
+ await evaluate("const copiedCell=document.querySelectorAll('.block-table')[1].querySelector('td');copiedCell.textContent='副本独立编辑';copiedCell.closest('.rich-field').dispatchEvent(new Event('input',{bubbles:true}))");assert.ok(!await evaluate("document.querySelector('.block-table').textContent.includes('副本独立编辑')"));
+ await wait("document.documentElement.dataset.desktopBusy==='false'");await evaluate("document.querySelector('#save').click()");await wait("document.documentElement.dataset.desktopDirty==='false'&&document.documentElement.dataset.desktopBusy==='false'");
+ await evaluate("document.querySelector('.block-table [aria-label=\"复制整个元素\"]').click()");await delay(100);await evaluate("document.querySelector('.tree-page[data-path=\"个人技术基础/粘贴目标.md\"]').click()");await wait("document.querySelector('#current-title').textContent==='粘贴目标'");await evaluate("document.querySelector('#paste-block').click()");await wait("document.querySelector('.block-table .element-title-input')?.value==='整块复制的标题'");await evaluate("document.querySelector('#save').click()");await wait("document.documentElement.dataset.desktopDirty==='false'&&document.documentElement.dataset.desktopBusy==='false'");await evaluate("document.querySelector('.tree-page[data-path=\"个人技术基础/测试.md\"]').click()");await wait("document.querySelectorAll('.block-table').length===2");assert.ok(await evaluate("document.querySelectorAll('.block-table')[1].textContent.includes('副本独立编辑')"));
+ await evaluate("const sourceField=document.querySelector('.block-text .rich-field');sourceField.focus();const sourceRange=document.createRange();sourceRange.selectNodeContents(sourceField);getSelection().removeAllRanges();getSelection().addRange(sourceRange);document.dispatchEvent(new Event('selectionchange'));document.querySelector('[data-command=createLink]').click()");await wait("document.querySelectorAll('.link-page').length>0");await evaluate("[...document.querySelectorAll('.link-page')].find(b=>b.textContent==='粘贴目标').click()");await wait("[...document.querySelectorAll('.link-target')].some(b=>b.textContent.startsWith('◈ 正文'))");await evaluate("[...document.querySelectorAll('.link-target')].find(b=>b.textContent.startsWith('◈ 正文')).click();const preview=document.querySelector('#link-target-preview'),textNode=preview.querySelector('p').firstChild,needle='先观察，再传球',offset=textNode.data.lastIndexOf(needle),targetRange=document.createRange();targetRange.setStart(textNode,offset);targetRange.setEnd(textNode,offset+needle.length);getSelection().removeAllRanges();getSelection().addRange(targetRange);preview.dispatchEvent(new MouseEvent('mouseup',{bubbles:true}));document.querySelector('#link-use-text').click();document.querySelector('#link-text').value='文字定位验证';document.querySelector('#link-form').requestSubmit()");await wait("!document.querySelector('#link-dialog').open");await evaluate("document.querySelector('.block-text a').click()");await wait("document.querySelector('#current-title').textContent==='粘贴目标'&&CSS.highlights.has('floorball-link-text')");assert.equal(await evaluate("[...CSS.highlights.get('floorball-link-text')][0].toString()"),'先观察，再传球');assert.ok(await evaluate("[...CSS.highlights.get('floorball-link-text')][0].startOffset>0"));await wait("document.querySelector('#preview').contentWindow.CSS.highlights.has('floorball-link-text')");await evaluate("document.querySelector('#return-source').click()");await wait("document.querySelector('#current-title').textContent==='桌面测试'");
+ await evaluate("const f=document.querySelector('.block-text .rich-field');f.innerHTML='<p>关闭时保存的文字</p>';f.dispatchEvent(new Event('input',{bubbles:true}))");
+ await wait("document.documentElement.dataset.desktopBusy==='false'");await requestClose();await delay(250);assert.equal(proc.exitCode,null);assert.deepEqual(await mainEvaluate("__dialogs.at(-1).buttons"),['保存后继续','取消','保留草稿并离开']);await requestClose(0);await delay(400);ws.close();mainWS.close();
+ for(let i=0;i<200&&proc.exitCode===null;i++)await delay(100);assert.equal(proc.exitCode,0);assert.match(await fs.readFile(path.join(fixture,page),'utf8'),/关闭时保存的文字/);await assert.rejects(fetch(info.origin+'/api/session'));
+ ws.close();mainWS.close();info=null;await launch(true);await wait("document.querySelector('#current-title').textContent==='桌面测试'");assert.ok(await evaluate("document.querySelector('.block-text .rich-field').textContent.includes('关闭时保存的文字')"));
+ await mainEvaluate("globalThis.__previews=[];__desktopElectron.shell.openExternal=async url=>{__previews.push(url)};");await evaluate("window.floorballDesktop.openPreview('个人技术基础/测试.md')");assert.match((await mainEvaluate('__previews'))[0],/^http:\/\/127\.0\.0\.1:\d+\//);
+ const image=await call('Page.captureScreenshot',{format:'png'});await fs.writeFile(path.join(fixture,'desktop.png'),Buffer.from(image.data,'base64'));
+ await evaluate("const f=document.querySelector('.block-text .rich-field');f.innerHTML='<p>重新打开后恢复的桌面草稿</p>';f.dispatchEvent(new Event('input',{bubbles:true}))");await requestClose(2);await delay(400);ws.close();mainWS.close();for(let i=0;i<100&&proc.exitCode===null;i++)await delay(100);assert.equal(proc.exitCode,0);assert.doesNotMatch(await fs.readFile(path.join(fixture,page),'utf8'),/重新打开后恢复的桌面草稿/);
+ info=null;await launch(true);await wait("document.querySelector('.block-text .rich-field')?.textContent.includes('重新打开后恢复的桌面草稿')");await mainEvaluate('__desktopElectron.Menu.getApplicationMenu().items[0].submenu.items[1].click();');await wait("document.documentElement.dataset.desktopDirty==='false'&&document.documentElement.dataset.desktopBusy==='false'");
+ await requestClose();await delay(400);ws.close();mainWS.close();for(let i=0;i<100&&proc.exitCode===null;i++)await delay(100);assert.equal(proc.exitCode,0);
+ console.log('Packaged desktop passed: visible startup, sandbox, project-picker cancellation, external links, tables, video compression, tactics, website preview, close-dialog cancel/save/draft choices, native-menu save, draft recovery, service shutdown and remembered project/page.');console.log('Fixture:',fixture);
+}finally{ws?.close();mainWS?.close();if(proc&&proc.exitCode===null){console.log('Desktop retained for diagnosis:',proc.pid);}}

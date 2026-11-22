@@ -586,3 +586,5 @@ html.dark .control-training .vp-doc .h3-card { background: none; }
 .vp-doc .element-block > :is(p, table, .media-grid, video, img) { margin-top: 0; margin-bottom: 0; }
 .vp-doc .element-block > :last-child { margin-bottom: 0; }
 .vp-doc .element-block > p > :is(video, img) { margin-top: 0; margin-bottom: 0; }
+
+::highlight(floorball-link-text){background:#ffe08a;color:#24313a}

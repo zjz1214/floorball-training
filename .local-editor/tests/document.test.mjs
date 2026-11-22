@@ -6,6 +6,13 @@ import { fileURLToPath } from 'node:url';
 import { categories, parseDocument, serializeDocument, splitFrontmatter, renderPreview } from '../document.mjs';
 import { updateElementSource } from '../web/element.js';
 
+test('ordered and nested table-cell lists remain editable through repeated saves',()=>{
+ const source='| 动作 | 步骤 |\n| --- | --- |\n| 传球 | <ol start="3"><li><strong>先抬头</strong></li><li>再传球<ul><li>留意防守</li></ul></li></ol> |\n';
+ let doc=parseDocument(source);assert.equal(doc.blocks[0].type,'table');assert.equal(serializeDocument(doc),source);
+ doc.blocks[0].raw=doc.blocks[0].raw.replace('再传球','再贴地传球');doc=parseDocument(serializeDocument(doc));
+ assert.equal(doc.blocks[0].type,'table');assert.match(doc.blocks[0].html,/<ol start="3">/);assert.match(doc.blocks[0].html,/<strong>先抬头<\/strong>/);assert.match(doc.blocks[0].html,/<ul>/);
+});
+
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 test('all current published pages round-trip without changing a single source character', async () => {
   const names = ['index.md'];

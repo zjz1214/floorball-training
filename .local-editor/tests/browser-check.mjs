@@ -5,6 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawn } from 'node:child_process';
 import assert from 'node:assert/strict';
+import net from 'node:net';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
 const cache=path.join(root,'.vitepress/cache/content-editor');
 const controlSource=await fs.readFile(path.join(root,'个人技术基础/控球训练.md'),'utf8');
@@ -20,14 +21,19 @@ await fs.copyFile(path.join(root,'.local-editor/groups.mjs'),path.join(fixture,'
 await fs.copyFile(path.join(root,'.local-editor/navigation.mjs'),path.join(fixture,'.local-editor/navigation.mjs'));
 await fs.writeFile(path.join(fixture,'.local-editor/groups.json'),'{}\n');
 await fs.writeFile(path.join(fixture,'.local-editor/names.json'),'{"pages":{},"categories":{}}\n');
-await fs.copyFile(path.join(root,'.vitepress/config.ts'),path.join(fixture,'.vitepress/config.ts'));
+// This isolated site itself lives below the real site's ignored cache directory.
+// Let its watcher see article edits while retaining the production ignore rules elsewhere.
+await fs.writeFile(path.join(fixture,'.vitepress/config.ts'),(await fs.readFile(path.join(root,'.vitepress/config.ts'),'utf8')).replace("'**/.vitepress/cache/**',","'**/node_modules/**',"));
 await fs.copyFile(path.join(root,'.vitepress/theme/custom.css'),path.join(fixture,'.vitepress/theme/custom.css'));
-await fs.copyFile(path.join(root,'.vitepress/theme/components/ReturnToSource.vue'),path.join(fixture,'.vitepress/theme/ReturnToSource.vue'));
+await fs.mkdir(path.join(fixture,'.local-editor/web'),{recursive:true});
+await fs.copyFile(path.join(root,'.local-editor/web/text-target.js'),path.join(fixture,'.local-editor/web/text-target.js'));
+await fs.writeFile(path.join(fixture,'.vitepress/theme/ReturnToSource.vue'),(await fs.readFile(path.join(root,'.vitepress/theme/components/ReturnToSource.vue'),'utf8')).replace('../../../.local-editor/web/text-target.js','../../.local-editor/web/text-target.js'));
 await fs.writeFile(path.join(fixture,'.vitepress/theme/index.ts'),"import {h} from 'vue';import DefaultTheme from 'vitepress/theme'; import './custom.css';import ReturnToSource from './ReturnToSource.vue';export default {...DefaultTheme,Layout:()=>h(DefaultTheme.Layout,null,{'layout-bottom':()=>h(ReturnToSource)})};\n");
 for(const name of ['index.md','个人技术基础/控球训练.md','专项练习/后卫专项.md','软曲简介/校内3v3规则.md','训练计划/传球与接球.md'])await fs.copyFile(path.join(root,name),path.join(fixture,name));
 for(const name of await fs.readdir(path.join(root,'public')))if(/\.(png|jpe?g|gif|svg|webp|avif)$/i.test(name))await fs.copyFile(path.join(root,'public',name),path.join(fixture,'public',name));
 await fs.symlink(path.join(root,'node_modules'),path.join(fixture,'node_modules'),process.platform==='win32'?'junction':'dir');
-const server=spawn(process.execPath,[path.join(root,'.local-editor/server.mjs')],{cwd:root,env:{...process.env,FLOORBALL_EDITOR_ROOT:fixture,FLOORBALL_EDITOR_PORT:'5184'},windowsHide:true,stdio:['ignore','pipe','pipe']});
+const probe=net.createServer();await new Promise(resolve=>probe.listen(0,'127.0.0.1',resolve));const port=probe.address().port;await new Promise(resolve=>probe.close(resolve));const editorOrigin='http://127.0.0.1:'+port;
+const server=spawn(process.execPath,[path.join(root,'.local-editor/server.mjs')],{cwd:root,env:{...process.env,FLOORBALL_EDITOR_ROOT:fixture,FLOORBALL_EDITOR_PORT:String(port)},windowsHide:true,stdio:['ignore','pipe','pipe']});
 let serverLog='';server.stdout.on('data',x=>serverLog+=x);server.stderr.on('data',x=>serverLog+=x);
 let ws,targetId,siteProcess; const pending=new Map();let next=1;const errors=[];
 const delay=ms=>new Promise(r=>setTimeout(r,ms));
@@ -35,8 +41,8 @@ async function call(method,params={}){const id=next++;return new Promise((resolv
 async function evaluate(expression){const r=await call('Runtime.evaluate',{expression:`{${expression}\n}`,awaitPromise:true,returnByValue:true,userGesture:true});if(r.exceptionDetails)throw new Error(r.exceptionDetails.text+': '+r.exceptionDetails.exception?.description);return r.result.value;}
 async function wait(expression){for(let i=0;i<400;i++){if(await evaluate(expression))return;await delay(100);}throw new Error('Timed out: '+expression);}
 try{
-  for(let i=0;i<60;i++){try{if((await fetch('http://127.0.0.1:5184/api/session')).ok)break;}catch{}await delay(100);}
-  const target=await (await fetch('http://127.0.0.1:9228/json/new?http://127.0.0.1:5184/',{method:'PUT'})).json();
+  for(let i=0;i<60;i++){try{if((await fetch(editorOrigin+'/api/session')).ok)break;}catch{}await delay(100);}
+  const target=await (await fetch('http://127.0.0.1:9228/json/new?'+editorOrigin+'/',{method:'PUT'})).json();
   targetId=target.id;
   ws=new WebSocket(target.webSocketDebuggerUrl);await new Promise(r=>ws.addEventListener('open',r,{once:true}));
   ws.addEventListener('message',e=>{const m=JSON.parse(e.data);if(m.id&&pending.has(m.id)){const p=pending.get(m.id);pending.delete(m.id);m.error?p.reject(m.error):p.resolve(m.result);}else if(m.method==='Runtime.exceptionThrown')errors.push(m.params.exceptionDetails.text);});
@@ -49,6 +55,10 @@ try{
   assert.equal(await evaluate("document.querySelectorAll('.editor-media video').length"),controlVideoCount);
   const original=await fs.readFile(path.join(fixture,'个人技术基础/控球训练.md'),'utf8');
   await evaluate("document.querySelector('#save').click()");await delay(400);assert.equal(await fs.readFile(path.join(fixture,'个人技术基础/控球训练.md'),'utf8'),original);
+  await call('Browser.grantPermissions',{origin:editorOrigin,permissions:['clipboardReadWrite','clipboardSanitizedWrite']});
+  await evaluate("document.querySelector('.block-video [aria-label=\"复制整个元素\"]').click()");await wait("document.querySelector('#toast').textContent.includes('元素已复制')");
+  await evaluate("document.querySelector('#paste-block').click()");await wait(`document.querySelectorAll('.editor-media video').length===${controlVideoCount+1}`);
+  await evaluate("document.querySelector('#undo').click()");assert.equal(await evaluate("document.querySelectorAll('.editor-media video').length"),controlVideoCount);
   await evaluate("document.querySelector('#new-page').click();document.querySelector('#new-category').value='个人技术基础';document.querySelector('#new-title').value='可视化编辑验证';document.querySelector('#new-form').requestSubmit()");
   await wait("document.querySelector('#current-title').textContent==='可视化编辑验证'");
   await evaluate("document.querySelector('[data-add=text]').click()");
@@ -62,6 +72,16 @@ try{
   await evaluate("[...document.querySelectorAll('.sortable-page')].find(b=>b.textContent==='可视化编辑验证').dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowUp',altKey:true,bubbles:true}))");
   await wait("[...document.querySelectorAll('details[data-category=\"个人技术基础\"] .sortable-page')][0]?.textContent==='可视化编辑验证'");
   const savedOrder=JSON.parse(await fs.readFile(path.join(fixture,'.local-editor/order.json'),'utf8'));assert.equal(savedOrder['个人技术基础'][0],'个人技术基础/可视化编辑验证.md');
+  const initialCategories=await evaluate("[...document.querySelectorAll('#tree>details')].map(e=>e.dataset.category)");
+  await evaluate("document.querySelector('#tree>details>summary [aria-label=一级目录下移]').click()");
+  await wait("document.querySelector('#tree>details').dataset.category!=="+JSON.stringify(initialCategories[0]));
+  assert.equal(await evaluate("document.querySelector('#new-category').options[0].value"),initialCategories[1]);
+  const categoryConfig=await(await import('vitepress')).resolveConfig(fixture,'serve');assert.equal(categoryConfig.site.themeConfig.nav[0].link,'/');assert.equal(categoryConfig.site.themeConfig.nav[1].text,initialCategories[1]);assert.ok(!categoryConfig.site.themeConfig.nav.some(item=>item.text==='更多'));
+  assert.equal(await evaluate("document.querySelector('#save-state').textContent"),'未保存');assert.equal(await evaluate("document.querySelector('.block-text .rich-field').textContent"),'抬头观察，先看队友再出球。');
+  assert.ok(!(await evaluate("[...document.querySelectorAll('#tree>details>summary')].map(e=>e.textContent)")).some(name=>name==='更多'));
+  await evaluate("document.querySelector('details[data-category='+"+JSON.stringify(initialCategories[0])+"+']>summary').dispatchEvent(new KeyboardEvent('keydown',{key:'ArrowUp',altKey:true,bubbles:true,cancelable:true}))");
+  await wait("document.querySelector('#tree>details').dataset.category==="+JSON.stringify(initialCategories[0]));
+  assert.deepEqual(await evaluate("[...document.querySelectorAll('#tree>details')].map(e=>e.dataset.category)"),initialCategories);
   await evaluate("const f=document.querySelector('.block-text .rich-field');f.focus();const r=document.createRange();r.selectNodeContents(f);getSelection().removeAllRanges();getSelection().addRange(r)");await delay(80);
   await evaluate("document.querySelector('[data-command=bold]').click()");
   await evaluate("document.querySelector('[data-add=table]').click()");
@@ -103,7 +123,7 @@ try{
   assert.equal(await evaluate("[...document.querySelectorAll('.block-text a')].some(a=>decodeURIComponent(a.getAttribute('href')).endsWith('#未保存的训练区块'))"),true);
   await evaluate("const f=document.querySelector('.block-text .rich-field');f.focus();const r=document.createRange();r.selectNodeContents(f);r.collapse(false);getSelection().removeAllRanges();getSelection().addRange(r)");await delay(40);
   await evaluate("document.querySelector('[data-command=createLink]').click()");await wait("[...document.querySelectorAll('.link-target')].some(b=>b.textContent.startsWith('◈ 表格'))");
-  await evaluate("[...document.querySelectorAll('.link-target')].find(b=>b.textContent.startsWith('◈ 表格')).click();document.querySelector('#link-form').requestSubmit()");await wait("!document.querySelector('#link-dialog').open");
+  await evaluate("[...document.querySelectorAll('.link-target')].find(b=>b.textContent.startsWith('◈ 表格')).click();const root=document.querySelector('#link-target-preview'),cell=[...root.querySelectorAll('td,th')].find(e=>e.textContent==='保留内容'),range=document.createRange();range.selectNodeContents(cell);getSelection().removeAllRanges();getSelection().addRange(range);root.dispatchEvent(new MouseEvent('mouseup',{bubbles:true}));document.querySelector('#link-use-text').click();document.querySelector('#link-form').requestSubmit()");await wait("!document.querySelector('#link-dialog').open");
   await evaluate("const f=document.querySelector('.block-text .rich-field');f.focus();const r=document.createRange();r.selectNodeContents(f);r.collapse(false);getSelection().removeAllRanges();getSelection().addRange(r)");await delay(40);
   await evaluate("document.querySelector('[data-command=createLink]').click()");await wait("document.querySelectorAll('.link-target').length>0");
   await evaluate("document.querySelector('#link-mode-external').click();document.querySelector('#link-url').value='https://example.com/floorball';document.querySelector('#link-text').value='';document.querySelector('#link-form').requestSubmit()");await wait("!document.querySelector('#link-dialog').open");
@@ -170,7 +190,7 @@ try{
   assert.equal(await evaluate("document.querySelector('#preview').contentWindow.getComputedStyle(document.querySelector('#preview').contentDocument.querySelector('.element-title')).marginBottom"),'10px');
   await evaluate("document.querySelector('.block-table').scrollIntoView({block:'center',behavior:'instant'});document.querySelector('#preview').contentDocument.querySelector('.element-block:has(table)').scrollIntoView({block:'start',behavior:'instant'})");await delay(150);
   const elementShot=await call('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});await fs.writeFile(path.join(cache,'editor-elements.png'),Buffer.from(elementShot.data,'base64'));
-  const tablePage=await fs.readFile(path.join(fixture,'个人技术基础/可视化编辑验证.md'),'utf8');assert.match(tablePage,/::: element 训练安排/);assert.match(tablePage,/<br>\*\*第二次修改\*\*/);assert.match(tablePage,/::: element 传接球示范/);
+  let tablePage=await fs.readFile(path.join(fixture,'个人技术基础/可视化编辑验证.md'),'utf8');assert.match(tablePage,/::: element 训练安排/);assert.match(tablePage,/<br>\*\*第二次修改\*\*/);assert.match(tablePage,/::: element 传接球示范/);
   await evaluate("document.querySelector('#theme-toggle').click();document.querySelector('#preview-width').value='mobile';document.querySelector('#preview-width').dispatchEvent(new Event('change'))");
   await wait("document.querySelector('#preview').contentDocument.documentElement.classList.contains('dark')");
   await wait("Math.abs(document.querySelector('#preview').getBoundingClientRect().width-375)<0.1");
@@ -187,6 +207,7 @@ try{
   await wait("document.querySelector('#rename-dialog').open");
   await evaluate("document.querySelector('#rename-name').value='目录新显示名';document.querySelector('#rename-form').requestSubmit()");
   await wait("!document.querySelector('#rename-dialog').open && [...document.querySelectorAll('.tree-page')].some(e=>e.textContent==='目录新显示名')");
+  tablePage=tablePage.replace('# 可视化编辑验证','# 目录新显示名');
   await evaluate("document.querySelector('details[data-category=个人技术基础] summary').dispatchEvent(new KeyboardEvent('keydown',{key:'F2',bubbles:true,cancelable:true}))");
   await wait("document.querySelector('#rename-dialog').open");
   await evaluate("document.querySelector('#rename-name').value='基础课程';document.querySelector('#rename-form').requestSubmit()");
@@ -203,7 +224,7 @@ try{
   }
   await evaluate("window.fallGroup=document.querySelector('.tree-folder').dataset.folder;window.springGroup=document.querySelectorAll('.tree-folder')[1].dataset.folder;document.querySelector('.tree-page[data-path=\"个人技术基础/可视化编辑验证.md\"]').parentElement.querySelector('.move-page').click();document.querySelector('#move-group').value=window.fallGroup;document.querySelector('#move-form').requestSubmit()");
   await wait("!document.querySelector('#move-dialog').open && document.querySelector('details[data-folder=\"'+window.fallGroup+'\"] .tree-page[data-path=\"个人技术基础/可视化编辑验证.md\"]')");
-  await evaluate("document.querySelector('.tree-page[data-path=\"个人技术基础/可视化编辑验证.md\"]').click()");await wait("document.querySelector('#current-title').textContent==='可视化编辑验证'");
+  await evaluate("document.querySelector('.tree-page[data-path=\"个人技术基础/可视化编辑验证.md\"]').click()");await wait("document.querySelector('#current-title').textContent==='目录新显示名'");
   await evaluate("const f=document.querySelector('.block-text .rich-field');f.innerHTML+='<p>分组操作期间的未保存文字</p>';f.dispatchEvent(new Event('input',{bubbles:true}));document.querySelector('details[data-folder=\"'+window.fallGroup+'\"]>summary').dispatchEvent(new KeyboardEvent('keydown',{key:'F2',bubbles:true,cancelable:true}));document.querySelector('#rename-name').value='秋季基础';document.querySelector('#rename-form').requestSubmit()");
   await wait("!document.querySelector('#rename-dialog').open && document.querySelector('details[data-folder=\"'+window.fallGroup+'\"]>summary>label').textContent==='秋季基础'");
   assert.equal(await evaluate("document.querySelector('#save-state').textContent"),'未保存');assert.ok(await evaluate("document.querySelector('.block-text .rich-field').textContent.includes('分组操作期间的未保存文字')"));
@@ -239,9 +260,12 @@ try{
   assert.ok(await evaluate("[...document.querySelectorAll('.VPSidebarItem')].some(e=>e.textContent.includes('春季训练')&&e.textContent.includes('目录新显示名'))"));
   await evaluate('window.scrollTo(0,200)');const siteY=await evaluate('window.scrollY');
   await evaluate("document.querySelector('.vp-doc a:not(.header-anchor)').click()");await wait("document.querySelector('.vp-doc h1')?.textContent.includes('传球与接球')");await wait("!!document.querySelector('.return-to-source')");
-  await evaluate("document.querySelector('.return-to-source').click()");await wait("document.querySelector('.vp-doc h1')?.textContent.includes('可视化编辑验证')");await delay(200);assert.ok(Math.abs(await evaluate('window.scrollY')-siteY)<3);
+  await evaluate("document.querySelector('.return-to-source').click()");await wait("document.querySelector('.vp-doc h1')?.textContent.includes('目录新显示名')");await delay(200);assert.ok(Math.abs(await evaluate('window.scrollY')-siteY)<3);
   await evaluate("[...document.querySelectorAll('.vp-doc a')].find(a=>decodeURIComponent(a.getAttribute('href')||'').endsWith('#未保存的训练区块')).click()");await wait("!!document.querySelector('.return-to-source')");
   await evaluate("document.querySelector('.return-to-source').click()");await delay(200);assert.ok(Math.abs(await evaluate('window.scrollY')-siteY)<3);
+  await evaluate("document.querySelector('.vp-doc a[href*=\"floorball-text\"]').click()");await wait("CSS.highlights.has('floorball-link-text')");assert.equal(await evaluate("[...CSS.highlights.get('floorball-link-text')][0].toString()"),'保留内容');await wait("!!document.querySelector('.return-to-source')");await evaluate("document.querySelector('.return-to-source').click()");await delay(250);assert.ok(Math.abs(await evaluate('window.scrollY')-siteY)<3);
+  await fs.writeFile(path.join(fixture,'个人技术基础/可视化编辑验证.md'),tablePage.replace('# 目录新显示名','# 自动同步验证'));
+  await wait("document.querySelector('.vp-doc h1')?.textContent.includes('自动同步验证') && [...document.querySelectorAll('.VPSidebarItem a')].some(e=>e.textContent.includes('自动同步验证'))");
   console.log('Browser workflows passed: editing, media, table, links, third-level groups, membership, group ordering/rename, unsaved-source protection, and website navigation.');
   console.log('Fixture retained:',fixture);
 }catch(e){console.error(serverLog);throw e;}finally{ws?.close();if(targetId)await fetch('http://127.0.0.1:9228/json/close/'+targetId).catch(()=>{});server.kill();siteProcess?.kill();}

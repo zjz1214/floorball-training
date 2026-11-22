@@ -5,6 +5,7 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useData, useRoute, useRouter } from 'vitepress'
+import { followTextTarget } from '../../../.local-editor/web/text-target.js'
 
 type Source = { from: string; to: string; y: number }
 const key = 'floorball-return-source-v1'
@@ -21,6 +22,7 @@ function normalized(href: string) {
 const visible = computed(() => !!stack.value.length && !!current.value && normalized(stack.value.at(-1)!.to) === normalized(current.value))
 function persist() { try { sessionStorage.setItem(key, JSON.stringify(stack.value)) } catch {} }
 function sync() { current.value = location.href }
+function locateText() { if (!returning) followTextTarget(document.querySelector('.vp-doc'), location.hash.slice(1)) }
 function hashChanged(event: HashChangeEvent) {
   if (!returning && event.oldURL && event.newURL) {
     const previous = normalized(event.oldURL)
@@ -36,6 +38,7 @@ function hashChanged(event: HashChangeEvent) {
     }
   }
   sync()
+  if (!returning) setTimeout(locateText, 120)
 }
 function capture(event: MouseEvent) {
   if (returning || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
@@ -61,13 +64,14 @@ async function returnToSource() {
     sync()
   } finally { returning = false }
 }
-watch(() => route.path, async () => { await nextTick(); setTimeout(sync, 0) })
+watch(() => route.path, async () => { const locate = !returning; await nextTick(); setTimeout(() => { sync(); if(locate) locateText() }, 120) })
 onMounted(() => {
   try {
     const saved = JSON.parse(sessionStorage.getItem(key) || '[]')
     if (Array.isArray(saved)) stack.value = saved.filter((s: Source) => typeof s.from === 'string' && typeof s.to === 'string' && Number.isFinite(s.y) && new URL(s.from).origin === location.origin && new URL(s.to).origin === location.origin).slice(-30)
   } catch {}
   sync()
+  setTimeout(locateText, 120)
   // VitePress emits hashchange before scrolling; keep the original reading position there.
   window.addEventListener('click', capture, true)
   window.addEventListener('hashchange', hashChanged)
