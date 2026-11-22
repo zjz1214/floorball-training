@@ -1,5 +1,7 @@
 export const COURTS={standard:{length:40,width:20,label:'标准场 · 40 × 20 m'},small:{length:30,width:18,label:'小场 · 30 × 18 m'}};
 export const TYPES=['player','goalkeeper','ball','cone','text','line','arrow','curve','dribble','area','freehand'];
+export const isActor=o=>['player','goalkeeper','ball'].includes(o.type);
+const isStepDrawing=o=>['line','arrow','curve','dribble','freehand','area'].includes(o.type);
 export const uid=()=>'t'+(globalThis.crypto?.randomUUID?.()||Math.random().toString(36).slice(2)).replace(/-/g,'');
 export const copy=value=>JSON.parse(JSON.stringify(value));
 export function createTactic(){return {version:1,title:'',description:'',court:{size:'standard',view:'full',orientation:'landscape',color:'#f5f8f2',markings:true},frames:[{id:uid(),duration:2,note:'',objects:[]}]};}
@@ -20,6 +22,10 @@ export function validateTactic(input){
    if(!o||!TYPES.includes(o.type)||objectIds.has(o.id))fail('元素类型或重复标识');objectIds.add(o.id);
    if(types.has(o.id)&&types.get(o.id)!==o.type)fail('同一元素不能改变类型');types.set(o.id,o.type);
    const result={id:id(o.id),type:o.type,x:number(o.x,0,dims.length,'横坐标'),y:number(o.y,0,dims.width,'纵坐标'),angle:number(o.angle??0,-3600,3600,'旋转'),color:color(o.color),label:text(o.label??'',120,'标签'),number:text(o.number??'',8,'号码'),width:number(o.width??.07,.02,.5,'线宽'),opacity:number(o.opacity??1,0,1,'透明度'),dashed:!!o.dashed};
+   if(o.positionMode!==undefined){
+    if(!isActor(o)||!['inherit','fixed'].includes(o.positionMode))fail('元素位置模式');
+    result.positionMode=o.positionMode;
+   }
    if(['line','arrow','curve','dribble'].includes(o.type)){result.x2=number(o.x2,0,dims.length,'终点');result.y2=number(o.y2,0,dims.width,'终点');}
    if(o.type==='dribble'||o.playerId!==undefined&&isRun(o))result.playerId=id(o.playerId);
    if(o.ballId!==undefined)result.ballId=id(o.ballId);
@@ -38,16 +44,33 @@ export function validateTactic(input){
 }
 export const totalDuration=doc=>doc.frames.reduce((sum,f)=>sum+f.duration,0);
 export const frameTime=(doc,index)=>doc.frames.slice(0,index).reduce((sum,f)=>sum+f.duration,0);
+export function frameAtTime(doc,time){
+ let index=0,elapsed=Math.max(0,time);
+ while(index<doc.frames.length-1&&elapsed>=doc.frames[index].duration)elapsed-=doc.frames[index++].duration;
+ return {index,elapsed};
+}
 export function resolveFrames(doc){
  const carried=new Map(),resolved=[];
+ let previousRaw=new Map(),previousEnd=new Map();
  for(const original of doc.frames){
   const removed=new Set(original.removedIds||[]);for(const id of removed)carried.delete(id);
-  const objects=[...original.objects],present=new Set(objects.map(o=>o.id));for(const [id,actor] of carried)if(!present.has(id)&&!removed.has(id))objects.push({...actor});
+  const objects=original.objects.map(actor=>{
+   if(!isActor(actor)||actor.positionMode==='fixed')return actor;
+   const previous=previousRaw.get(actor.id);
+   const inherited=actor.positionMode==='inherit';
+   const staleCopy=!actor.positionMode&&carried.has(actor.id)&&previous&&actor.x===previous.x&&actor.y===previous.y;
+   const endpoint=(inherited||staleCopy)&&previousEnd.get(actor.id);
+   if(!endpoint)return actor;
+   const angle=previous&&actor.angle!==previous.angle&&!inherited?actor.angle:endpoint.angle;
+   return {...actor,x:endpoint.x,y:endpoint.y,angle,positionMode:'inherit'};
+  });
+  const present=new Set(objects.map(o=>o.id));for(const [id,actor] of carried)if(!present.has(id)&&!removed.has(id))objects.push({...actor,positionMode:'inherit'});
   const frame={...original,objects},end=applyMotion(frame,1,objects,doc.court),endById=new Map(end.map(o=>[o.id,o]));
   for(const id of carried.keys())if(endById.has(id))carried.set(id,endById.get(id));
   for(const path of objects.filter(isMotion)){const owner=runnerFor(path,objects);if(owner&&endById.has(owner.id))carried.set(owner.id,endById.get(owner.id));}
   if(objects.some(o=>o.type==='dribble'||['arrow','curve'].includes(o.type)&&o.dashed))for(const ball of end.filter(o=>o.type==='ball')){const previous=objects.find(o=>o.id===ball.id);if(!previous||previous.x!==ball.x||previous.y!==ball.y||objects.some(o=>o.ballId===ball.id))carried.set(ball.id,ball);}
   resolved.push(frame);
+  previousRaw=new Map(original.objects.map(o=>[o.id,o]));previousEnd=endById;
  }
  return resolved;
 }
@@ -64,11 +87,11 @@ export function removeTacticObject(doc,index,objectId){
 }
 export function sampleTactic(doc,time){
  const frames=resolveFrames(doc);
- let i=0,t=Math.max(0,time);while(i<frames.length-1&&t>=frames[i].duration){t-=frames[i].duration;i++;}
+ const {index:i,elapsed:t}=frameAtTime(doc,time);
  const frame=frames[i],next=frames[i+1];if(!next)return {objects:applyMotion(frame,Math.min(1,t/frame.duration),frame.objects,doc.court),index:i,note:frame.note,source:frame.objects};
  const progress=Math.min(1,t/frame.duration),b=new Map(next.objects.map(o=>[o.id,o])),aIds=new Set(frame.objects.map(o=>o.id));
- const objects=frame.objects.map(a=>{const target=b.get(a.id);if(!target)return {...a,opacity:next.removedIds?.includes(a.id)?(a.opacity??1):(a.opacity??1)*(1-progress)};const result={...a};for(const key of ['x','y','x2','y2','cx','cy','w','h','width','opacity'])if(typeof a[key]==='number'&&typeof target[key]==='number')result[key]=a[key]+(target[key]-a[key])*progress;const turn=(((target.angle-a.angle)%360)+540)%360-180;result.angle=a.angle+turn*progress;if(a.points&&target.points&&a.points.length===target.points.length)result.points=a.points.map((p,j)=>p.map((v,k)=>v+(target.points[j][k]-v)*progress));return result;});
- for(const target of next.objects)if(!aIds.has(target.id))objects.push({...target,opacity:(target.opacity??1)*progress});return {objects:applyMotion(frame,progress,objects,doc.court),index:i,note:frame.note,source:frame.objects};
+ const objects=frame.objects.map(a=>{if(isStepDrawing(a))return a;const target=b.get(a.id);if(!target)return {...a,opacity:next.removedIds?.includes(a.id)?(a.opacity??1):(a.opacity??1)*(1-progress)};const result={...a};for(const key of ['x','y','x2','y2','cx','cy','w','h','width','opacity'])if(typeof a[key]==='number'&&typeof target[key]==='number')result[key]=a[key]+(target[key]-a[key])*progress;const turn=(((target.angle-a.angle)%360)+540)%360-180;result.angle=a.angle+turn*progress;if(a.points&&target.points&&a.points.length===target.points.length)result.points=a.points.map((p,j)=>p.map((v,k)=>v+(target.points[j][k]-v)*progress));return result;});
+ for(const target of next.objects)if(!aIds.has(target.id)&&!isStepDrawing(target))objects.push({...target,opacity:(target.opacity??1)*progress});return {objects:applyMotion(frame,progress,objects,doc.court),index:i,note:frame.note,source:frame.objects};
 }
 export const isRun=o=>['arrow','curve'].includes(o.type)&&!o.dashed;
 export const isMotion=o=>o.type==='dribble'||['arrow','curve'].includes(o.type);
@@ -96,7 +119,7 @@ function applyMotion(frame,progress,base,court){
  }
  return [...result.values()];
 }
-export function nextFrameObjects(frame,court){return copy(applyMotion(frame,1,frame.objects,court).filter(o=>!isMotion(o)||isRun(o)&&!runnerFor(o,frame.objects)));}
+export function nextFrameObjects(frame,court){return copy(applyMotion(frame,1,frame.objects,court).filter(o=>!isMotion(o)||isRun(o)&&!runnerFor(o,frame.objects))).map(o=>isActor(o)?{...o,positionMode:'inherit'}:o);}
 export function viewport(court){const d=COURTS[court.size],length=court.view==='full'?d.length:d.length/2;return {length,width:d.width,from:court.view==='right'?d.length/2:0,w:court.orientation==='portrait'?d.width:length,h:court.orientation==='portrait'?length:d.width};}
 export function exportSize(doc){const v=viewport(doc.court),scale=1280/Math.max(v.w+2,v.h+2);return {width:Math.round((v.w+2)*scale/2)*2,height:Math.round((v.h+2)*scale/2)*2};}
 export const tacticSource=src=>typeof src==='string'&&/^\/tactics\/[a-f0-9]{64}\.json$/.test(src);

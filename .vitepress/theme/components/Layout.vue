@@ -30,6 +30,7 @@
         <Live2DCanvas />
         <ReturnToSource />
         <TacticsLoader />
+        <MediaFlip />
       </ClientOnly>
     </template>
   </DefaultTheme.Layout>
@@ -41,4 +42,5 @@ import ResponsiveNav from './ResponsiveNav.vue'
 import Live2DCanvas from './Live2DCanvas.vue'
 import ReturnToSource from './ReturnToSource.vue'
 import TacticsLoader from './TacticsLoader.vue'
+import MediaFlip from './MediaFlip.vue'
 </script>

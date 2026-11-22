@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "title": "",
+  "description": "",
+  "court": {
+    "size": "small",
+    "view": "right",
+    "orientation": "portrait",
+    "color": "#f5f8f2",
+    "markings": true
+  },
+  "frames": [
+    {
+      "id": "t34e117cdd5ef46bd955659e9461ebe1a",
+      "duration": 2,
+      "note": "",
+      "objects": [
+        {
+          "id": "t75ed4398f621474b8bddcad19111920d",
+          "type": "player",
+          "x": 26.786017954177737,
+          "y": 10.674786210226177,
+          "angle": -60,
+          "color": "#b45147",
+          "label": "",
+          "number": "1",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t0e10f958ce804949a1327daad5f99c32",
+          "type": "player",
+          "x": 29.019068320084088,
+          "y": 9.01800715025232,
+          "angle": -300,
+          "color": "#356b99",
+          "label": "",
+          "number": "2",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        },
+        {
+          "id": "t26dde0fbf6614603939c03e94456f6bf",
+          "type": "ball",
+          "x": 29.055084718542744,
+          "y": 9.846398054176781,
+          "angle": 0,
+          "color": "#356b99",
+          "label": "",
+          "number": "",
+          "width": 0.07,
+          "opacity": 1,
+          "dashed": false
+        }
+      ]
+    }
+  ]
+}
