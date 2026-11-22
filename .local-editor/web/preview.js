@@ -1,5 +1,4 @@
 import { sanitize } from './serialize.js';
-import { textTarget,followTextTarget } from './text-target.js';
 import { mountTactics } from '/tactics-runtime/player.js';
 window.addEventListener('message', event => {
   if (event.origin !== location.origin || event.source !== parent || event.data?.type !== 'render') return;
@@ -9,7 +8,7 @@ window.addEventListener('message', event => {
   mountTactics(document.querySelector('.vp-doc'),{assetBase:'/media'});
   requestAnimationFrame(()=>{
     const nav=event.data.navigation;
-    if(nav?.hash){document.getElementById(textTarget(nav.hash).anchor)?.scrollIntoView({block:'start',behavior:'instant'});followTextTarget(document.querySelector('.vp-doc'),nav.hash);}
+    if(nav?.hash)document.getElementById(nav.hash)?.scrollIntoView({block:'start',behavior:'instant'});
     else if(Number.isFinite(nav?.y))window.scrollTo(0,nav.y);
   });
 });

@@ -2,7 +2,7 @@ import MarkdownIt from 'markdown-it';
 import container from 'markdown-it-container';
 import { createHash } from 'node:crypto';
 
-export const categories = ['软曲简介', '个人技术基础', '个人技术进阶', '专项练习', '团队训练', '校队训练记录', '训练计划', '装备器材', '比赛经验', '发力原理解析', '热身及小游戏'];
+export const categories = ['软曲简介', '个人技术基础', '个人技术进阶', '专项练习', '团队训练', '校队训练记录', '训练计划', '装备器材', '其他'];
 export const hash = text => createHash('sha256').update(text).digest('hex');
 export const escapeHTML = text => String(text).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 export const md = new MarkdownIt({ html: true, linkify: true, breaks: false });
@@ -74,7 +74,7 @@ function classify(raw, prefix, token) {
     meta.anchor = raw.match(/\s+(\{#[^}\n]+\})\s*$/)?.[1] || '';
   } else if (token.type === 'paragraph_open' && !/<\/?[a-z][^>]*>/i.test(raw)) type = /^!\[[^\]]*\]\([^\n]+\)\s*$/.test(raw) ? 'image' : 'text';
   else if (['bullet_list_open', 'ordered_list_open'].includes(token.type) && !/<\/?[a-z][^>]*>/i.test(raw)) type = 'list';
-  else if (token.type === 'table_open' && !/<\/?[a-z][^>]*>/i.test(raw.replace(/<\/?(?:br|ol|ul|li|p|div|strong|b|em|i|s|del|strike|code|a)\b[^>]*>/gi,''))) type = 'table';
+  else if (token.type === 'table_open' && !/<\/?[a-z][^>]*>/i.test(raw.replace(/<br\s*\/?\s*>/gi,''))) type = 'table';
   else if (token.type === 'blockquote_open' && !/<\/?[a-z][^>]*>/i.test(raw)) type = 'quote';
   else if (token.type === 'hr') type = 'divider';
   else if (/^container_(tip|info|warning|danger)_open$/.test(token.type) && !/<\/?[a-z][^>]*>/i.test(raw)) {
@@ -96,7 +96,7 @@ export function serializeDocument(document) {
 }
 
 export function pageClass(category, filename = '') {
-  return ['软曲简介','装备器材','比赛经验','发力原理解析'].includes(category) || category === '其他' && filename !== '热身及小游戏.md' ? 'reading-preview' : 'technical-reading';
+  return category === '软曲简介' || category === '装备器材' || category === '其他' && filename !== '热身及小游戏.md' ? 'reading-preview' : 'technical-reading';
 }
 
 export function validateDocument(source, exists) {

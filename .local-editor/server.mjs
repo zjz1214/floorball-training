@@ -7,7 +7,6 @@ import { spawn } from 'node:child_process';
 import { categories, hash, parseDocument, serializeDocument, pageClass, splitFrontmatter, renderPreview, validateDocument, escapeHTML, md } from './document.mjs';
 import { VideoImports, videoExtensions } from './video.mjs';
 import { sortByOrder } from './order.mjs';
-import { pageTitle } from './names.mjs';
 import { groupPages } from './groups.mjs';
 import { TacticsStore } from './tactics.mjs';
 
@@ -17,8 +16,6 @@ const cache = path.join(root, '.vitepress/cache/content-editor');
 const token = randomBytes(32).toString('hex');
 const port = Number(process.env.FLOORBALL_EDITOR_PORT || 5174);
 const origin = `http://127.0.0.1:${port}`;
-const previewPort=Number(process.env.FLOORBALL_PREVIEW_PORT||5173);
-const previewOrigin=`http://127.0.0.1:${previewPort}`;
 const registry = path.join(root, '.local-editor/pages.json');
 const orderFile=path.join(root,'.local-editor/order.json');
 const namesFile=path.join(root,'.local-editor/names.json');
@@ -61,7 +58,7 @@ async function linkTargets(name,source){
     if(b.type==='raw'&&!visible)return;
     const marker=blockAnchor(doc,index);const id=marker||'editor-block-'+hash(name+'\0'+index+'\0'+b.raw).slice(0,16);
     const summary=b.type==='tactics'?(tacticTitles.get(index)||'地板球战术'):b.title||visible.slice(0,48)||b.raw.match(/src=["']([^"']+)["']/)?.[1]?.split('/').at(-1)?.slice(0,40)||'未填写内容';
-    targets.push({id,label:(labels[b.type]||'内容')+' · '+summary,section,level:3,type:'block',blockIndex:index,existing:!!marker,version:hash(source),previewHTML:b.html||'',url:route+'#'+id});
+    targets.push({id,label:(labels[b.type]||'内容')+' · '+summary,section,level:3,type:'block',blockIndex:index,existing:!!marker,version:hash(source),url:route+'#'+id});
   });
   return {path:name,targets};
 }
@@ -95,7 +92,7 @@ async function readRegistry() { try { return JSON.parse(await fs.readFile(regist
 async function readOrder(){let raw;try{raw=await fs.readFile(orderFile,'utf8');}catch(e){if(e.code!=='ENOENT')throw e;raw='{}\n';}return {data:JSON.parse(raw),version:hash(raw)};}
 async function readNames(){let raw;try{raw=await fs.readFile(namesFile,'utf8');}catch(e){if(e.code!=='ENOENT')throw e;raw='{"pages":{},"categories":{}}\n';}const data=JSON.parse(raw);return {data:{pages:data.pages||{},categories:data.categories||{}},version:hash(raw)};}
 async function readGroups(){let raw;try{raw=await fs.readFile(groupsFile,'utf8');}catch(e){if(e.code!=='ENOENT')throw e;raw='{}\n';}return {data:JSON.parse(raw),version:hash(raw)};}
-async function directoryData(){const order=await readOrder();const names=await readNames();const folders=await readGroups();const groups=await tree(order.data,names.data);for(const group of groups){group.folders=folders.data[group.category]||[];group.children=groupPages(group.pages,group.folders);}return {groups,orderVersion:order.version,namesVersion:names.version,groupsVersion:folders.version,homeName:pageTitle(await fs.readFile(path.join(root,'index.md'),'utf8'),names.data.pages['index.md']||'网站首页')};}
+async function directoryData(){const order=await readOrder();const names=await readNames();const folders=await readGroups();const groups=await tree(order.data,names.data);for(const group of groups){group.folders=folders.data[group.category]||[];group.children=groupPages(group.pages,group.folders);}return {groups,orderVersion:order.version,namesVersion:names.version,groupsVersion:folders.version,homeName:names.data.pages['index.md']||'网站首页'};}
 function directoryName(value){const name=String(value||'').trim();if(!name||name.length>80||/[<>\x00-\x1f]/.test(name))throw new Problem('名称不能为空，最多80字，不能包含换行或尖括号。');return name;}
 const normalizedName=value=>value.normalize('NFKC').toLocaleLowerCase('zh-CN');
 async function atomicWrite(filename, content, backup = true) {
@@ -120,14 +117,13 @@ async function tree(order,names) {
       const filename = await pagePath(`${category}/${name}`);
       if (!(await fs.lstat(filename)).isFile()) continue;
       const source = await fs.readFile(filename, 'utf8');
-      const pageName=`${category}/${name}`,sourceTitle=pageTitle(source,names.pages[pageName]||name.slice(0,-3));
-      pages.push({ path: pageName, title:sourceTitle,sourceTitle });
+      const sourceTitle=source.match(/^#\s+(.+)$/m)?.[1] || name.slice(0, -3);const pageName=`${category}/${name}`;
+      pages.push({ path: pageName, title:names.pages[pageName]||sourceTitle,sourceTitle });
     }
     pages.sort((a, b) => (a.path.endsWith('/index.md') ? -1 : b.path.endsWith('/index.md') ? 1 : a.sourceTitle.localeCompare(b.sourceTitle, 'zh-CN')));
-    const overview=pages.find(page=>page.path===category+'/index.md');
-    groups.push({ category,displayName:overview?.title||names.categories[category]||category, pages:sortByOrder(pages,order[category]||[]) });
+    groups.push({ category,displayName:names.categories[category]||category, pages:sortByOrder(pages,order[category]||[]) });
   }
-  return sortByOrder(groups,order.$categories||[],group=>group.category);
+  return groups;
 }
 function warnings(source) {
   return validateDocument(source, p => {
@@ -135,14 +131,14 @@ function warnings(source) {
   });
 }
 function result(source, name) {
-  return { ...parseDocument(source), path: name, title: pageTitle(source,'首页'), profile: source.match(/^pageClass:\s*(.*)$/m)?.[1]?.trim() || pageClass(name.split('/')[0]), warnings: warnings(source) };
+  return { ...parseDocument(source), path: name, title: source.match(/^#\s+(.+)$/m)?.[1] || '首页', profile: source.match(/^pageClass:\s*(.*)$/m)?.[1]?.trim() || pageClass(name.split('/')[0]), warnings: warnings(source) };
 }
-function previewURL(name) { return `${previewOrigin}/floorball-training/${name === 'index.md' ? '' : name.replace(/index\.md$/, '').replace(/\.md$/, '').split('/').map(encodeURIComponent).join('/')}`; }
+function previewURL(name) { return `http://127.0.0.1:5173/floorball-training/${name === 'index.md' ? '' : name.replace(/index\.md$/, '').replace(/\.md$/, '').split('/').map(encodeURIComponent).join('/')}`; }
 async function ensurePreview() {
-  try { const response = await fetch(previewOrigin+'/floorball-training/', { signal: AbortSignal.timeout(1500) }); if (response.ok) return; } catch {}
+  try { const response = await fetch('http://127.0.0.1:5173/floorball-training/', { signal: AbortSignal.timeout(1500) }); if (response.ok) return; } catch {}
   if (!previewProcess) {
     const entry = path.join(root, 'node_modules/vitepress/bin/vitepress.js');
-    previewProcess = spawn(process.execPath, [entry, 'dev', '--host', '127.0.0.1', '--port', String(previewPort), '--strictPort'], { cwd: root, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
+    previewProcess = spawn(process.execPath, [entry, 'dev', '--host', '127.0.0.1', '--port', '5173', '--strictPort'], { cwd: root, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
     previewProcess.stdout.resume();
     previewProcess.stderr.on('data', x => { previewStatus = String(x).slice(-1500); });
     previewProcess.on('exit', () => { previewProcess = undefined; });
@@ -150,7 +146,7 @@ async function ensurePreview() {
   }
   for (let i = 0; i < 40; i++) {
     await new Promise(r => setTimeout(r, 250));
-    try { if ((await fetch(previewOrigin+'/floorball-training/', { signal: AbortSignal.timeout(800) })).ok) return; } catch {}
+    try { if ((await fetch('http://127.0.0.1:5173/floorball-training/', { signal: AbortSignal.timeout(800) })).ok) return; } catch {}
     if (!previewProcess) break;
   }
   throw new Problem(`网站预览启动失败，请检查项目依赖。${previewStatus}`, 503);
@@ -257,17 +253,10 @@ const server = http.createServer(async (req, res) => {
         const { body: markdown } = splitFrontmatter(source);
         return send(res, 200, { html: await siteRender(markdown, data.path), profile, warnings: warnings(source) });
       }
-      if (!['/api/save', '/api/create','/api/ensure-anchor','/api/order','/api/category-order','/api/rename','/api/groups'].includes(url.pathname)) throw new Problem('找不到操作', 404);
+      if (!['/api/save', '/api/create','/api/ensure-anchor','/api/order','/api/rename','/api/groups'].includes(url.pathname)) throw new Problem('找不到操作', 404);
       if (saving) throw new Problem('正在保存另一个页面，请稍后重试', 409);
       saving = true;
       try {
-        if(url.pathname==='/api/category-order'){
-          const order=await readOrder();if(data.version!==order.version)throw new Problem('目录已在其他窗口更新，已重新加载，请再调整一次。',409);
-          const available=(await tree(order.data)).map(group=>group.category);
-          if(!Array.isArray(data.categories)||data.categories.length!==available.length||new Set(data.categories).size!==available.length||data.categories.some(category=>!available.includes(category)))throw new Problem('一级目录排序不能遗漏、重复或加入其他栏目');
-          order.data.$categories=data.categories;await fs.mkdir(path.dirname(orderFile),{recursive:true});await atomicWrite(orderFile,JSON.stringify(order.data,null,2)+'\n');
-          return send(res,200,await directoryData());
-        }
         if(url.pathname==='/api/groups'){
           if(!categories.includes(data.category))throw new Problem('请选择有效栏目');
           if(!(await fs.stat(await safePath(data.category))).isDirectory())throw new Problem('栏目不存在');
@@ -307,15 +296,6 @@ const server = http.createServer(async (req, res) => {
             candidates=(groups.find(g=>data.key.startsWith(g.category+'/'))?.pages||[]).filter(p=>p.path!==data.key).map(p=>p.title);names.data.pages[data.key]=name;
           }else throw new Problem('请选择页面或栏目');
           if(candidates.some(value=>normalize(value)===normalize(name)))throw new Problem('同一目录下已经有这个名称，请换一个名称。');
-          const target=data.kind==='category'?data.key+'/index.md':data.key;
-          const filename=await pagePath(target);let source;try{source=await fs.readFile(filename,'utf8');}catch(e){if(e.code!=='ENOENT'||data.kind!=='category')throw e;}
-          if(source!==undefined){
-            if(data.pageVersion&&hash(source)!==data.pageVersion)throw new Problem('页面标题已在其他地方修改，请重新打开页面。',409);
-            const doc=parseDocument(source),heading=doc.blocks.find(block=>block.type==='heading'&&block.meta.level===1);
-            if(heading){const anchor=heading.raw.match(/\s+(\{#[^}]+\})\s*$/)?.[1];heading.raw='# '+md.utils.escapeHtml(name).replace(/[\\`*_\[\]]/g,'\\$&')+(anchor?' '+anchor:'')+(heading.raw.endsWith('\r\n')?'\r\n':'\n');}
-            else doc.blocks.unshift({type:'heading',meta:{level:1},prefix:'',raw:'# '+md.utils.escapeHtml(name).replace(/[\\`*_\[\]]/g,'\\$&')+'\n\n'});
-            await atomicWrite(filename,serializeDocument(doc));
-          }
           await fs.mkdir(path.dirname(namesFile),{recursive:true});await atomicWrite(namesFile,JSON.stringify(names.data,null,2)+'\n');
           return send(res,200,await directoryData());
         }
@@ -375,7 +355,7 @@ const server = http.createServer(async (req, res) => {
       return await file(res, req, await safePath(`public/${asset}`, ['public']));
     }
     if(url.pathname.startsWith('/tactics-runtime/')){const name=url.pathname.slice('/tactics-runtime/'.length);if(!['model.js','render.js','player.js','player.css'].includes(name))throw new Problem('找不到文件',404);return await file(res,req,path.join(here,'../public/tactics-runtime',name));}
-    const assets = { '/': 'index.html', '/app.js': 'app.js', '/editor.css': 'editor.css', '/serialize.js': 'serialize.js', '/table.js':'table.js', '/navigation.js':'navigation.js', '/element.js':'element.js', '/github.js':'github.js', '/text-target.js':'text-target.js', '/block-clipboard.js':'block-clipboard.js', '/tactics.js':'tactics.js','/tactics.css':'tactics.css','/preview.html': 'preview.html', '/preview.js': 'preview.js' };
+    const assets = { '/': 'index.html', '/app.js': 'app.js', '/editor.css': 'editor.css', '/serialize.js': 'serialize.js', '/table.js':'table.js', '/navigation.js':'navigation.js', '/element.js':'element.js', '/tactics.js':'tactics.js','/tactics.css':'tactics.css','/preview.html': 'preview.html', '/preview.js': 'preview.js' };
     if (assets[url.pathname]) return await file(res, req, path.join(here, 'web', assets[url.pathname]));
     throw new Problem('找不到页面', 404);
   } catch (error) { if (!res.headersSent) send(res, error.status || (error.code === 'ENOENT' ? 404 : 500), { error: error instanceof SyntaxError ? '请求格式不正确' : error.message }); else res.end(); }
@@ -390,9 +370,3 @@ server.on('error', async error => {
 server.listen(port, '127.0.0.1', () => { console.log(`内容编辑器已启动：${origin}`); if (process.argv.includes('--open')) openBrowser(); });
 process.on('SIGINT', () => { previewProcess?.kill(); server.close(); });
 process.on('SIGTERM', () => { previewProcess?.kill(); server.close(); });
-if(process.env.FLOORBALL_EDITOR_DESKTOP==='1'&&process.send){
-  let shuttingDown=false;
-  const shutdown=()=>{if(shuttingDown)return;shuttingDown=true;previewProcess?.kill();server.close(()=>process.exit(0));server.closeIdleConnections();setTimeout(()=>process.exit(0),3000).unref();};
-  process.on('message',message=>{if(message?.type==='floorball-desktop-shutdown')shutdown();});
-  process.on('disconnect',shutdown);
-}

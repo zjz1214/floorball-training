@@ -7,7 +7,7 @@ export function resolveLink(href,current,pages,origin){
     let pathname;try{pathname=decodeURIComponent(url.pathname).replace(/^(?:\/floorball-training)+(?=\/|$)/,'');}catch{return null;}
     const clean=pathname.replace(/^\//,'').replace(/\.(html|md)$/,'').replace(/\/$/,'');
     const target=pages.find(name=>name.replace(/(?:^|\/)index\.md$/,'').replace(/\.md$/,'')===clean);
-    if(target){let hash;try{const [anchor,...directive]=url.hash.slice(1).split(':floorball-text=');hash=decodeURIComponent(anchor)+(directive.length?':floorball-text='+directive.join(':floorball-text='):'');}catch{hash=url.hash.slice(1);}return {type:'page',path:target,hash};}
+    if(target){let hash;try{hash=decodeURIComponent(url.hash.slice(1));}catch{hash=url.hash.slice(1);}return {type:'page',path:target,hash};}
     if(url.host===new URL(origin).host&&/\.(mp4|webm|png|jpe?g|gif|svg|webp|avif|pdf)$/i.test(pathname))return {type:'external',href:origin+'/media/'+pathname.replace(/^\//,'')+url.hash};
   }
   return {type:'external',href:url.href};

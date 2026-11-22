@@ -65,12 +65,7 @@ export function htmlMarkdown(element) {
     if (['UL', 'OL'].includes(node.tagName)) return '\n\n' + list(node) + '\n\n';
     if (node.tagName === 'BLOCKQUOTE') return '\n\n' + compact([...node.childNodes].map(block).join('')).split('\n').map(x => '> ' + x).join('\n') + '\n\n';
     if (node.tagName === 'TABLE') {
-      const rows = [...node.querySelectorAll('tr')].map(tr => [...tr.children].map(td => {
-        const content=td.querySelector('ol,ul')
-          ?sanitize(td.innerHTML,false).replace(/\r?\n/g,' ')
-          :compact([...td.childNodes].map(inline).join(''));
-        return content.replace(/\|/g,'\\|').replace(/\n+/g,'<br>');
-      }));
+      const rows = [...node.querySelectorAll('tr')].map(tr => [...tr.children].map(td => compact([...td.childNodes].map(inline).join('')).replace(/\|/g, '\\|').replace(/\n+/g, '<br>')));
       const width = Math.max(1, ...rows.map(r => r.length));
       const row = r => '| ' + Array.from({ length: width }, (_, i) => r[i] || '').join(' | ') + ' |';
       return '\n\n' + [row(rows[0] || []), row(Array(width).fill('---')), ...rows.slice(1).map(row)].join('\n') + '\n\n';
