@@ -10,7 +10,9 @@ import directoryNames from '../.local-editor/names.json'
 import { applyNavigationNames, pageTitle } from '../.local-editor/names.mjs'
 import directoryGroups from '../.local-editor/groups.json'
 import { groupSidebar } from '../.local-editor/groups.mjs'
-import { syncNavigation } from '../.local-editor/navigation.mjs'
+import { firstNavigationLink, syncNavigation } from '../.local-editor/navigation.mjs'
+import directoryArchives from '../.local-editor/archives.json'
+import { archivePatterns, isArchived } from '../.local-editor/archives.mjs'
 
 // All H1 sections and their H2 children
 const sidebar = {
@@ -90,14 +92,17 @@ function readPageTitle(name:string){try{return pageTitle(readFileSync(new URL(`.
 pageTitles['index.md']=readPageTitle('index.md')
 for (const [key,items] of Object.entries(sidebar)) {
   const category=key.replace(/^\//,'').replace(/\/$/,'')
-  ;(sidebar as Record<string, { text: string; link: string }[]>)[key]=sortByOrder(items,(pageOrder as Record<string,string[]>)[category]||[],item=>sidebarPage(item.link))
-  for (const item of items) {
+  const sidebarEntries=sidebar as Record<string, { text: string; link: string }[]>
+  if(directoryArchives.categories.includes(category)){delete sidebarEntries[key];continue}
+  sidebarEntries[key]=items.filter(item=>!isArchived(directoryArchives,sidebarPage(item.link)))
+  sidebarEntries[key]=sortByOrder(sidebarEntries[key],(pageOrder as Record<string,string[]>)[category]||[],item=>sidebarPage(item.link))
+  for (const item of sidebarEntries[key]) {
     const file=sidebarPage(item.link)
     pageTitles[file]=readPageTitle(file)
     const name=pageTitles[file]||(directoryNames.pages as Record<string,string>)[file]
     if(name)item.text=name
   }
-  ;(sidebar as Record<string, any[]>)[key]=groupSidebar((sidebar as Record<string, any[]>)[key],(directoryGroups as Record<string,any[]>)[category]||[],item=>sidebarPage(item.link))
+  ;(sidebar as Record<string, any[]>)[key]=groupSidebar(sidebarEntries[key],(directoryGroups as Record<string,any[]>)[category]||[],item=>sidebarPage(item.link)).filter(item=>!('items' in item)||item.items.length)
 }
 
 export default defineConfig({
@@ -107,7 +112,21 @@ export default defineConfig({
   base: '/floorball-training/',
   cleanUrls: true,
   ignoreDeadLinks: true,
-  srcExclude: ['**/.local-editor/**', '**/manual.md', '**/*.py', '**/feishu-export/**', '**/README.md', '**/AGENTS.md', '**/DESIGN.md', '**/CLAUDE.md', '**/todo.md'],
+  srcExclude: ['**/.local-editor/**', '**/.local-editor-private/**', '**/manual.md', '**/*.py', '**/feishu-export/**', '**/README.md', '**/AGENTS.md', '**/DESIGN.md', '**/CLAUDE.md', '**/todo.md', ...archivePatterns(directoryArchives)],
+  transformPageData(page){
+    const features=page.frontmatter.features
+    if(page.relativePath!=='index.md'||!Array.isArray(features))return
+    page.frontmatter.features=features.flatMap(item=>{
+      if(typeof item.link!=='string'||!item.link.startsWith('/'))return [item]
+      const category=item.link.match(/^\/([^/]+)\/$/)?.[1]
+      if(!category)return isArchived(directoryArchives,sidebarPage(item.link))?[]:[item]
+      if(directoryArchives.categories.includes(category))return []
+      const entries=(sidebar as Record<string,any[]>)[item.link]
+      if(!entries)return [item]
+      const first=firstNavigationLink(entries)
+      return first?[{...item,title:(directoryNames.categories as Record<string,string>)[category]||item.title,link:first}]:[]
+    })
+  },
 
   head: [
     ['script', { async: '', src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js' }],
@@ -304,7 +323,7 @@ export default defineConfig({
       { text: '比赛经验', items: [{text:'比赛经验',link:'/比赛经验/'}] },
       { text: '发力原理解析', items: [{text:'发力原理解析',link:'/发力原理解析/'}] },
       { text: '热身及小游戏', items: [{text:'热身及小游戏',link:'/热身及小游戏/'}] },
-    ],directoryNames,0,pageTitles),sidebar,(pageOrder as Record<string,string[]>).$categories||[]),
+    ].filter(item=>{const link=firstNavigationLink([item]);return !link||(item.items?!directoryArchives.categories.includes(link.split('/')[1]):!isArchived(directoryArchives,sidebarPage(link)))}),directoryNames,0,pageTitles),sidebar,(pageOrder as Record<string,string[]>).$categories||[]),
 
     sidebar,
   },

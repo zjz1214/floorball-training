@@ -14,9 +14,10 @@ export function applyNavigationNames(nodes,names={},depth=0,titles={}){
     if(node.items)result.items=applyNavigationNames(node.items,names,depth+1,titles);
     let page,category;try{if(node.link?.startsWith('/')){page=sidebarPage(node.link);category=decodeURIComponent(node.link.split('/')[1]);}}catch{}
     if(page&&(titles[page]||pages[page]))result.text=titles[page]||pages[page];
-    if(depth===0&&groups[node.text])result.text=groups[node.text];
-    else if(depth===0&&category&&groups[category]&&node.link===`/${category}/`)result.text=groups[category];
-    if(depth===0){const root=firstNavigationLink([node])?.split('/')[1];if(root&&titles[`${root}/index.md`])result.text=titles[`${root}/index.md`];}
+    if(depth===0){
+      const root=node.items?firstNavigationLink(node.items)?.split('/')[1]:category;
+      if(root&&(node.items||node.link===`/${root}/`))result.text=groups[root]||groups[node.text]||node.text;
+    }
     return result;
   });
 }

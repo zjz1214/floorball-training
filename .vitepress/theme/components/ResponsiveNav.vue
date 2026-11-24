@@ -19,9 +19,7 @@ const overflowItem = computed(() => ({
     if ('link' in item || 'component' in item) return item
     const firstPage = firstNavigationLink(item.items)
     if (!firstPage) return item
-    // Grouped categories have an overview in their child pages' directory.
-    const link = firstPage.slice(0, firstPage.lastIndexOf('/') + 1)
-    return { text: item.text, link, activeMatch: item.activeMatch }
+    return { text: item.text, link: firstPage, activeMatch: item.activeMatch }
   })
 }))
 let observer: ResizeObserver | undefined

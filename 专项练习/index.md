@@ -5,13 +5,6 @@ pageClass: technical-reading
 # 专项练习
 
 
-
-
-<div class="vp-cards">
-    <a class="vp-card" href="前锋专项">
-        <h3>前锋专项</h3>
-    </a>
-    <a class="vp-card" href="后卫专项">
-        <h3>后卫专项</h3>
-    </a>
-</div>
+::: info 说明
+按照[后卫](/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/%E5%90%8E%E5%8D%AB%E4%B8%93%E9%A1%B9)和[前锋](/%E4%B8%93%E9%A1%B9%E7%BB%83%E4%B9%A0/%E5%89%8D%E9%94%8B%E4%B8%93%E9%A1%B9)划分，虽说如此但是有些动作和思路是共通的，有些动作是要互相配合的。
+:::
