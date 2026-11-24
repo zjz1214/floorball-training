@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { nextTick, onMounted, onUnmounted, watch } from 'vue'
-import { useRoute } from 'vitepress'
+import { useRoute, withBase } from 'vitepress'
 
 const route = useRoute()
 const cleanups: (() => void)[] = []
@@ -67,20 +67,53 @@ function attach(media: HTMLImageElement | HTMLVideoElement) {
   flip.setAttribute('aria-pressed', 'false')
   tools.append(flip)
 
-  const nativeVideo = media instanceof HTMLVideoElement && media.controls ? media : null
+  const video = media instanceof HTMLVideoElement ? media : null
+  const nativeVideo = video?.controls ? video : null
   const playback = nativeVideo && videoControls(nativeVideo, controller.signal)
-  if (playback) tools.append(playback.controls)
+  let pending = !!video?.hasAttribute('data-video-pending')
   let mirrored = false
+  const updateControls = () => {
+    if (!nativeVideo || !playback) return
+    nativeVideo.controls = !pending && !mirrored
+    playback.controls.hidden = pending || !mirrored
+    if (!playback.controls.hidden) playback.sync()
+  }
+  if (video && pending) {
+    const start = button('播放视频')
+    const caption = video.getAttribute('aria-label')
+    if (caption) start.setAttribute('aria-label', `播放视频：${caption}`)
+    tools.prepend(start)
+    start.onclick = async () => {
+      start.disabled = true
+      const sources = [video, ...video.querySelectorAll('source[data-video-src]')]
+      for (const source of sources) {
+        const src = source.getAttribute('data-video-src')
+        if (src) source.setAttribute('src', src.startsWith(import.meta.env.BASE_URL) ? src : withBase(src))
+      }
+      video.load()
+      try {
+        await video.play()
+        if (controller.signal.aborted) return
+        pending = false
+        video.removeAttribute('data-video-pending')
+        start.remove()
+        updateControls()
+      } catch {
+        if (controller.signal.aborted) return
+        start.disabled = false
+        start.textContent = '重试播放'
+        start.setAttribute('aria-label', caption ? `重试播放：${caption}` : '重试播放')
+      }
+    }
+    updateControls()
+  }
+  if (playback) tools.append(playback.controls)
   flip.onclick = () => {
     mirrored = !mirrored
     media.classList.toggle('media-flip-mirrored', mirrored)
     flip.setAttribute('aria-pressed', String(mirrored))
     flip.textContent = mirrored ? '恢复原方向' : '左右翻转'
-    if (nativeVideo && playback) {
-      nativeVideo.controls = !mirrored
-      playback.controls.hidden = !mirrored
-      if (mirrored) playback.sync()
-    }
+    updateControls()
   }
   // Insert outside image links and picture groups, keeping the original media in its layout.
   const wrapper = media.closest('a') || media.closest('picture') || media
@@ -88,7 +121,7 @@ function attach(media: HTMLImageElement | HTMLVideoElement) {
   cleanups.push(() => {
     controller.abort()
     media.classList.remove('media-flip-mirrored')
-    if (nativeVideo && mirrored) nativeVideo.controls = true
+    if (nativeVideo) nativeVideo.controls = true
     tools.remove()
   })
 }

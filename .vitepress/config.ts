@@ -222,6 +222,14 @@ export default defineConfig({
         state.tokens = newTokens
       })
 
+      // Keep media URLs out of video/source src attributes until playback is requested.
+      // Match complete tags so a quoted attribute can contain spaces or angle brackets.
+      const videoBlock = /(<video\b(?:[^"'<>]|"[^"]*"|'[^']*')*>)([\s\S]*?)(<\/video\s*>)/gi
+      const sourceTag = /<source\b(?:[^"'<>]|"[^"]*"|'[^']*')*>/gi
+      const attributes = /\s+([^\s"'=<>/]+)(\s*=\s*(?:"[^"]*"|'[^']*'|[^\s"'=<>]+))?/g
+      const deferSource = (tag: string) => tag.replace(attributes, (attribute, name: string, value?: string) =>
+        name.toLowerCase() === 'src' && value ? ' data-video-src' + value : attribute,
+      )
       const defaultRender = md.render.bind(md)
       md.render = (src, env) => {
         let html = defaultRender(src, env)
@@ -235,7 +243,15 @@ export default defineConfig({
             return `<div class="media-grid">${wrapped}</div>`
           },
         )
-        return html
+        return html.replace(videoBlock, (video, opening: string, body: string, closing: string) => {
+          const deferredOpening = deferSource(opening)
+          const deferredBody = body.replace(sourceTag, deferSource)
+          if (deferredOpening === opening && deferredBody === body) return video
+          const openingWithoutPreload = deferredOpening.replace(attributes, (attribute, name: string) =>
+            /^(?:autoplay|preload)$/i.test(name) ? '' : attribute,
+          )
+          return openingWithoutPreload.replace(/>$/, ' preload="none" data-video-pending>') + deferredBody + closing
+        })
       }
     },
   },
