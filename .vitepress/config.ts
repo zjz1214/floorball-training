@@ -235,7 +235,13 @@ export default defineConfig({
             return `<div class="media-grid">${wrapped}</div>`
           },
         )
-        return html
+        // Require manual playback using the native controls and avoid preloading each clip.
+        return html.replace(/<video(?=\s|>)(?:[^"'<>]|"[^"]*"|'[^']*')*>/gi, tag => {
+          const opening = tag.replace(/\s+([^\s"'=<>/]+)(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s"'=<>]+))?/g, (attribute, name: string) =>
+            /^(?:autoplay|preload)$/i.test(name) ? '' : attribute,
+          )
+          return opening.slice(0, -1) + ' preload="none">'
+        })
       }
     },
   },
