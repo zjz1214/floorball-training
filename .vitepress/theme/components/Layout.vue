@@ -31,6 +31,7 @@
         <ReturnToSource />
         <TacticsLoader />
         <MediaFlip />
+        <CampusVideoPreload />
       </ClientOnly>
     </template>
   </DefaultTheme.Layout>
@@ -43,4 +44,5 @@ import Live2DCanvas from './Live2DCanvas.vue'
 import ReturnToSource from './ReturnToSource.vue'
 import TacticsLoader from './TacticsLoader.vue'
 import MediaFlip from './MediaFlip.vue'
+import CampusVideoPreload from './CampusVideoPreload.vue'
 </script>
